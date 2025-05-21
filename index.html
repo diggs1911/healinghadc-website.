@@ -2,64 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Healing H.A.D.C., Inc. — Home</title>
-  <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-  <!-- Your brand CSS -->
-  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
   <!-- HEADER -->
-  <header
-    class="container"
-    style="padding:1rem 0; display:flex; align-items:center; justify-content:space-between;"
-  >
-    <a href="index.html">
-      <img
-        src="images/hhc-logo.svg"
-        alt="Healing HADC Logo"
-        style="height:50px;"
-      />
-    </a>
+  <header class="container" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 0;">
+    <a href="index.html"><img src="images/hhc-logo.svg" alt="Healing HADC Logo" style="height:50px;"></a>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="services.html">Services</a> |
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
       <a href="foundation.html">Foundation</a>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section
-    class="container"
-    style="
-      padding:4rem 0;
-      text-align:center;
-      background: var(--teal);
-      color: var(--white);
-    "
-  >
-    <h1>Healing Hearts. Strong Communities.</h1>
-    <p>
-      Home Health · Behavioral Health · Independent Living · Community Services
-      · Scholarships
-    </p>
-    <a
-      href="services.html"
-      style="
-        display:inline-block;
-        margin-top:1rem;
-        padding:.75rem 1.5rem;
-        background: var(--gold);
-        color: var(--white);
-        text-decoration:none;
-      "
-      >Explore Our Services</a
-    >
+  <!-- HERO -->
+  <section class="hero" style="background:url('https://source.unsplash.com/1600x900/?healthcare,community')">
+    <div class="container" style="text-align:center;">
+      <h1>Empowering Independence, One Heart at a Time</h1>
+      <p>Caring Hearts Independent Living · VitalPath Home Health · MindPath Behavioral Health · HeartReach Community Services · Mary Williams Foundation</p>
+      <a href="services.html" style="background:var(--gold);color:var(--white);padding:.75rem 1.5rem;border-radius:4px;">Explore Our Services</a>
+    </div>
   </section>
+
+  <!-- PILLARS OF CARE -->
+  <div class="container">
+    <h2>Our Pillars of Care</h2>
+    <div class="service‐grid">
+      <!-- VitalPath -->
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?nurse,home" alt="VitalPath Home Health">
+        <div class="card-content">
+          <h3>VitalPath Home Health</h3>
+          <p>Expert in‐home nursing, therapy & support to help you heal safely at home.</p>
+          <a href="vital-path.html">Learn More →</a>
+        </div>
+      </div>
+      <!-- MindPath -->
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?mentalhealth,therapy" alt="MindPath Behavioral Health">
+        <div class="card-content">
+          <h3>MindPath Behavioral Health</h3>
+          <p>Compassionate counseling & psychiatric care to empower your mental wellness.</p>
+          <a href="mind-path.html">Learn More →</a>
+        </div>
+      </div>
+      <!-- Caring Hearts -->
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?senior,living" alt="Caring Hearts Independent Living">
+        <div class="card-content">
+          <h3>Caring Hearts Independent Living</h3>
+          <p>Supportive residential community fostering dignity & social engagement.</p>
+          <a href="caring-hearts.html">Learn More →</a>
+        </div>
+      </div>
+      <!-- HeartReach -->
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?community,help" alt="HeartReach Community Services">
+        <div class="card-content">
+          <h3>HeartReach Community Services</h3>
+          <p>Food drives, housing assistance & senior outreach to strengthen families.</p>
+          <a href="heartreach.html">Learn More →</a>
+        </div>
+      </div>
+      <!-- Foundation -->
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?scholarship,students" alt="Mary Williams Foundation">
+        <div class="card-content">
+          <h3>Mary Williams Foundation</h3>
+          <p>Scholarships, summer institute & annual banquet advancing health education.</p>
+          <a href="foundation.html">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p><strong>Empowering independence, one heart at a time.</strong></p>
+      <p>Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a> | Phone: (713) 824-0017 | Fax: (713) 730-3601</p>
+      <div class="footer‐links">
+        <a href="privacy.html">Privacy</a> | <a href="contact.html">Contact</a>
+      </div>
+      <p>© 2025 Healing H.A.D.C., Inc.</p>
+    </div>
+  </footer>
 </body>
 </html>
