@@ -1,410 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="css/main.css">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Healing H.A.D.C., INC</title>
-
-  <!-- Google Font: Montserrat (example) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-  
-  <style>
-    /* 
-      ================
-      GLOBAL STYLES
-      ================
-    */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: #333;
-      background-color: #fafafa;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    
-    ul {
-      list-style: none;
-    }
-
-    /* 
-      ================
-      HEADER
-      ================
-    */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #ffffff;
-      padding: 0.75rem 1.5rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo svg {
-      width: 50px;
-      height: 50px;
-      margin-right: 0.5rem;
-    }
-
-    .logo-text {
-      font-weight: 600;
-      font-size: 1.2rem;
-      line-height: 1.2;
-      color: #5AB9B2;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    nav a {
-      font-weight: 500;
-      padding: 0.5rem 0.75rem;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #5AB9B2;
-    }
-
-    /* 
-      ================
-      HERO SECTION
-      ================
-    */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1589758438368-fd0c5d579a6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') 
-                  no-repeat center center/cover;
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 2rem;
-      color: #fff;
-      text-shadow: 1px 2px 3px rgba(0,0,0,0.5);
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero .btn {
-      background-color: #5AB9B2;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      color: #fff;
-      font-weight: 500;
-      transition: background-color 0.2s ease;
-      cursor: pointer;
-    }
-
-    .hero .btn:hover {
-      background-color: #48a4a1;
-    }
-
-    /* 
-      ================
-      MAIN CONTENT
-      ================
-    */
-    main {
-      width: 90%;
-      max-width: 1200px;
-      margin: 2rem auto;
-    }
-
-    .section {
-      margin-bottom: 3rem;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      position: relative;
-      font-weight: 600;
-      color: #5AB9B2;
-    }
-
-    .section h2::after {
-      content: "";
-      position: absolute;
-      width: 50px;
-      height: 3px;
-      background: #9A78FF; 
-      left: 0;
-      bottom: -5px;
-    }
-
-    .section p {
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Services cards */
-    .services-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-2px);
-    }
-
-    .service-card img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 0.75rem;
-    }
-
-    .service-card h3 {
-      margin-bottom: 0.5rem;
-      color: #5AB9B2;
-      font-weight: 600;
-    }
-
-    .service-card p {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    /* 
-      ================
-      FOOTER
-      ================
-    */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    footer p {
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .footer-links {
-      margin-bottom: 1rem;
-    }
-
-    .footer-links a {
-      color: #fff;
-      margin: 0 0.5rem;
-      transition: color 0.2s ease;
-      font-size: 0.9rem;
-    }
-
-    .footer-links a:hover {
-      color: #5AB9B2;
-    }
-
-    /* 
-      ================
-      MEDIA QUERIES
-      ================
-    */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-    }
-
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healing H.A.D.C., Inc. — Home</title>
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Your brand CSS -->
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-
-<!--================ HEADER ================-->
-<header>
-  <div class="logo">
-    <!-- Inline SVG for Logo (Example: A stylized heart with teal/purple) -->
-    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path 
-        d="M32 58C13 42.6667 4 31.3333 4 23.2C4 15.0667 9.06667 9 17.2 9C22.1333 9 26.3333 11.6 29.3333 16C32 11.6 36.2667 9 41.2 9C49.3333 9 54.4 15.0667 54.4 23.2C54.4 31.3333 45.4 42.6667 32 58Z"
-        fill="url(#MyGradient)"
+  <!-- HEADER -->
+  <header
+    class="container"
+    style="padding:1rem 0; display:flex; align-items:center; justify-content:space-between;"
+  >
+    <a href="index.html">
+      <img
+        src="images/hhc-logo.svg"
+        alt="Healing HADC Logo"
+        style="height:50px;"
       />
-      <defs>
-        <linearGradient id="MyGradient" x1="4" y1="9" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#5AB9B2"/>
-          <stop offset="1" stop-color="#9A78FF"/>
-        </linearGradient>
-      </defs>
-    </svg>
+    </a>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a> |
+      <a href="foundation.html">Foundation</a>
+    </nav>
+  </header>
 
-    <div>
-      <span class="logo-text">Healing H.A.D.C., INC</span><br/>
-      <span style="font-size:0.85rem; color:#9A78FF;">Caring Hearts Independent Living</span>
-    </div>
-  </div>
-
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!--================ HERO SECTION ================-->
-<section class="hero" id="home">
-  <h1>Welcome to Healing H.A.D.C., INC</h1>
-  <p>Caring Hearts Independent Living – Empowering individuals through compassionate care.</p>
-  <a href="#about" class="btn">Learn More</a>
-</section>
-
-<!--================ MAIN CONTENT ================-->
-<main>
-
-  <!-- About Section -->
-  <section class="section" id="about">
-    <h2>About Us</h2>
+  <!-- HERO SECTION -->
+  <section
+    class="container"
+    style="
+      padding:4rem 0;
+      text-align:center;
+      background: var(--teal);
+      color: var(--white);
+    "
+  >
+    <h1>Healing Hearts. Strong Communities.</h1>
     <p>
-      At Healing H.A.D.C., INC, we provide services that promote independence, well-being,
-      and support for individuals in our community. Operating under our DBA, Caring Hearts Independent Living,
-      our mission is to nurture each person’s unique needs with empathy, respect, and professionalism.
+      Home Health · Behavioral Health · Independent Living · Community Services
+      · Scholarships
     </p>
-    <p>
-      Our experienced team works tirelessly to ensure our clients feel respected and cared for, 
-      offering programs that help them maintain dignity and autonomy in their daily lives.
-    </p>
+    <a
+      href="services.html"
+      style="
+        display:inline-block;
+        margin-top:1rem;
+        padding:.75rem 1.5rem;
+        background: var(--gold);
+        color: var(--white);
+        text-decoration:none;
+      "
+      >Explore Our Services</a
+    >
   </section>
-
-  <!-- Services Section -->
-  <section class="section" id="services">
-    <h2>Our Services</h2>
-    <p>
-      We offer a range of programs and resources designed to foster independent living, 
-      encourage social interaction, and improve overall wellness.
-    </p>
-
-    <div class="services-container">
-      <!-- Service Card 1 -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1589736650357-4b712a6637f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Home Care">
-        <h3>In-Home Care</h3>
-        <p>Personalized support for daily activities, ensuring a safe and comfortable living environment.</p>
-      </div>
-
-      <!-- Service Card 2 -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1587982330636-268a7d9c4956?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Group Activities">
-        <h3>Wellness & Social Programs</h3>
-        <p>Engaging group activities, exercise routines, and wellness workshops to enhance mental and physical health.</p>
-      </div>
-
-      <!-- Service Card 3 -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Counseling">
-        <h3>Counseling & Support</h3>
-        <p>Professional guidance and emotional support for individuals and families adjusting to new life stages.</p>
-      </div>
-
-      <!-- Service Card 4 (Optional) -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1565372910087-8ba72ca1afb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Nutrition">
-        <h3>Nutrition & Meal Planning</h3>
-        <p>Healthy meal programs and dietary counseling tailored to individual health requirements.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>
-      Have questions or need more information? We’d love to hear from you. 
-      Reach out via phone, email, or the contact form below.
-    </p>
-
-    <!-- Simple Contact Info (replace with your details) -->
-    <p><strong>Phone:</strong> <a href="tel:+10000000000">+1 (000) 000-0000</a></p>
-    <p><strong>Email:</strong> <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
-    
-    <!-- Example Form (non-functional; you’d handle form submission on the server) -->
-    <form action="#" method="post" style="max-width: 600px; margin-top: 1rem;">
-      <label for="name" style="display:block; margin-bottom:0.25rem;">Name</label>
-      <input type="text" id="name" name="name" style="width: 100%; padding: 0.5rem; margin-bottom:1rem;" required />
-
-      <label for="email" style="display:block; margin-bottom:0.25rem;">Email</label>
-      <input type="email" id="email" name="email" style="width: 100%; padding: 0.5rem; margin-bottom:1rem;" required />
-
-      <label for="message" style="display:block; margin-bottom:0.25rem;">Message</label>
-      <textarea id="message" name="message" rows="5" style="width: 100%; padding: 0.5rem;" required></textarea>
-
-      <button type="submit" class="btn" style="margin-top:1rem;">Send Message</button>
-    </form>
-  </section>
-</main>
-
-<!--================ FOOTER ================-->
-<footer>
-  <div class="footer-links">
-    <a href="#home">Home</a> | 
-    <a href="#about">About</a> | 
-    <a href="#services">Services</a> | 
-    <a href="#contact">Contact</a>
-  </div>
-  <p>© 2025 Healing H.A.D.C., INC – Caring Hearts Independent Living. All Rights Reserved.</p>
-</footer>
-
-<!--================ OPTIONAL JS FOR SMOOTH SCROLLING (IF DESIRED) ================-->
-<script>
-  // If you want to add a gentle scroll effect for anchor links:
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-</script>
-
 </body>
 </html>
