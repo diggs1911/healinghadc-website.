@@ -43,6 +43,8 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+  position: relative;
+  z-index: 10; /* ensure nav sits above hero */
 }
 
 .logo-img {
@@ -75,7 +77,7 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   list-style: none;
   min-width: 200px;
-  z-index: 2; /* ensure above hero */
+  z-index: 20; /* above everything */
 }
 
 .has-dropdown:hover .dropdown {
@@ -100,24 +102,23 @@ a:hover {
 /* ================ HERO ================ */
 .hero {
   position: relative;
-  height: 85vh;      /* extend height */
+  height: 85vh;
   overflow: hidden;
-  margin-top: 0;     /* hug top */
+  margin-top: 0;
 }
 
 .hero-bg {
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/images/hero-banner.jpg') center/cover no-repeat;
+  width: 100%; height: 100%;
+  background: url('/images/hero-banner.png') center/cover no-repeat;
 }
 
 .hero-overlay {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   text-align: center;
-  padding-top: 22vh; /* adjust vertical centering */
+  padding-top: 22vh;
   color: #fff;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.6);
 }
@@ -187,29 +188,26 @@ a:hover {
   margin-bottom: .75rem;
 }
 
-/* ================ ABOUT US ================ */
+/* ================ ABOUT PREVIEW ================ */
 .about-us {
   padding: 4rem 0;
 }
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
 }
-
 .about-images img {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
 
-/* ================ FOUNDATION ================ */
+/* ================ FOUNDER TEASER ================ */
 .about-foundation {
   padding: 4rem 0;
 }
-
 .founder-photo {
   width: 100%;
   max-width: 300px;
@@ -243,13 +241,12 @@ a:hover {
   color: #fff;
 }
 
-/* Social icons wrapper */
+/* circular social icons */
 .social-icons {
   display: flex;
   gap: .5rem;
   margin-top: .5rem;
 }
-
 .social-icons a {
   display: inline-flex;
   width: 36px;
@@ -260,11 +257,9 @@ a:hover {
   justify-content: center;
   text-decoration: none;
 }
-
 .social-icons a img {
   width: 20px;
   height: 20px;
-  /* tint a black SVG to your brand teal */
   filter: invert(40%) sepia(92%) saturate(3242%) hue-rotate(152deg) brightness(93%) contrast(95%);
 }
 
@@ -278,15 +273,12 @@ a:hover {
   .hero {
     height: 60vh;
   }
-
   .hero-overlay h1 {
     font-size: 2rem;
   }
-
   .hero-overlay p {
     font-size: 1rem;
   }
-
   .main-nav ul {
     flex-direction: column;
     background: var(--white);
@@ -296,11 +288,9 @@ a:hover {
     right: 0;
     display: none;
   }
-
   .main-nav.open ul {
     display: flex;
   }
-
   .about-grid {
     grid-template-columns: 1fr;
   }
