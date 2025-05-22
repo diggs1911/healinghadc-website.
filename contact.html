@@ -241,5 +241,27 @@
       }
     });
   </script>
+  <script>
+// auto-format US phone as (xxx) xxx-xxxx
+const phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', e => {
+  // strip out non-digits, limit to 10 chars
+  let digits = e.target.value.replace(/\D/g, '').slice(0,10);
+  let formatted = digits;
+
+  if (digits.length > 6) {
+    // (123) 456-7890
+    formatted = `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  } else if (digits.length > 3) {
+    // (123) 456
+    formatted = `(${digits.slice(0,3)}) ${digits.slice(3)}`;
+  } else if (digits.length > 0) {
+    // (123
+    formatted = `(${digits}`;
+  }
+
+  e.target.value = formatted;
+});
+</script>
 </body>
 </html>
