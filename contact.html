@@ -12,7 +12,7 @@
     /* 1) Banner full display */
     .contact-banner img {
       width: 100%;
-      height: 300px;           /* adjust as needed */
+      height: 500px;           /* adjust as needed */
       object-fit: cover;      /* show entire image */
       display: block;
       margin-bottom: 1.5rem;
@@ -26,7 +26,13 @@
       padding: 2rem 0;
     }
 
-    /* 3) Left: form styling */
+    /* 3) Left column: form + teal right border */
+      .contact-form {
+      padding-right: 2rem;
+      border-right: 4px solid var(--teal);
+      display: flex;
+      flex-direction: column;
+    }
     .contact-form h2 {
       font-size: 1.75rem;
       font-weight: 600;
@@ -81,11 +87,8 @@
       background: #005050;
     }
 
-    /* 4) Right: details styling + teal separator */
+    /* 4) Right Column: details, no border */
     .contact-details {
-      border-left: 4px solid var(--teal);
-      display: flex;
-      flex-direction: column;
       padding-left: 2rem;
     }
     .contact-details h3 {
