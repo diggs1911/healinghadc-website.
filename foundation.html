@@ -3,15 +3,50 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mary Ja Ne Foundation for Hope &amp; Healing</title>
+  <title>Mary Ja Ne Williams Foundation for Hope &amp; Healing</title>
   <link 
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" 
     rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    /* Page‐specific overrides */
+    .foundation-hero {
+      width: 100%;
+      height: 50vh;
+      background: url('/images/Founder_Mary_Williams.JPG') center/cover no-repeat;
+    }
+    .foundation-header {
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+    .foundation-header h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--teal);
+    }
+    .foundation-header h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--gray-mid);
+      margin-bottom: 1.5rem;
+    }
+    .foundation-story p {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    .service-grid .card {
+      padding: 2rem;
+    }
+    .service-grid .card img {
+      max-height: 180px;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER & NAVIGATION (same as index.html) -->
+  <!-- HEADER & NAVIGATION -->
   <header class="header container">
     <a href="index.html" class="logo-link">
       <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
@@ -34,40 +69,29 @@
     </nav>
   </header>
 
-  <!-- FOUNDER SECTION -->
-  <section class="about-foundation container" style="padding:4rem 0;">
-    <h2 style="color:var(--purple); font-size:2rem; margin-bottom:1.5rem;">
-      About the Founder
-    </h2>
-    <div 
-      class="about-grid" 
-      style="display:grid; grid-template-columns:1fr 2fr; gap:2rem; align-items:center;">
-      
-      <!-- Founder Photo -->
-      <div class="about-images">
-        <img 
-          src="/images/Founder_Mary_Williams.JPG" 
-          alt="Mary Ja Ne" 
-          style="width:100%; max-width:300px; border-radius:8px;"/>
-      </div>
-      
-      <!-- Founder Story -->
-      <div class="about-text" style="font-size:1rem; line-height:1.8;">
-        <p style="margin-bottom:1.5rem;">
-          In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life’s mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
-        </p>
-        <p style="margin-bottom:1.5rem;">
-          Mary’s profound dedication to uplifting those around her extended far beyond education. She actively engaged in numerous community initiatives, becoming a recognized leader and advocate for families, youth, and seniors alike. Her compassionate spirit inspired her next significant endeavor—transitioning into adult care. Answering a divine call, she established Healing H.A.D.C., Inc., a comprehensive 24/7 adult care facility rooted in the same compassion, empathy, and devotion that characterized her educational ventures.
-        </p>
-        <p>
-          Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well-being.
-        </p>
-      </div>
-    </div>
+  <!-- FOUNDER BANNER -->
+  <section class="foundation-hero"></section>
+
+  <!-- NAME & ABOUT -->
+  <section class="container foundation-header">
+    <h2>Mary Ja Ne Williams</h2>
+    <h3>About the Founder</h3>
   </section>
 
-  <!-- CORE PROGRAMS SECTION -->
-  <section class="pillars container" style="padding-bottom:4rem;">
+  <section class="container foundation-story">
+    <p>
+      In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life’s mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
+    </p>
+    <p>
+      Mary’s profound dedication to uplifting those around her extended far beyond education. She actively engaged in numerous community initiatives, becoming a recognized leader and advocate for families, youth, and seniors alike. Her compassionate spirit inspired her next significant endeavor—transitioning into adult care. Answering a divine call, she established Healing H.A.D.C., Inc., a comprehensive 24/7 adult care facility rooted in the same compassion, empathy, and devotion that characterized her educational ventures.
+    </p>
+    <p>
+      Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well-being.
+    </p>
+  </section>
+
+  <!-- CORE PROGRAMS -->
+  <section class="pillars container" style="padding-top:2rem; padding-bottom:4rem;">
     <h2 style="color:var(--purple); font-size:2rem; margin-bottom:1.5rem;">
       Core Programs &amp; Services
     </h2>
@@ -76,7 +100,7 @@
       style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem;">
       
       <!-- Scholarship Card -->
-      <div class="card" style="padding:1.5rem;">
+      <div class="card">
         <img src="/images/Leagacy_Scholarships.png" alt="Mary Williams Legacy Scholarships"/>
         <div class="card-content">
           <h3>Mary Williams Legacy Scholarships</h3>
@@ -85,7 +109,7 @@
       </div>
       
       <!-- Summer Institute Card -->
-      <div class="card" style="padding:1.5rem;">
+      <div class="card">
         <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute"/>
         <div class="card-content">
           <h3>Hope &amp; Healing Summer Institute</h3>
@@ -94,7 +118,7 @@
       </div>
       
       <!-- Banquet Card -->
-      <div class="card" style="padding:1.5rem;">
+      <div class="card">
         <img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope Banquet"/>
         <div class="card-content">
           <h3>Hearts of Hope Banquet</h3>
@@ -104,7 +128,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (same as index.html) -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
