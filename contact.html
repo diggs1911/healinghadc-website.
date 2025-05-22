@@ -12,9 +12,8 @@
     /* 1) Banner full display */
     .contact-banner img {
       width: 100%;
-      height: auto;
-      max-height: 300px;       /* adjust as needed */
-      object-fit: contain;      /* show entire image */
+      height: 300px;           /* adjust as needed */
+      object-fit: cover;      /* show entire image */
       display: block;
       margin-bottom: 1.5rem;
     }
@@ -85,6 +84,8 @@
     /* 4) Right: details styling + teal separator */
     .contact-details {
       border-left: 4px solid var(--teal);
+      display: flex;
+      flex-direction: column;
       padding-left: 2rem;
     }
     .contact-details h3 {
