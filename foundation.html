@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
   <style>
-    /* ===== Page-Specific Overrides for Foundation ===== */
+    /* ===== Page Overrides for Foundation ===== */
     .foundation-banner {
       background: var(--purple);
       height: 300px;
@@ -18,8 +18,8 @@
       margin-bottom: 2rem;
     }
     .foundation-banner img {
-      height: 100%;
       width: auto;
+      height: 100%;
       object-fit: cover;
     }
     .foundation-founder {
@@ -42,18 +42,16 @@
       max-width: 800px;
       margin: 0 auto 3rem;
       padding: 0 1rem;
-    }
-    .foundation-story p {
       font-weight: 500;
       line-height: 1.8;
       font-size: 1.1rem;
-      margin-bottom: 1.5rem;
     }
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
       gap: 2rem;
       margin-bottom: 3rem;
+      padding: 0 1rem;
     }
     .service-grid .card {
       background: #fff;
@@ -62,12 +60,13 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      min-height: 360px;
     }
     .service-grid .card img {
       width: 100%;
       height: auto;
       object-fit: cover;
-      border-bottom: 1px solid #eee;
+      border-bottom:1px solid #eee;
     }
     .service-grid .card-content {
       padding: 1.25rem;
@@ -77,6 +76,7 @@
       margin-bottom: .75rem;
       color: var(--teal);
       font-size: 1.3rem;
+      line-height: 1.3;
     }
     .service-grid .card-content p {
       color: var(--gray-mid);
@@ -84,16 +84,16 @@
       margin: 0;
     }
 
-    @media (max-width: 768px) {
-      .foundation-banner { height: 200px; }
-      .foundation-banner img { height: auto; max-height: 200px; }
-      .service-grid { grid-template-columns: 1fr; }
+    @media (max-width:768px) {
+      .foundation-banner { height:200px; }
+      .foundation-banner img { max-height:200px; }
+      .service-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER & NAV -->
+  <!-- HEADER -->
   <header class="header container">
     <a href="index.html" class="logo-link">
       <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
