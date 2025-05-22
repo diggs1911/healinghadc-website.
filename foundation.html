@@ -6,94 +6,10 @@
   <title>Mary Ja Ne Williams Foundation</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
-  <style>
-    /* ===== Page Overrides for Foundation ===== */
-    .foundation-banner {
-      background: var(--purple);
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      margin-bottom: 2rem;
-    }
-    .foundation-banner img {
-      width: auto;
-      height: 100%;
-      object-fit: cover;
-    }
-    .foundation-founder {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .foundation-founder h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: var(--teal);
-      margin-bottom: .5rem;
-    }
-    .foundation-founder h3 {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--gray-dark);
-      margin-bottom: 1.5rem;
-    }
-    .foundation-story {
-      max-width: 800px;
-      margin: 0 auto 3rem;
-      padding: 0 1rem;
-      font-weight: 500;
-      line-height: 1.8;
-      font-size: 1.1rem;
-    }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-      padding: 0 1rem;
-    }
-    .service-grid .card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      min-height: 360px;
-    }
-    .service-grid .card img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-bottom:1px solid #eee;
-    }
-    .service-grid .card-content {
-      padding: 1.25rem;
-      flex: 1;
-    }
-    .service-grid .card-content h3 {
-      margin-bottom: .75rem;
-      color: var(--teal);
-      font-size: 1.3rem;
-      line-height: 1.3;
-    }
-    .service-grid .card-content p {
-      color: var(--gray-mid);
-      font-size: 1rem;
-      margin: 0;
-    }
-
-    @media (max-width:768px) {
-      .foundation-banner { height:200px; }
-      .foundation-banner img { max-height:200px; }
-      .service-grid { grid-template-columns:1fr; }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER & NAV -->
   <header class="header container">
     <a href="index.html" class="logo-link">
       <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
@@ -122,11 +38,12 @@
   </section>
 
   <!-- FOUNDER DETAILS -->
-  <section class="foundation-founder container">
+  <section class="foundation-founder">
     <h2>Mary Ja Ne Williams</h2>
     <h3>About the Founder</h3>
   </section>
 
+  <!-- FOUNDER STORY -->
   <section class="foundation-story">
     <p>
       In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life’s mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
@@ -141,9 +58,7 @@
 
   <!-- CORE PROGRAMS -->
   <section class="pillars container">
-    <h2 style="text-align:center; color:var(--purple); font-size:2.25rem; margin-bottom:2rem;">
-      Core Programs &amp; Services
-    </h2>
+    <h2 class="pillar-header">Core Programs &amp; Services</h2>
     <div class="service-grid">
       <div class="card">
         <img src="/images/Leagacy_Scholarships.png" alt="Legacy Scholarships"/>
@@ -153,7 +68,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="/images/Hope_Healing_Summer.png" alt="Summer Institute"/>
+        <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute"/>
         <div class="card-content">
           <h3>Hope &amp; Healing Summer Institute</h3>
           <p>Six-week teen &amp; adult camp on mental health literacy, cancer prevention, nutrition &amp; fitness.</p>
