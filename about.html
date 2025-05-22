@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
   <style>
-    /* Page-specific overrides */
+    /* ===== Page-Specific Overrides ===== */
     .about-us {
       padding: 4rem 0;
     }
@@ -15,12 +15,13 @@
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 2rem;
-      align-items: center;
+      align-items: stretch; /* equal heights */
     }
     .about-images img {
       width: 300px;
       border-radius: 8px;
       display: block;
+      object-fit: cover;
     }
     .about-text p {
       margin-bottom: 1.75rem;
@@ -28,10 +29,18 @@
       font-size: 1.05rem;
     }
     .section-divider {
-      border: 0;
-      height: 1px;
-      background: var(--gray-light);
+      border: none;
+      height: 2px;
+      background: var(--teal);
       margin: 3rem 0;
+    }
+    .join-text {
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      line-height: 1.8;
+      font-weight: 500;
+      font-size: 1.05rem;
+      text-align: center;
     }
     @media (max-width:768px) {
       .about-grid {
@@ -113,11 +122,15 @@
         <p><strong>Excellence:</strong> Driven by innovation and ongoing improvement, we consistently strive to surpass expectations and set new standards in care.</p>
         <p><strong>Integrity:</strong> Honesty, transparency, and accountability are fundamental to everything we do, building trust with our clients, staff, and partners.</p>
         <p><strong>Collaboration:</strong> We actively seek partnerships with families, healthcare providers, and community organizations, understanding that collective efforts lead to stronger, healthier, and more resilient communities.</p>
-        <p style="margin-top:1.5rem;">
-          Join us at Healing H.A.D.C., Inc. and become part of a compassionate team dedicated to making a meaningful difference. Together, let's inspire wellness, independence, and community strength.
-        </p>
       </div>
     </div>
+  </section>
+
+  <!-- JOIN US CALL-OUT -->
+  <section class="container">
+    <p class="join-text">
+      Join us at Healing H.A.D.C., Inc. and become part of a compassionate team dedicated to making a meaningful difference. Together, let's inspire wellness, independence, and community strength.
+    </p>
   </section>
 
   <!-- FOOTER -->
