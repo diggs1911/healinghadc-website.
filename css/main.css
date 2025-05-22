@@ -254,6 +254,97 @@ a:hover {
   margin-top: 1.5rem;
 }
 
+/* ================ CONTACT PAGE (NEW) ================ */
+.contact-banner img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  overflow: hidden;
+}
+
+.contact-form,
+.contact-details {
+  flex: 1 1 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.contact-form p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  padding: .75rem;
+  border: 1px solid var(--gray-mid);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.robot-check {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 1rem 0;
+}
+.robot-check input {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--teal);
+}
+
+.contact-form button {
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .2s;
+  align-self: flex-start;
+}
+.contact-form button:hover {
+  background: #005050; /* darker teal */
+}
+
+@media (max-width: 768px) {
+  .contact-form,
+  .contact-details {
+    flex: 1 1 100%;
+  }
+  .contact-banner img {
+    height: 20vh;
+  }
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-nav ul {
+    flex-direction: column;
+  }
+}
+
 /* ================ FOOTER ================ */
 .footer {
   background: var(--purple);
