@@ -58,7 +58,7 @@ a:hover { text-decoration:underline; }
 .footer-grid { display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:start; margin-bottom:2rem; }
 .footer-col h4 { margin-bottom:.5rem; font-size:1rem; }
 .footer-col p, .footer-col a { font-size:.95rem; color:#fff; }
-.footer-col.social img { width:24px; height:24px; margin-right:.5rem; filter:invert(1); }
+.footer-col.social img { width:24px; height:24px; margin-right:.5rem; filter:invert(100%); }
 .footer-bottom { text-align:center; font-size:.9rem; }
 
 /* ================ MEDIA ================ */
