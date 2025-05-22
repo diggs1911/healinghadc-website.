@@ -8,99 +8,77 @@
   <link rel="stylesheet" href="css/main.css"/>
   <style>
     /* ----------------------------
-       Page‐Specific Overrides
+       Foundation Page Overrides
        ---------------------------- */
 
-    /* Banner container */
+    /* 1. Full‐bleed founder banner with cover */
     .foundation-banner {
-      background: var(--purple);
-      height: 400px;                /* taller */
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: url('/images/Founder_Mary_Williams.JPG') center/cover no-repeat;
+      background-color: var(--purple);
+      height: 450px;           /* tall banner */
       margin-bottom: 2.5rem;
+      position: relative;
     }
-    .foundation-banner img {
-      width: 250px;                 /* larger */
-      height: 250px;
-      object-fit: cover;
-      border-radius: 50%;           /* circle */
+    /* A subtle gradient overlay for better text legibility if needed */
+    .foundation-banner::after {
+      content: "";
+      position: absolute; top:0; left:0; right:0; bottom:0;
+      background: rgba(89,35,122,0.4);
     }
 
-    /* Header text */
-    .foundation-header {
+    /* 2. Name and subtitle centered over banner */
+    .foundation-banner .banner-text {
+      position: relative;
+      z-index: 1;
+      color: #fff;
       text-align: center;
-      margin-bottom: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
     }
-    .foundation-header h2 {
+    .foundation-banner .banner-text h2 {
       font-size: 3rem;
       font-weight: 600;
-      color: var(--teal);
-      margin-bottom: .5rem;
+      margin-bottom: .25rem;
     }
-    .foundation-header h3 {
+    .foundation-banner .banner-text h3 {
       font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--gray-mid);
-      margin-bottom: 1.5rem;
+      font-weight: 400;
     }
 
-    /* Story section */
+    /* 3. Story section tweaks */
     .foundation-story {
       max-width: 800px;
-      margin: 0 auto 3rem;
+      margin: 3rem auto;
       padding: 0 1rem;
     }
     .foundation-story p {
       font-weight: 500;
       line-height: 1.8;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       margin-bottom: 1.5rem;
     }
 
-    /* Programs grid */
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-      padding: 0 1rem;
-    }
+    /* 4. Program cards: show full image */
     .service-grid .card img {
       width: 100%;
-      height: 200px;               /* taller */
-      object-fit:cover;
+      height: auto;          /* allow natural aspect */
+      max-height: 240px;     /* generous cap */
+      object-fit: contain;
       border-radius: 8px;
       margin-bottom: 1rem;
     }
-    .service-grid .card-content {
-      padding: 1rem 1.25rem;
-    }
-    .service-grid .card-content h3 {
-      font-size: 1.35rem;
-      margin-bottom: .75rem;
-      color: var(--teal);
-      line-height: 1.3;
-    }
-    .service-grid .card-content p {
-      font-size: 1rem;
-      color: var(--gray-mid);
-      margin-bottom: 0;
-    }
 
-    /* Responsive tweaks */
     @media (max-width: 768px) {
-      .foundation-banner { height: 280px; }
-      .foundation-banner img { width: 180px; height: 180px; }
-      .foundation-header h2 { font-size: 2.25rem; }
-      .foundation-header h3 { font-size: 1.1rem; }
+      .foundation-banner { height: 300px; }
+      .foundation-banner .banner-text h2 { font-size:2.25rem; }
+      .foundation-banner .banner-text h3 { font-size:1rem; }
       .service-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER (unchanged) -->
   <header class="header container">
     <a href="index.html" class="logo-link">
       <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
@@ -123,15 +101,12 @@
     </nav>
   </header>
 
-  <!-- FOUNDER BANNER -->
+  <!-- FOUNDER BANNER (now full‐bleed background) -->
   <section class="foundation-banner">
-    <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Ja Ne Williams"/>
-  </section>
-
-  <!-- NAME & ABOUT -->
-  <section class="foundation-header container">
-    <h2>Mary Ja Ne Williams</h2>
-    <h3>About the Founder</h3>
+    <div class="banner-text">
+      <h2>Mary Ja Ne Williams</h2>
+      <h3>About the Founder</h3>
+    </div>
   </section>
 
   <!-- FOUNDER STORY -->
@@ -177,7 +152,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (unchanged) -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
