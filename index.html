@@ -9,111 +9,121 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header class="container header">
-    <!-- Main HADC Logo -->
+  <header class="header container">
     <a href="index.html" class="logo-link">
-      <img 
-        src="images/Healing_HADC.png" 
-        alt="Healing HADC Logo" 
-        class="logo-img"
-      />
+      <img src="images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
     </a>
-    <!-- Navigation -->
     <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="foundation.html">Foundation</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="#">Services <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="vital-path.html">VitalPath Home Health</a></li>
+            <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
+            <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
+            <li><a href="heartreach.html">HeartReach Community Services</a></li>
+          </ul>
+        </li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+  <!-- HERO -->
   <section class="hero">
-    <!-- Fallback image (in case video won't autoplay) -->
-    <img src="https://source.unsplash.com/1600x900/?healthcare,community" alt="" class="hero-fallback" />
-    <!-- Looping background video -->
+    <img src="https://source.unsplash.com/1600x900/?healthcare,community" alt="" class="hero-fallback"/>
     <video autoplay muted loop playsinline class="hero-video">
       <source src="videos/hero-background.mp4" type="video/mp4"/>
-      <!-- You can replace this with a stock video or your own file -->
     </video>
     <div class="hero-overlay container">
-      <h1>Empowering <br/>Independence, One Heart at a Time</h1>
-      <p>
-        Caring Hearts Independent Living · VitalPath · MindPath · HeartReach · Mary Williams Foundation
-      </p>
+      <h1>Empowering<br/>Independence,<br/>One Heart at a Time</h1>
+      <p>Caring Hearts · VitalPath · MindPath · HeartReach · Mary Williams Foundation</p>
       <a href="services.html" class="btn-hero">Explore Our Services</a>
     </div>
   </section>
 
-  <!-- PILLARS OF CARE GRID -->
-  <div class="container pillars">
+  <!-- PILLARS OF CARE -->
+  <section class="pillars container">
     <h2>Our Pillars of Care</h2>
     <div class="service-grid">
-      <!-- VitalPath -->
       <div class="card">
-        <img src="images/Vital_Path_Home_Health-logo.png" alt="VitalPath Logo">
+        <img src="images/Vital_Path_Home_Health-logo.png" alt="VitalPath">
         <div class="card-content">
           <h3>VitalPath Home Health</h3>
-          <p>Expert in-home nursing, therapy & support to help you heal safely at home.</p>
+          <p>Expert in-home nursing, therapy & support to help you heal safely.</p>
           <a href="vital-path.html">Learn More →</a>
         </div>
       </div>
-      <!-- MindPath -->
       <div class="card">
-        <img src="images/MindPath_Behavioral_Health-logo.png" alt="MindPath Logo">
+        <img src="images/MindPath_Behavioral_Health-logo.png" alt="MindPath">
         <div class="card-content">
           <h3>MindPath Behavioral Health</h3>
           <p>Compassionate counseling & psychiatric care to empower your mental wellness.</p>
           <a href="mind-path.html">Learn More →</a>
         </div>
       </div>
-      <!-- Caring Hearts -->
       <div class="card">
-        <img src="images/Caring_Hearts-logo.png" alt="Caring Hearts Logo">
+        <img src="images/Caring_Hearts-logo.png" alt="Caring Hearts">
         <div class="card-content">
           <h3>Caring Hearts Independent Living</h3>
           <p>Supportive residential community fostering dignity & social engagement.</p>
           <a href="caring-hearts.html">Learn More →</a>
         </div>
       </div>
-      <!-- HeartReach -->
       <div class="card">
-        <img src="images/HeartReach-logo.png" alt="HeartReach Logo">
+        <img src="images/HeartReach-logo.png" alt="HeartReach">
         <div class="card-content">
           <h3>HeartReach Community Services</h3>
-          <p>Food drives, housing assistance & senior programs strengthening Galveston families.</p>
+          <p>Food drives, housing assistance & senior outreach to strengthen families.</p>
           <a href="heartreach.html">Learn More →</a>
         </div>
       </div>
-      <!-- Foundation -->
       <div class="card">
-        <img src="images/Mary_Williams_Foundation-logo.png" alt="Foundation Logo">
+        <img src="images/Mary_Williams_Foundation-logo.png" alt="Foundation">
         <div class="card-content">
           <h3>Mary Williams Foundation</h3>
-          <p>Scholarships, summer institute & banquet advancing health education.</p>
+          <p>Scholarships, summer institute & annual banquet advancing health education.</p>
           <a href="foundation.html">Learn More →</a>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- IMPACT STATS STRIP TO FILL WHITE SPACE -->
-  <section class="stats-strip">
-    <div class="container stats-grid">
-      <div><strong>24/7 Care</strong><br/>Always On-Site Support</div>
-      <div><strong>300+</strong><br/>Lives Touched Yearly</div>
-      <div><strong>50+</strong><br/>Professional Staff Members</div>
-      <div><strong>20</strong><br/>Years of Service</div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container" style="text-align:center;">
-      <p><strong>Empowering independence, one heart at a time.</strong></p>
-      <p>
-        Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a> | 
-        Phone: (713) 824-0017 | Fax: (713) 730-3601
-      </p>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy</a>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="images/Donate_Life_Logo.png" alt="Donate Life" class="footer-logo"/>
+        <img src="images/STA_Logo.png" alt="Southwest Transplant Alliance" class="footer-logo"/>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>8190 Manderville Ln.<br/>Galveston County, TX</p>
+        <p>Phone: (713) 824-0017</p>
+        <p>Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
+      </div>
+      <div class="footer-col social">
+        <h4>Follow Us</h4>
+        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"/></a>
+        <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"/></a>
+        <a href="#"><img src="images/icon-linkedin.svg" alt="LinkedIn"/></a>
+        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"/></a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
+    </div>
+  </footer>
+</body>
+</html>
