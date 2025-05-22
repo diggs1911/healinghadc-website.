@@ -9,17 +9,17 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header class="container" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 0;">
+  <header class="container header">
     <!-- Main HADC Logo -->
-    <a href="index.html">
+    <a href="index.html" class="logo-link">
       <img 
-        src="images/hhc-logo.png" 
+        src="images/Healing_HADC.png" 
         alt="Healing HADC Logo" 
-        style="height:50px;"
+        class="logo-img"
       />
     </a>
     <!-- Navigation -->
-    <nav>
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
@@ -27,34 +27,34 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section 
-    class="hero" 
-    style="background:url('https://source.unsplash.com/1600x900/?healthcare,community') center/cover;">
-    <div class="container" style="text-align:center; color:#fff;">
-      <h1>Empowering Independence, One Heart at a Time</h1>
+  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+  <section class="hero">
+    <!-- Fallback image (in case video won't autoplay) -->
+    <img src="https://source.unsplash.com/1600x900/?healthcare,community" alt="" class="hero-fallback" />
+    <!-- Looping background video -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/hero-background.mp4" type="video/mp4"/>
+      <!-- You can replace this with a stock video or your own file -->
+    </video>
+    <div class="hero-overlay container">
+      <h1>Empowering <br/>Independence, One Heart at a Time</h1>
       <p>
         Caring Hearts Independent Living · VitalPath · MindPath · HeartReach · Mary Williams Foundation
       </p>
-      <a 
-        href="services.html" 
-        style="display:inline-block;margin-top:1rem;padding:.75rem 1.5rem;background:var(--gold);color:#fff;border-radius:4px;"
-      >
-        Explore Our Services
-      </a>
+      <a href="services.html" class="btn-hero">Explore Our Services</a>
     </div>
   </section>
 
   <!-- PILLARS OF CARE GRID -->
-  <div class="container" style="padding:4rem 0;">
+  <div class="container pillars">
     <h2>Our Pillars of Care</h2>
-    <div class="service‐grid">
+    <div class="service-grid">
       <!-- VitalPath -->
       <div class="card">
         <img src="images/Vital_Path_Home_Health-logo.png" alt="VitalPath Logo">
         <div class="card-content">
           <h3>VitalPath Home Health</h3>
-          <p>Expert in‐home nursing, therapy & support to help you heal safely at home.</p>
+          <p>Expert in-home nursing, therapy & support to help you heal safely at home.</p>
           <a href="vital-path.html">Learn More →</a>
         </div>
       </div>
@@ -87,7 +87,7 @@
       </div>
       <!-- Foundation -->
       <div class="card">
-        <img src="images/Mary_Williams_Foundation-logo.png" alt="Mary Williams Foundation Logo">
+        <img src="images/Mary_Williams_Foundation-logo.png" alt="Foundation Logo">
         <div class="card-content">
           <h3>Mary Williams Foundation</h3>
           <p>Scholarships, summer institute & banquet advancing health education.</p>
@@ -97,20 +97,23 @@
     </div>
   </div>
 
+  <!-- IMPACT STATS STRIP TO FILL WHITE SPACE -->
+  <section class="stats-strip">
+    <div class="container stats-grid">
+      <div><strong>24/7 Care</strong><br/>Always On-Site Support</div>
+      <div><strong>300+</strong><br/>Lives Touched Yearly</div>
+      <div><strong>50+</strong><br/>Professional Staff Members</div>
+      <div><strong>20</strong><br/>Years of Service</div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer>
-    <div class="container" style="text-align:center;padding:2rem 0;">
+  <footer class="footer">
+    <div class="container" style="text-align:center;">
       <p><strong>Empowering independence, one heart at a time.</strong></p>
       <p>
         Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a> | 
-        Phone: (713) 824-0017 | 
-        Fax: (713) 730-3601
+        Phone: (713) 824-0017 | Fax: (713) 730-3601
       </p>
-      <div class="footer‐links">
-        <a href="privacy.html">Privacy</a> | <a href="contact.html">Contact</a>
-      </div>
-      <p>© 2025 Healing H.A.D.C., Inc.</p>
-    </div>
-  </footer>
-</body>
-</html>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
