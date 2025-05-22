@@ -7,32 +7,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
   <style>
-    /* PAGE-SPECIFIC OVERRIDES */
+    /* ----------------------------
+       Page‐Specific Overrides
+       ---------------------------- */
 
-    /* Banner: larger, square, flush against top */
+    /* Banner container */
     .foundation-banner {
       background: var(--purple);
-      height: 350px;
+      height: 400px;                /* taller */
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 2.5rem;
     }
     .foundation-banner img {
-      width: 200px;
-      height: 200px;
+      width: 250px;                 /* larger */
+      height: 250px;
       object-fit: cover;
+      border-radius: 50%;           /* circle */
     }
 
-    /* Center header text */
+    /* Header text */
     .foundation-header {
       text-align: center;
-      margin: 2rem 0 1rem;
+      margin-bottom: 2rem;
     }
     .foundation-header h2 {
-      font-size: 2.75rem;
+      font-size: 3rem;
       font-weight: 600;
       color: var(--teal);
-      margin-bottom: .25rem;
+      margin-bottom: .5rem;
     }
     .foundation-header h3 {
       font-size: 1.25rem;
@@ -41,37 +45,42 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Story text: limit width and center */
+    /* Story section */
     .foundation-story {
       max-width: 800px;
       margin: 0 auto 3rem;
+      padding: 0 1rem;
     }
     .foundation-story p {
       font-weight: 500;
       line-height: 1.8;
+      font-size: 1.05rem;
       margin-bottom: 1.5rem;
     }
 
-    /* Core program cards: larger images and text area */
+    /* Programs grid */
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       margin-bottom: 3rem;
+      padding: 0 1rem;
     }
     .service-grid .card img {
-      max-width: 100%;
-      height: 180px;
-      object-fit: cover;
+      width: 100%;
+      height: 200px;               /* taller */
+      object-fit:cover;
+      border-radius: 8px;
       margin-bottom: 1rem;
     }
     .service-grid .card-content {
-      padding: 1.25rem;
+      padding: 1rem 1.25rem;
     }
     .service-grid .card-content h3 {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       margin-bottom: .75rem;
       color: var(--teal);
+      line-height: 1.3;
     }
     .service-grid .card-content p {
       font-size: 1rem;
@@ -79,9 +88,12 @@
       margin-bottom: 0;
     }
 
+    /* Responsive tweaks */
     @media (max-width: 768px) {
-      .foundation-banner { height: 250px; }
-      .foundation-banner img { width: 140px; height: 140px; }
+      .foundation-banner { height: 280px; }
+      .foundation-banner img { width: 180px; height: 180px; }
+      .foundation-header h2 { font-size: 2.25rem; }
+      .foundation-header h3 { font-size: 1.1rem; }
       .service-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -117,12 +129,13 @@
   </section>
 
   <!-- NAME & ABOUT -->
-  <section class="container foundation-header">
+  <section class="foundation-header container">
     <h2>Mary Ja Ne Williams</h2>
     <h3>About the Founder</h3>
   </section>
 
-  <section class="container foundation-story">
+  <!-- FOUNDER STORY -->
+  <section class="foundation-story">
     <p>
       In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life’s mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
     </p>
@@ -130,13 +143,13 @@
       Mary’s profound dedication to uplifting those around her extended far beyond education. She actively engaged in numerous community initiatives, becoming a recognized leader and advocate for families, youth, and seniors alike. Her compassionate spirit inspired her next significant endeavor—transitioning into adult care. Answering a divine call, she established Healing H.A.D.C., Inc., a comprehensive 24/7 adult care facility rooted in the same compassion, empathy, and devotion that characterized her educational ventures.
     </p>
     <p>
-      Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well-being.
+      Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well‐being.
     </p>
   </section>
 
   <!-- CORE PROGRAMS -->
   <section class="pillars container">
-    <h2 style="color:var(--purple); font-size:2rem; text-align:center; margin-bottom:2rem;">
+    <h2 style="text-align:center; color:var(--purple); font-size:2.25rem; margin-bottom:2rem;">
       Core Programs &amp; Services
     </h2>
     <div class="service-grid">
