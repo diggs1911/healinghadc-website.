@@ -4,26 +4,33 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mary Ja Ne Williams Foundation for Hope &amp; Healing</title>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" 
-    rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
   <style>
-    /* Page‐specific overrides */
-    .foundation-hero {
-      width: 100%;
-      height: 50vh;
-      background: url('/images/Founder_Mary_Williams.JPG') center/cover no-repeat;
+    /* ===== PAGE SPECIFIC ===== */
+    .foundation-banner {
+      background: var(--purple);
+      position: relative;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .foundation-banner img {
+      max-height: 180px;
+      border: 5px solid var(--white);
+      border-radius: 50%;
+      object-fit: cover;
     }
     .foundation-header {
       text-align: center;
       margin: 2rem 0 1rem;
     }
     .foundation-header h2 {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       font-weight: 600;
-      margin-bottom: 0.25rem;
       color: var(--teal);
+      margin-bottom: 0.25rem;
     }
     .foundation-header h3 {
       font-size: 1.25rem;
@@ -34,19 +41,23 @@
     .foundation-story p {
       margin-bottom: 1.5rem;
       line-height: 1.8;
-    }
-    .service-grid .card {
-      padding: 2rem;
+      font-weight: 500;
     }
     .service-grid .card img {
-      max-height: 180px;
-      margin-bottom: 1rem;
+      max-height: 200px;
+      margin: 0 auto 1rem;
+      display: block;
+      object-fit: contain;
+    }
+    @media (max-width:768px) {
+      .foundation-banner { height: 200px; }
+      .foundation-banner img { max-height: 120px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER & NAVIGATION -->
+  <!-- HEADER -->
   <header class="header container">
     <a href="index.html" class="logo-link">
       <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
@@ -70,7 +81,9 @@
   </header>
 
   <!-- FOUNDER BANNER -->
-  <section class="foundation-hero"></section>
+  <section class="foundation-banner">
+    <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Ja Ne Williams"/>
+  </section>
 
   <!-- NAME & ABOUT -->
   <section class="container foundation-header">
@@ -95,11 +108,7 @@
     <h2 style="color:var(--purple); font-size:2rem; margin-bottom:1.5rem;">
       Core Programs &amp; Services
     </h2>
-    <div 
-      class="service-grid" 
-      style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem;">
-      
-      <!-- Scholarship Card -->
+    <div class="service-grid">
       <div class="card">
         <img src="/images/Leagacy_Scholarships.png" alt="Mary Williams Legacy Scholarships"/>
         <div class="card-content">
@@ -107,8 +116,6 @@
           <p>Renewable awards for Galveston-area students entering mental health, social work, or healthcare degree tracks.</p>
         </div>
       </div>
-      
-      <!-- Summer Institute Card -->
       <div class="card">
         <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute"/>
         <div class="card-content">
@@ -116,8 +123,6 @@
           <p>Six-week teen &amp; adult day-camp covering mental health literacy, cancer prevention, nutrition &amp; fitness.</p>
         </div>
       </div>
-      
-      <!-- Banquet Card -->
       <div class="card">
         <img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope Banquet"/>
         <div class="card-content">
