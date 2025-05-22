@@ -7,21 +7,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
   <style>
-    /* ===== PAGE SPECIFIC ===== */
+    /* PAGE-SPECIFIC OVERRIDES */
+
+    /* Banner: larger, square, flush against top */
     .foundation-banner {
       background: var(--purple);
-      position: relative;
-      height: 300px;
+      height: 350px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .foundation-banner img {
-      max-height: 180px;
-      border: 5px solid var(--white);
-      border-radius: 50%;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
     }
+
+    /* Center header text */
     .foundation-header {
       text-align: center;
       margin: 2rem 0 1rem;
@@ -30,7 +32,7 @@
       font-size: 2.75rem;
       font-weight: 600;
       color: var(--teal);
-      margin-bottom: 0.25rem;
+      margin-bottom: .25rem;
     }
     .foundation-header h3 {
       font-size: 1.25rem;
@@ -38,20 +40,49 @@
       color: var(--gray-mid);
       margin-bottom: 1.5rem;
     }
+
+    /* Story text: limit width and center */
+    .foundation-story {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
     .foundation-story p {
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
       font-weight: 500;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Core program cards: larger images and text area */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
     }
     .service-grid .card img {
-      max-height: 200px;
-      margin: 0 auto 1rem;
-      display: block;
-      object-fit: contain;
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 1rem;
     }
-    @media (max-width:768px) {
-      .foundation-banner { height: 200px; }
-      .foundation-banner img { max-height: 120px; }
+    .service-grid .card-content {
+      padding: 1.25rem;
+    }
+    .service-grid .card-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: .75rem;
+      color: var(--teal);
+    }
+    .service-grid .card-content p {
+      font-size: 1rem;
+      color: var(--gray-mid);
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .foundation-banner { height: 250px; }
+      .foundation-banner img { width: 140px; height: 140px; }
+      .service-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -104,13 +135,13 @@
   </section>
 
   <!-- CORE PROGRAMS -->
-  <section class="pillars container" style="padding-top:2rem; padding-bottom:4rem;">
-    <h2 style="color:var(--purple); font-size:2rem; margin-bottom:1.5rem;">
+  <section class="pillars container">
+    <h2 style="color:var(--purple); font-size:2rem; text-align:center; margin-bottom:2rem;">
       Core Programs &amp; Services
     </h2>
     <div class="service-grid">
       <div class="card">
-        <img src="/images/Leagacy_Scholarships.png" alt="Mary Williams Legacy Scholarships"/>
+        <img src="/images/Leagacy_Scholarships.png" alt="Legacy Scholarships"/>
         <div class="card-content">
           <h3>Mary Williams Legacy Scholarships</h3>
           <p>Renewable awards for Galveston-area students entering mental health, social work, or healthcare degree tracks.</p>
