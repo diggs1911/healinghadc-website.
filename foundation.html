@@ -3,82 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mary Ja Ne Williams Foundation for Hope &amp; Healing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <title>Mary Ja Ne Williams Foundation</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
-  <style>
-    /* ----------------------------
-       Foundation Page Overrides
-       ---------------------------- */
-
-    /* 1. Full‐bleed founder banner with cover */
-    .foundation-banner {
-      background: url('/images/Founder_Mary_Williams.JPG') center/cover no-repeat;
-      background-color: var(--purple);
-      height: 450px;           /* tall banner */
-      margin-bottom: 2.5rem;
-      position: relative;
-    }
-    /* A subtle gradient overlay for better text legibility if needed */
-    .foundation-banner::after {
-      content: "";
-      position: absolute; top:0; left:0; right:0; bottom:0;
-      background: rgba(89,35,122,0.4);
-    }
-
-    /* 2. Name and subtitle centered over banner */
-    .foundation-banner .banner-text {
-      position: relative;
-      z-index: 1;
-      color: #fff;
-      text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .foundation-banner .banner-text h2 {
-      font-size: 3rem;
-      font-weight: 600;
-      margin-bottom: .25rem;
-    }
-    .foundation-banner .banner-text h3 {
-      font-size: 1.25rem;
-      font-weight: 400;
-    }
-
-    /* 3. Story section tweaks */
-    .foundation-story {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-    .foundation-story p {
-      font-weight: 500;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    /* 4. Program cards: show full image */
-    .service-grid .card img {
-      width: 100%;
-      height: auto;          /* allow natural aspect */
-      max-height: 240px;     /* generous cap */
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .foundation-banner { height: 300px; }
-      .foundation-banner .banner-text h2 { font-size:2.25rem; }
-      .foundation-banner .banner-text h3 { font-size:1rem; }
-      .service-grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER (unchanged) -->
+  <!-- HEADER & NAV -->
   <header class="header container">
     <a href="index.html" class="logo-link">
       <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
@@ -101,45 +34,44 @@
     </nav>
   </header>
 
-  <!-- FOUNDER BANNER (now full‐bleed background) -->
+  <!-- FOUNDER BANNER -->
   <section class="foundation-banner">
-    <div class="banner-text">
-      <h2>Mary Ja Ne Williams</h2>
-      <h3>About the Founder</h3>
-    </div>
+    <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Ja Ne Williams"/>
   </section>
 
-  <!-- FOUNDER STORY -->
-  <section class="foundation-story">
-    <p>
-      In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life’s mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
-    </p>
-    <p>
-      Mary’s profound dedication to uplifting those around her extended far beyond education. She actively engaged in numerous community initiatives, becoming a recognized leader and advocate for families, youth, and seniors alike. Her compassionate spirit inspired her next significant endeavor—transitioning into adult care. Answering a divine call, she established Healing H.A.D.C., Inc., a comprehensive 24/7 adult care facility rooted in the same compassion, empathy, and devotion that characterized her educational ventures.
-    </p>
-    <p>
-      Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well‐being.
-    </p>
+  <!-- FOUNDER DETAILS -->
+  <section class="foundation-founder container">
+    <h2>Mary Ja Ne Williams</h2>
+    <h3>About the Founder</h3>
+    <div class="foundation-story">
+      <p>
+        In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life’s mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
+      </p>
+      <p>
+        Mary’s profound dedication to uplifting those around her extended far beyond education. She actively engaged in numerous community initiatives, becoming a recognized leader and advocate for families, youth, and seniors alike. Her compassionate spirit inspired her next significant endeavor—transitioning into adult care. Answering a divine call, she established Healing H.A.D.C., Inc., a comprehensive 24/7 adult care facility rooted in the same compassion, empathy, and devotion that characterized her educational ventures.
+      </p>
+      <p>
+        Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well-being.
+      </p>
+    </div>
   </section>
 
   <!-- CORE PROGRAMS -->
   <section class="pillars container">
-    <h2 style="text-align:center; color:var(--purple); font-size:2.25rem; margin-bottom:2rem;">
-      Core Programs &amp; Services
-    </h2>
+    <h2>Core Programs &amp; Services</h2>
     <div class="service-grid">
       <div class="card">
         <img src="/images/Leagacy_Scholarships.png" alt="Legacy Scholarships"/>
         <div class="card-content">
-          <h3>Mary Williams Legacy Scholarships</h3>
-          <p>Renewable awards for Galveston-area students entering mental health, social work, or healthcare degree tracks.</p>
+          <h3>Legacy Scholarships</h3>
+          <p>Renewable awards for Galveston-area students entering mental health, social work, or healthcare tracks.</p>
         </div>
       </div>
       <div class="card">
-        <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute"/>
+        <img src="/images/Hope_Healing_Summer.png" alt="Summer Institute"/>
         <div class="card-content">
           <h3>Hope &amp; Healing Summer Institute</h3>
-          <p>Six-week teen &amp; adult day-camp covering mental health literacy, cancer prevention, nutrition &amp; fitness.</p>
+          <p>Six-week teen &amp; adult camp on mental health literacy, cancer prevention, nutrition &amp; fitness.</p>
         </div>
       </div>
       <div class="card">
@@ -152,7 +84,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (unchanged) -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
@@ -164,10 +96,10 @@
       <div class="footer-col social">
         <h4>Follow Us</h4>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
-          <a href="#" aria-label="Twitter"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
-          <a href="#" aria-label="LinkedIn"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
-          <a href="#" aria-label="Instagram"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
+          <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
+          <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
+          <a href="#"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
         </div>
       </div>
     </div>
