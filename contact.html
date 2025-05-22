@@ -4,83 +4,102 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Contact — Healing H.A.D.C., Inc.</title>
+  <!-- Montserrat Font -->
   <link 
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" 
     rel="stylesheet"/>
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/main.css"/>
   <style>
-    /* === Page-specific overrides === */
+    /* ===== Page-specific CSS ===== */
+
+    /* Force container to full viewport height and hide overflow */
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: calc(100vh -  (var(--header-height) + var(--footer-height)));
+      overflow: hidden;
+    }
+
+    /* Left (form) & right (details) columns */
+    .contact-form, .contact-details {
+      flex: 1 1 50%;
+      padding: 2rem;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    /* Make banner exactly one quarter of viewport height */
     .contact-banner img {
       width: 100%;
-      height: auto;
+      height: 25vh;
+      object-fit: cover;
       display: block;
-      margin-bottom: 2rem;
     }
-    .contact-section {
-      padding: 4rem 0;
-    }
-    .intro-text {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: start;
+
+    /* Modern form fields & spacing */
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
     .contact-form label {
-      display: block;
-      margin-bottom: .25rem;
-      font-weight: 500;
+      font-weight: 600;
     }
     .contact-form input,
     .contact-form textarea {
-      width: 100%;
-      padding: .75rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-bottom: 1rem;
       font-family: var(--font-sans);
+      padding: .75rem;
+      border: 1px solid var(--gray-mid);
+      border-radius: 4px;
+      font-size: 1rem;
     }
+
+    /* Custom “I’m not a robot” toggle */
     .robot-check {
       display: flex;
       align-items: center;
       gap: .5rem;
-      margin-bottom: 1.5rem;
+      margin: 1rem 0;
     }
-    .contact-form .btn-hero {
-      background: var(--gold);
+    .robot-check input {
+      width: 1.25rem;
+      height: 1.25rem;
+      accent-color: var(--teal);
+    }
+
+    /* Modern submit button */
+    .contact-form button {
+      background: var(--teal);
       color: #fff;
-      padding: .75rem 1.5rem;
       border: none;
-      border-radius: 4px;
+      padding: .75rem 1.5rem;
+      font-size: 1rem;
       font-weight: 600;
+      border-radius: 4px;
       cursor: pointer;
+      transition: background .2s ease;
+      align-self: start;
     }
-    .contact-details h3 {
-      font-size: 1.25rem;
-      color: var(--purple);
-      margin-bottom: .75rem;
+    .contact-form button:hover {
+      background: darken(var(--teal), 10%);
     }
-    .contact-details p {
-      margin-bottom: .75rem;
-      line-height: 1.6;
-    }
-    @media (max-width:768px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
+
+    /* Responsive stacking */
+    @media (max-width: 768px) {
+      .contact-form, .contact-details {
+        flex: 1 1 100%;
+        max-height: none;
       }
       .contact-banner img {
-        margin-bottom: 1.5rem;
+        height: 20vh;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER & NAVIGATION -->
+  <!-- HEADER -->
   <header class="header container">
     <a href="index.html" class="logo-link">
       <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
@@ -99,7 +118,7 @@
           </ul>
         </li>
         <li><a href="foundation.html">Foundation</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -110,49 +129,45 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section class="contact-section container">
-    <p class="intro-text">We’d love to hear from you!</p>
-    <div class="contact-grid">
-      
-      <!-- Form Column -->
-      <div class="contact-form">
-        <form 
-          action="mailto:info@healinghadc.org" 
-          method="post" 
-          enctype="text/plain">
-          
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="Your Name" required/>
-          
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="Email Address" required/>
-          
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="Phone Number" required/>
-          
-          <label for="message">Message</label>
-          <textarea id="message" name="Message" rows="6" required></textarea>
-          
-          <div class="robot-check">
-            <input type="checkbox" id="not-robot" name="not-robot" required/>
-            <label for="not-robot">I’m not a robot</label>
-          </div>
-          
-          <button type="submit" class="btn-hero">Submit</button>
-        </form>
-      </div>
-      
-      <!-- Details Column -->
-      <div class="contact-details">
-        <h3>Get in Touch</h3>
-        <p><strong>Phone:</strong> <a href="tel:+17138240017">(713) 824-0017</a></p>
-        <p><strong>Fax:</strong> (713) 730-3601</p>
-        <p><strong>Email:</strong> <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
-        
-        <h3>Office Hours</h3>
-        <p>Mon – Fri: 8:00 AM – 6:00 PM</p>
-        <p>Sat – Sun: Closed</p>
-      </div>
+  <section class="contact-section">
+
+    <!-- Form Column -->
+    <div class="contact-form">
+      <p>We’d love to hear from you!</p>
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required/>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required/>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required/>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <div class="robot-check">
+          <input type="checkbox" id="notRobot" required/>
+          <label for="notRobot">I’m not a robot</label>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="confirmation" style="margin-top:1rem; display:none; color:var(--teal);">
+        Thanks! Your message has been sent.
+      </p>
+    </div>
+
+    <!-- Details Column -->
+    <div class="contact-details">
+      <h3>Get in Touch</h3>
+      <p><strong>Phone:</strong> <a href="tel:+17138240017">(713) 824-0017</a></p>
+      <p><strong>Fax:</strong> (713) 730-3601</p>
+      <p><strong>Email:</strong> <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
+      <h3>Office Hours</h3>
+      <p>Mon – Fri: 8:00 AM – 6:00 PM</p>
+      <p>Sat – Sun: Closed</p>
     </div>
   </section>
 
@@ -161,24 +176,41 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <h4>Contact Us</h4>
-        <p><strong>Phone:</strong> (713) 824-0017</p>
-        <p><strong>Fax:</strong> (713) 730-3601</p>
-        <p><strong>Email:</strong> <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
+        <p>Phone: (713) 824-0017</p>
+        <p>Fax: (713) 730-3601</p>
+        <p>Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
       </div>
       <div class="footer-col social">
         <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
-          <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
-          <a href="#"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
-          <a href="#"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
-        </div>
+        <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
+        <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
+        <a href="#"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
+        <a href="#"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
+      © 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.
     </div>
   </footer>
 
+  <!-- ===== Formspree AJAX submission ===== -->
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const resp = await fetch('https://formspree.io/f/mrbqvagk', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (resp.ok) {
+        form.reset();
+        document.getElementById('confirmation').style.display = 'block';
+      } else {
+        alert('Oops! There was a problem submitting your form.');
+      }
+    });
+  </script>
 </body>
 </html>
