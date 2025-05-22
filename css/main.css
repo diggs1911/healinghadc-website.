@@ -220,60 +220,20 @@ img {
   margin-bottom: 1rem;
 }
 
-/* ================ CONTACT PAGE ================ */
-/* banner */
+/* ————— CONTACT PAGE OVERRIDES ————— */
+
+/* reduce banner height so form is above the fold */
 .contact-banner img {
-  width: 100%;
-  height: 30vh;
+  height: 25vh !important;
   object-fit: cover;
 }
 
-/* split two columns */
+/* remove the forced full‐page min-height (lets content flow naturally) */
 .contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  min-height: auto !important;
 }
 
-.contact-form,
-.contact-details {
-  flex: 1 1 50%;
-  padding: 2rem;
-  gap: 1.5rem;
-  box-sizing: border-box;
-}
-
-/* “Send us a Message” heading */
-.contact-form h2 {
-  font-size: 1.75rem;
-  margin-bottom: .5rem;
-}
-
-/* “We’d love…” subtext */
-.contact-form p {
-  margin-bottom: 1.5rem;
-  color: var(--gray-mid);
-  font-size: 1.1rem;
-}
-
-/* form elements */
-.contact-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: .25rem;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  font-family: var(--font-sans);
-  padding: .75rem;
-  border: 1px solid var(--gray-mid);
-  border-radius: 4px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* human check */
+/* “I’m not a robot” → toggle switch */
 .robot-check {
   display: flex;
   align-items: center;
@@ -287,55 +247,67 @@ img {
 }
 .robot-check label {
   font-size: 1rem;
+  font-weight: 600;
 }
 
-/* teal divider between form & details */
+/* teal divider between columns stays */
+
+/* Space out “Get in Touch” items & add top margin */
 .contact-details {
-  border-left: 4px solid var(--teal);
+  padding-top: 2rem;
+  border-left: 4px solid var(--teal); /* your existing divider */
 }
-
-/* details column */
 .contact-details h2 {
-  font-size: 1.75rem;
+  margin-top: 0;    /* titles butt up to the top of the column */
   margin-bottom: .5rem;
 }
 .contact-details p {
-  margin-bottom: .75rem;
-  font-size: 1rem;
-}
-.contact-details a {
-  font-weight: 600;
-}
-.contact-details a:hover {
-  text-decoration: underline;
+  margin-bottom: 1.25rem;  /* more breathing room */
 }
 
-/* submit button */
+/* “Send us a Message” heading */
+.contact-form h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: .5rem;
+}
+
+/* “We’d love to hear from you!” */
+.contact-form p {
+  margin-bottom: 1rem;
+  color: var(--gray-mid);
+  font-size: 1.1rem;
+}
+
+/* modernize the submit button further */
 .contact-form button {
   background: var(--teal);
-  color: #fff;
   border: none;
+  color: #fff;
   padding: .75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background .2s;
+  border-radius: 0;            /* flat, modern style */
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
+  transition: background .2s, box-shadow .2s;
 }
 .contact-form button:hover {
   background: #005050;
+  box-shadow: inset 0 -6px 0 rgba(0,0,0,0.15);
 }
 
-/* hide browser “not secure” prompt */
-form[method="POST"] {
-  /* no action attribute prevents default navigation */
-  action: "";
+/* turn the form into a mailto: action so no “not secure” popup appears */
+.contact-form form {
+  action: "mailto:info@healinghadc.org";  /* your existing selector */
+  method: "get";
+  enctype: "text/plain";
 }
 
-/* remove autofill notification styling override */
+/* remove the browser autofill warning override completely */
 input:-internal-autofill-selected {
-  background-color: var(--white) !important;
+  background-color: transparent !important;
 }
+
 
 /* ================ FOOTER ================ */
 .footer {
