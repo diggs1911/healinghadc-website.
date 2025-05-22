@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Healing H.A.D.C., Inc.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header container">
+    <a href="index.html" class="logo-link">
+      <img src="images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="#">Services ▾</a>
+          <ul class="dropdown">
+            <li><a href="vital-path.html">VitalPath Home Health</a></li>
+            <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
+            <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
+            <li><a href="heartreach.html">HeartReach Community Services</a></li>
+          </ul>
+        </li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO (Image-only banner) -->
+  <section class="hero" style="height:40vh;position:relative;overflow:hidden;">
+    <div class="hero-bg" style="background:url('https://source.unsplash.com/1200x600/?help,community') center/cover no-repeat;"></div>
+    <div class="hero-overlay container" style="padding-top:12vh;text-align:left;color:#fff;">
+      <h1>Contact Us</h1>
+      <p>We’re happy to help—tell us how we can support you.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="container contact-us" style="padding:4rem 0;">
+    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <!-- Contact Form -->
+      <div>
+        <h2 style="color:var(--purple);margin-bottom:1rem;">Send Us a Message</h2>
+        <form action="#" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required style="padding:.75rem;border:1px solid #ccc;border-radius:4px;"/>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required style="padding:.75rem;border:1px solid #ccc;border-radius:4px;"/>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" style="padding:.75rem;border:1px solid #ccc;border-radius:4px;"/>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required style="padding:.75rem;border:1px solid #ccc;border-radius:4px;"></textarea>
+
+          <button type="submit" class="btn-hero" style="align-self:flex-start;">Submit</button>
+        </form>
+      </div>
+
+      <!-- Contact Details -->
+      <div>
+        <h2 style="color:var(--purple);margin-bottom:1rem;">Get in Touch</h2>
+        <p style="margin-bottom:.5rem;"><strong>Phone:</strong> <a href="tel:+17138240017">(713) 824-0017</a></p>
+        <p style="margin-bottom:.5rem;"><strong>Fax:</strong> (713) 730-3601</p>
+        <p style="margin-bottom:1.5rem;"><strong>Email:</strong> <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
+
+        <h3 style="margin-top:2rem;color:var(--teal);">Office Hours</h3>
+        <p>Mon – Fri: 8:00 AM – 6:00 PM</p>
+        <p>Sat – Sun: Closed</p>
+
+        <h3 style="margin-top:2rem;color:var(--teal);">Find Us</h3>
+        <!-- Replace with real embed later -->
+        <div style="width:100%;height:200px;background:#eee;border-radius:4px;text-align:center;line-height:200px;color:#999;">
+          [Map Placeholder]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Phone: (713) 824-0017</p>
+        <p>Fax: (713) 730-3601</p>
+        <p>Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
+      </div>
+      <div class="footer-col social">
+        <h4>Follow Us</h4>
+        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"/></a>
+        <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"/></a>
+        <a href="#"><img src="images/icon-linkedin.svg" alt="LinkedIn"/></a>
+        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"/></a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
 
