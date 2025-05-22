@@ -1,40 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mary Williams Foundation</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mary Williams Foundation for Hope & Healing</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
+
+  <!-- HEADER & NAV -->
   <header class="header container">
     <a href="index.html" class="logo-link">
-      <img src="images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
+      <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
     </a>
     <nav class="main-nav">
-      <!-- same nav as index.html -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="#">Services ▾</a>
+          <ul class="dropdown">
+            <li><a href="vital-path.html">VitalPath Home Health</a></li>
+            <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
+            <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
+            <li><a href="heartreach.html">HeartReach Community Services</a></li>
+          </ul>
+        </li>
+        <li><a href="foundation.html">Foundation</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="container about-foundation">
-    <h1>Mary Williams Foundation for Hope &amp; Healing</h1>
-    <img src="images/Founder_Mary_Williams.jpg" alt="Mary Williams" class="founder-photo"/>
-    <p>
-      In 1985, Mary Ann Williams graduated with a <strong>B.A. in Business Administration</strong>. Motivated by her faith and love for community, she founded Choo Choo Train Christian Academy in 1995—growing it from 5 children to 300+, plus a charter school, youth camp, and Head Start program.
-    </p>
-    <p>
-      Answering God’s call, she transitioned to adult care—with the same compassion she’d shown children—launching Healing H.A.D.C., Inc. Her 24/7 care facility continues her legacy of love and service.
-    </p>
-    <h2>Core Programs</h2>
-    <ul>
-      <li><strong>Legacy Scholarships:</strong> Renewable awards for students in healthcare, social work, or behavioral health.</li>
-      <li><strong>Hope &amp; Healing Summer Institute:</strong> 6-week camp on mental-health literacy, cancer prevention, nutrition & fitness.</li>
-      <li><strong>Hearts of Hope Banquet:</strong> Annual gala honoring partners and scholarship winners.</li>
-    </ul>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay">
+      <h1>Mary Williams Foundation<br/>for Hope & Healing</h1>
+      <p>Honoring Mary Ann’s legacy through scholarships, community programs, and annual celebration.</p>
+    </div>
   </section>
 
+  <!-- FOUNDER STORY -->
+  <section class="about-foundation container">
+    <h2>Our Founder: Mary Ann Williams</h2>
+    <div class="about-grid">
+      <div class="about-images">
+        <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Ann Williams" class="founder-photo"/>
+      </div>
+      <div class="about-text">
+        <p>
+          In 1985, Mary Ann Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life's mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
+        </p>
+        <p>
+          Mary's profound dedication to uplifting those around her extended far beyond education. She actively engaged in numerous community initiatives, becoming a recognized leader and advocate for families, youth, and seniors alike. Her compassionate spirit inspired her next significant endeavor—transitioning into adult care. Answering a divine call, she established Healing H.A.D.C., Inc., a comprehensive 24/7 adult care facility rooted in the same compassion, empathy, and devotion that characterized her educational ventures.
+        </p>
+        <p>
+          Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well-being.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE PROGRAMS -->
+  <section class="pillars container">
+    <h2>Core Programs & Services</h2>
+    <div class="service-grid">
+      <div class="card">
+        <img src="/images/Leagacy_Scholarships.png" alt="Mary Williams Legacy Scholarships"/>
+        <div class="card-content">
+          <h3>Mary Williams Legacy Scholarships</h3>
+          <p>Renewable awards for Galveston-area students entering mental health, social work, or healthcare degree tracks.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute"/>
+        <div class="card-content">
+          <h3>Hope & Healing Summer Institute</h3>
+          <p>Six-week teen & adult day-camp covering mental health literacy, cancer prevention, nutrition & fitness.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope Banquet"/>
+        <div class="card-content">
+          <h3>Hearts of Hope Banquet</h3>
+          <p>Annual celebration honoring partners, awarding scholarships & presenting the Community Healing Award.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <!-- same footer as index.html -->
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
+        <p>Phone: <a href="tel:+17138240017">(713) 824-0017</a></p>
+        <p>Fax: (713) 730-3601</p>
+      </div>
+      <div class="footer-col social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
+          <a href="#" aria-label="Twitter"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
+          <a href="#" aria-label="LinkedIn"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#" aria-label="Instagram"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
+    </div>
   </footer>
+
 </body>
 </html>
