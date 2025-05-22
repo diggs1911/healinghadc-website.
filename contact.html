@@ -1,18 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us — Healing H.A.D.C., Inc.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact — Healing H.A.D.C., Inc.</title>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" 
+    rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    /* === Page-specific overrides === */
+    .contact-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .contact-section {
+      padding: 4rem 0;
+    }
+    .intro-text {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: .25rem;
+      font-weight: 500;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: .75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-family: var(--font-sans);
+    }
+    .robot-check {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-form .btn-hero {
+      background: var(--gold);
+      color: #fff;
+      padding: .75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .contact-details h3 {
+      font-size: 1.25rem;
+      color: var(--purple);
+      margin-bottom: .75rem;
+    }
+    .contact-details p {
+      margin-bottom: .75rem;
+      line-height: 1.6;
+    }
+    @media (max-width:768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-banner img {
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER & NAVIGATION -->
   <header class="header container">
     <a href="index.html" class="logo-link">
-      <img src="images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
+      <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
     </a>
     <nav class="main-nav">
       <ul>
@@ -33,54 +104,54 @@
     </nav>
   </header>
 
-  <!-- HERO (Image-only banner) -->
-  <section class="hero" style="height:40vh;position:relative;overflow:hidden;">
-    <div class="hero-bg" style="background:url('https://source.unsplash.com/1200x600/?help,community') center/cover no-repeat;"></div>
-    <div class="hero-overlay container" style="padding-top:12vh;text-align:left;color:#fff;">
-      <h1>Contact Us</h1>
-      <p>We’re happy to help—tell us how we can support you.</p>
-    </div>
+  <!-- BANNER -->
+  <section class="contact-banner">
+    <img src="/images/Contact_Us.png" alt="Contact Us Banner"/>
   </section>
 
-  <!-- CONTACT CONTENT -->
-  <section class="container contact-us" style="padding:4rem 0;">
-    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
-      <!-- Contact Form -->
-      <div>
-        <h2 style="color:var(--purple);margin-bottom:1rem;">Send Us a Message</h2>
-        <form action="#" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
+  <!-- CONTACT SECTION -->
+  <section class="contact-section container">
+    <p class="intro-text">We’d love to hear from you!</p>
+    <div class="contact-grid">
+      
+      <!-- Form Column -->
+      <div class="contact-form">
+        <form 
+          action="mailto:info@healinghadc.org" 
+          method="post" 
+          enctype="text/plain">
+          
           <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required style="padding:.75rem;border:1px solid #ccc;border-radius:4px;"/>
-
+          <input type="text" id="name" name="Your Name" required/>
+          
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required style="padding:.75rem;border:1px solid #ccc;border-radius:4px;"/>
-
+          <input type="email" id="email" name="Email Address" required/>
+          
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" style="padding:.75rem;border:1px solid #ccc;border-radius:4px;"/>
-
+          <input type="tel" id="phone" name="Phone Number" required/>
+          
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required style="padding:.75rem;border:1px solid #ccc;border-radius:4px;"></textarea>
-
-          <button type="submit" class="btn-hero" style="align-self:flex-start;">Submit</button>
+          <textarea id="message" name="Message" rows="6" required></textarea>
+          
+          <div class="robot-check">
+            <input type="checkbox" id="not-robot" name="not-robot" required/>
+            <label for="not-robot">I’m not a robot</label>
+          </div>
+          
+          <button type="submit" class="btn-hero">Submit</button>
         </form>
       </div>
-
-      <!-- Contact Details -->
-      <div>
-        <h2 style="color:var(--purple);margin-bottom:1rem;">Get in Touch</h2>
-        <p style="margin-bottom:.5rem;"><strong>Phone:</strong> <a href="tel:+17138240017">(713) 824-0017</a></p>
-        <p style="margin-bottom:.5rem;"><strong>Fax:</strong> (713) 730-3601</p>
-        <p style="margin-bottom:1.5rem;"><strong>Email:</strong> <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
-
-        <h3 style="margin-top:2rem;color:var(--teal);">Office Hours</h3>
+      
+      <!-- Details Column -->
+      <div class="contact-details">
+        <h3>Get in Touch</h3>
+        <p><strong>Phone:</strong> <a href="tel:+17138240017">(713) 824-0017</a></p>
+        <p><strong>Fax:</strong> (713) 730-3601</p>
+        <p><strong>Email:</strong> <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
+        
+        <h3>Office Hours</h3>
         <p>Mon – Fri: 8:00 AM – 6:00 PM</p>
         <p>Sat – Sun: Closed</p>
-
-        <h3 style="margin-top:2rem;color:var(--teal);">Find Us</h3>
-        <!-- Replace with real embed later -->
-        <div style="width:100%;height:200px;background:#eee;border-radius:4px;text-align:center;line-height:200px;color:#999;">
-          [Map Placeholder]
-        </div>
       </div>
     </div>
   </section>
@@ -89,17 +160,19 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Phone: (713) 824-0017</p>
-        <p>Fax: (713) 730-3601</p>
-        <p>Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
+        <h4>Contact Us</h4>
+        <p><strong>Phone:</strong> (713) 824-0017</p>
+        <p><strong>Fax:</strong> (713) 730-3601</p>
+        <p><strong>Email:</strong> <a href="mailto:info@healinghadc.org">info@healinghadc.org</a></p>
       </div>
       <div class="footer-col social">
         <h4>Follow Us</h4>
-        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"/></a>
-        <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"/></a>
-        <a href="#"><img src="images/icon-linkedin.svg" alt="LinkedIn"/></a>
-        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"/></a>
+        <div class="social-icons">
+          <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
+          <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
+          <a href="#"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom container">
@@ -109,4 +182,3 @@
 
 </body>
 </html>
-
