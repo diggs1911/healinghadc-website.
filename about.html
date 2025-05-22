@@ -2,51 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>About Us — Healing H.A.D.C., Inc.</title>
+  <title>About Healing H.A.D.C.</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="container" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 0;">
-    <a href="index.html"><img src="images/hhc-logo.svg" alt="Logo" style="height:50px;"></a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="foundation.html">Foundation</a>
+  <header class="header container">
+    <a href="index.html" class="logo-link"><img src="images/Healing_HADC.png" alt="Logo" class="logo-img"/></a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown"><a href="#">Services ▾</a>
+          <ul class="dropdown">
+            <li><a href="vital-path.html">VitalPath</a></li>
+            <li><a href="mind-path.html">MindPath</a></li>
+            <li><a href="caring-hearts.html">Caring Hearts</a></li>
+            <li><a href="heartreach.html">HeartReach</a></li>
+          </ul>
+        </li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" style="background:url('https://source.unsplash.com/1600x900/?founder,leadership')">
-    <div class="container" style="text-align:center;">
-      <h1>Meet Our Founder</h1>
-      <h2>Mary Ann Williams</h2>
-    </div>
+  <section class="container about-us">
+    <h1>About Healing H.A.D.C., Inc.</h1>
+    <p>
+      Healing H.A.D.C., Inc. is a 501(c)(3) nonprofit dedicated to providing 
+      compassionate, professional care across the lifespan. Founded as a faith-based 
+      outreach, we partner with Medicare, HHS and Social Security to deliver 
+      outcomes-driven home health, behavioral health, independent living, and 
+      community services throughout Galveston County and beyond.
+    </p>
+    <h2>Our Mission</h2>
+    <p>
+      To empower independence and foster wellbeing—one heart, one mind, one community at a time.
+    </p>
+    <h2>Our Values</h2>
+    <ul>
+      <li><strong>Compassion:</strong> Every interaction is rooted in empathy and respect.</li>
+      <li><strong>Excellence:</strong> We exceed standards through ongoing training and innovation.</li>
+      <li><strong>Integrity:</strong> We operate with transparency, accountability, and trust.</li>
+      <li><strong>Collaboration:</strong> Strong partnerships magnify our community impact.</li>
+    </ul>
   </section>
 
-  <!-- STORY -->
-  <div class="container">
-    <h2>Her Journey of Faith & Service</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;">
-      <img src="images/founder-mary.jpg" alt="Mary Williams" style="border-radius:8px;">
-      <div>
-        <p>In 1985, Mary Ann Williams graduated with a <strong>B.A. in Business Administration</strong>. Fueled by her passion for church, children and community, she founded Choo Choo Train Christian Academy in 1995 with five students in her home. Under her leadership, it expanded to six buildings, serving 300+ children with a charter school, youth camp and Head Start program.</p>
-        <p>Answering God’s call to adult care, she established Healing H.A.D.C.—bringing the same compassion to adults in need. Today, our 24/7 facility continues her legacy of dignity, respect and holistic support.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p><strong>Empowering independence, one heart at a time.</strong></p>
-      <p>Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a> | Phone: (713) 824-0017 | Fax: (713) 730-3601</p>
-      <div class="footer‐links">
-        <a href="privacy.html">Privacy</a> | <a href="contact.html">Contact</a>
-      </div>
-      <p>© 2025 Healing H.A.D.C., Inc.</p>
-    </div>
+  <footer class="footer">
+    <!-- same footer markup as index.html -->
   </footer>
 </body>
 </html>
