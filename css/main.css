@@ -17,7 +17,7 @@ a:hover { text-decoration:underline; }
 
 /* ================ HEADER & NAV ================ */
 .header { display:flex; align-items:center; justify-content:space-between; padding:1rem 0; }
-.logo-img { max-height:100px; width:auto; } /* bigger logo */
+.logo-img { max-height:140px; width:auto; } /* bigger logo */
 .main-nav ul { display:flex; gap:1.5rem; list-style:none; position:relative; }
 .main-nav a { font-weight:600; padding:.5rem; display:inline-block; }
 .has-dropdown { position:relative; }
