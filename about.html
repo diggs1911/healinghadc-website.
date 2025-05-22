@@ -15,7 +15,7 @@
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 2rem;
-      align-items: stretch; /* equal heights */
+      align-items: stretch; /* default for other sections */
     }
     .about-images img {
       width: 300px;
@@ -79,15 +79,15 @@
     </nav>
   </header>
 
-  <!-- ABOUT US -->
+  <!-- ABOUT US (text centered next to image) -->
   <section class="about-us container">
-    <div class="about-grid">
+    <div class="about-grid" style="align-items: center;">
       <div class="about-images">
         <img src="/images/About_Us.png" alt="About Us"/>
       </div>
       <div class="about-text">
         <p>
-          Healing H.A.D.C., Inc. is a compassionate and dedicated 501(c)(3) nonprofit organization committed to positively transforming lives throughout Galveston County and the surrounding regions. We offer an integrated approach to care, providing essential services in home health, behavioral health counseling, independent living solutions, and proactive community outreach. Our dedicated team focuses on empowering individuals, supporting families, and strengthening community bonds. We aim to create environments where both our clients and our team members feel valued, supported, and inspired.
+          <strong>Healing H.A.D.C., Inc.</strong> is a compassionate and dedicated 501(c)(3) nonprofit organization committed to positively transforming lives throughout Galveston County and the surrounding regions. We offer an integrated approach to care, providing essential services in home health, behavioral health counseling, independent living solutions, and proactive community outreach. Our dedicated team focuses on empowering individuals, supporting families, and strengthening community bonds. We aim to create environments where both our clients and our team members feel valued, supported, and inspired.
         </p>
       </div>
     </div>
@@ -103,7 +103,7 @@
       </div>
       <div class="about-text">
         <p>
-          Our mission is to foster independence, promote wellness, and enrich lives—one heart, one mind, and one community at a time. We are passionately dedicated to delivering personalized, compassionate care that honors dignity, respects individual needs, and enhances the overall quality of life.
+          <strong>Our mission</strong> is to foster independence, promote wellness, and enrich lives—one heart, one mind, and one community at a time. We are passionately dedicated to delivering personalized, compassionate care that honors dignity, respects individual needs, and enhances the overall quality of life.
         </p>
       </div>
     </div>
@@ -125,6 +125,8 @@
       </div>
     </div>
   </section>
+
+  <hr class="section-divider"/>
 
   <!-- JOIN US CALL-OUT -->
   <section class="container">
