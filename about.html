@@ -6,6 +6,44 @@
   <title>About Us – Healing H.A.D.C., Inc.</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    /* Page-specific overrides */
+    .about-us {
+      padding: 4rem 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-images img {
+      width: 300px;
+      border-radius: 8px;
+      display: block;
+    }
+    .about-text p {
+      margin-bottom: 1.75rem;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .section-divider {
+      border: 0;
+      height: 1px;
+      background: var(--gray-light);
+      margin: 3rem 0;
+    }
+    @media (max-width:768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .about-images img {
+        margin: 0 auto 2rem;
+        width: 60%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -32,52 +70,52 @@
     </nav>
   </header>
 
-  <!-- ABOUT US SECTION -->
+  <!-- ABOUT US -->
   <section class="about-us container">
     <div class="about-grid">
-      <!-- Text on left -->
+      <div class="about-images">
+        <img src="/images/About_Us.png" alt="About Us"/>
+      </div>
       <div class="about-text">
         <p>
           Healing H.A.D.C., Inc. is a compassionate and dedicated 501(c)(3) nonprofit organization committed to positively transforming lives throughout Galveston County and the surrounding regions. We offer an integrated approach to care, providing essential services in home health, behavioral health counseling, independent living solutions, and proactive community outreach. Our dedicated team focuses on empowering individuals, supporting families, and strengthening community bonds. We aim to create environments where both our clients and our team members feel valued, supported, and inspired.
         </p>
       </div>
-      <!-- Image on right -->
-      <div class="about-images">
-        <img src="/images/About_Us.png" alt="About Us"/>
-      </div>
     </div>
   </section>
 
-  <!-- OUR MISSION SECTION -->
+  <hr class="section-divider"/>
+
+  <!-- OUR MISSION -->
   <section class="about-us container">
     <div class="about-grid">
+      <div class="about-images">
+        <img src="/images/Our_Mission.png" alt="Our Mission"/>
+      </div>
       <div class="about-text">
         <p>
           Our mission is to foster independence, promote wellness, and enrich lives—one heart, one mind, and one community at a time. We are passionately dedicated to delivering personalized, compassionate care that honors dignity, respects individual needs, and enhances the overall quality of life.
         </p>
       </div>
-      <div class="about-images">
-        <img src="/images/Our_Mission.png" alt="Our Mission"/>
-      </div>
     </div>
   </section>
 
-  <!-- OUR VALUES SECTION -->
+  <hr class="section-divider"/>
+
+  <!-- OUR VALUES -->
   <section class="about-us container">
     <div class="about-grid">
+      <div class="about-images">
+        <img src="/images/Our_Values.png" alt="Our Values"/>
+      </div>
       <div class="about-text">
-        <ul style="list-style:disc; margin-left:1.25rem;">
-          <li><strong>Compassion:</strong> Empathy and understanding shape every service we provide, ensuring genuine care and kindness.</li>
-          <li><strong>Excellence:</strong> Driven by innovation and ongoing improvement, we consistently strive to surpass expectations and set new standards in care.</li>
-          <li><strong>Integrity:</strong> Honesty, transparency, and accountability are fundamental to everything we do, building trust with our clients, staff, and partners.</li>
-          <li><strong>Collaboration:</strong> We actively seek partnerships with families, healthcare providers, and community organizations, understanding that collective efforts lead to stronger, healthier, and more resilient communities.</li>
-        </ul>
+        <p><strong>Compassion:</strong> Empathy and understanding shape every service we provide, ensuring genuine care and kindness.</p>
+        <p><strong>Excellence:</strong> Driven by innovation and ongoing improvement, we consistently strive to surpass expectations and set new standards in care.</p>
+        <p><strong>Integrity:</strong> Honesty, transparency, and accountability are fundamental to everything we do, building trust with our clients, staff, and partners.</p>
+        <p><strong>Collaboration:</strong> We actively seek partnerships with families, healthcare providers, and community organizations, understanding that collective efforts lead to stronger, healthier, and more resilient communities.</p>
         <p style="margin-top:1.5rem;">
           Join us at Healing H.A.D.C., Inc. and become part of a compassionate team dedicated to making a meaningful difference. Together, let's inspire wellness, independence, and community strength.
         </p>
-      </div>
-      <div class="about-images">
-        <img src="/images/Our_Values.png" alt="Our Values"/>
       </div>
     </div>
   </section>
