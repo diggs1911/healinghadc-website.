@@ -115,11 +115,15 @@
     </div>
   </footer>
 <script>
-  document.querySelector('.nav-toggle')
-    .addEventListener('click', () => {
-      document.querySelector('.main-nav')
-        .classList.toggle('open');
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (!toggleBtn || !nav) return;
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('open');
     });
+  });
 </script>
 </body>
 </html>
