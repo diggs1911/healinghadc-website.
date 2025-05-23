@@ -62,17 +62,22 @@ a:hover {
   padding: .5rem;
   display: inline-block;
 }
-/* — Mobile hamburger toggle — */
+/* — Mobile hamburger toggle & submenu accordion — */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 2rem;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
 }
 
-/* at widths ≤768px, hide the links & show the button */
+/* at widths ≤768px, toggle nav & submenu */
 @media (max-width: 768px) {
+  /* show hamburger, hide desktop links */
   .nav-toggle {
     display: block;
   }
@@ -81,14 +86,23 @@ a:hover {
     flex-direction: column;
     background: var(--white);
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    top: 100%; left: 0; right: 0;
     padding: 1rem 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 10;
   }
   .main-nav.open ul {
+    display: flex;
+  }
+
+  /* accordion submenu behavior */
+  .has-dropdown .dropdown {
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .has-dropdown.open .dropdown {
     display: flex;
   }
 }
