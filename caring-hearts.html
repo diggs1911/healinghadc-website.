@@ -1,47 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Caring Hearts Independent Living — Healing H.A.D.C.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Caring Hearts Independent Living — Healing H.A.D.C., Inc.</title>
+  <!-- Montserrat Font -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" 
+    rel="stylesheet"/>
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    /* ===== Page-Specific CSS ===== */
+    .hero-bg {
+      background: url('/images/Caring_Hearts_Banner.png') center/cover no-repeat;
+      height: 50vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      text-shadow: 1px 2px 4px rgba(0,0,0,0.6);
+    }
+    .hero-overlay h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-overlay p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+    .section h2 {
+      font-size: 2rem;
+      color: var(--purple);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .about-grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .about-text p {
+      margin-bottom: 1.5rem;
+      line-height: 1.75;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      overflow: hidden;
+      text-align: center;
+      padding: 1rem;
+      transition: transform .2s;
+    }
+    .service-card:hover {
+      transform: translateY(-3px);
+    }
+    .service-card img {
+      max-width: 80px;
+      margin-bottom: .75rem;
+    }
+    .service-card h3 {
+      color: var(--teal);
+      margin-bottom: .5rem;
+      font-size: 1.25rem;
+    }
+    .service-card p {
+      color: var(--gray-mid);
+      font-size: 1rem;
+    }
+
+    @media (max-width:768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-bg {
+        height: 30vh;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="container" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 0;">
-    <a href="index.html"><img src="images/hhc-logo.svg" alt="Logo" style="height:50px;"></a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="foundation.html">Foundation</a>
+
+  <!-- HEADER -->
+  <header class="header container">
+    <a href="index.html" class="logo-link">
+      <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="#">Services ▾</a>
+          <ul class="dropdown">
+            <li><a href="vital-path.html">VitalPath Home Health</a></li>
+            <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
+            <li class="active"><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
+            <li><a href="heartreach.html">HeartReach Community Services</a></li>
+          </ul>
+        </li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero" style="background:url('https://source.unsplash.com/1600x900/?senior,living')">
-    <div class="container"><h1>Caring Hearts Independent Living</h1></div>
+  <!-- HERO -->
+  <section class="hero-bg">
+    <div class="hero-overlay">
+      <h1>Caring Hearts Independent Living</h1>
+      <p>Compassionate caregivers onsite daily, with doctors and nurse practitioners engaged per your personalized healthcare plan.</p>
+    </div>
   </section>
 
-  <div class="container">
-    <h2>Safe, Compassionate Residential Care</h2>
-    <img src="images/Caring_Hearts.png" alt="Caring Hearts Logo" style="height:100px;margin:1rem 0;">
-    <p>Our Independent Living community offers 24/7 support, daily wellness programs, nutritious meals, and social activities—all designed to nurture dignity, autonomy and meaningful connections.</p>
-    <h3>Community Features</h3>
-    <ul>
-      <li>Private & semi-private living suites with emergency call systems</li>
-      <li>Daily group activities: art, music, fitness & therapy workshops</li>
-      <li>On-site dining room with chef-prepared meals</li>
-      <li>Transportation to appointments & community events</li>
-    </ul>
-    <a href="contact.html" style="background:var(--gold);color:var(--white);padding:.75rem 1.5rem;border-radius:4px;">Schedule a Tour</a>
-  </div>
+  <!-- ABOUT US -->
+  <section class="section container">
+    <h2>About Caring Hearts</h2>
+    <div class="about-grid">
+      <div class="about-images">
+        <img src="/images/CaringHearts_Facility.jpg" alt="Residents enjoying community activities"/>
+      </div>
+      <div class="about-text">
+        <p>
+          At Caring Hearts Independent Living, we provide a warm, community-focused environment for adults needing daily support with activities of living. Our compassionate caregivers are onsite each day, and we partner with doctors and nurse practitioners—assigned according to each resident’s healthcare plan—to ensure comprehensive medical oversight.
+        </p>
+        <p>
+          Residents share comfortable suites and communal living spaces, enjoy meals prepared under the Texas Department of Agriculture’s Adult Food Program guidelines, and participate in engaging wellness and social programs designed to foster connection and joy.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <div class="container">
-      <p><strong>Empowering independence, one heart at a time.</strong></p>
-      <p>Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a> | Phone: (713) 824-0017 | Fax: (713) 730-3601</p>
-      <div class="footer‐links"><a href="privacy.html">Privacy</a> | <a href="contact.html">Contact</a></div>
-      <p>© 2025 Healing H.A.D.C., Inc.</p>
+  <!-- CORE SERVICES -->
+  <section class="section container">
+    <h2>Our Core Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="/images/icon-meal.svg" alt="Adult Food Program"/>
+        <h3>Nutritious Meal Service</h3>
+        <p>Delicious meals prepared daily in accordance with the Texas Dept. of Agriculture Adult Food Program standards.</p>
+      </div>
+      <div class="service-card">
+        <img src="/images/icon-therapy.svg" alt="Therapeutic Activities"/>
+        <h3>Therapeutic Activities</h3>
+        <p>Weekly art and music sessions, exercise classes, and wellness workshops led by trained facilitators.</p>
+      </div>
+      <div class="service-card">
+        <img src="/images/icon-nurse.svg" alt="Nursing Care"/>
+        <h3>Nursing & Health Monitoring</h3>
+        <p>Licensed nurses provide medication administration and health monitoring, with doctors & NPs consulted per plan.</p>
+      </div>
+      <div class="service-card">
+        <img src="/images/icon-transport.svg" alt="Transportation"/>
+        <h3>Transportation Assistance</h3>
+        <p>Coordinated rides for medical appointments, community events, and family visits.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="section container">
+    <h2>Resident & Family Testimonial</h2>
+    <blockquote style="font-style:italic; color:var(--gray-mid); max-width:800px; margin:1rem auto; text-align:center;">
+      “My father receives excellent care here and loves joining the daily activities. The team truly treats him like family.”  
+      <br/><strong>— Kevin L., son of resident</strong>
+    </blockquote>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Contact Caring Hearts</h4>
+        <p>Email: <a href="mailto:caringhearts@healinghadc.org">caringhearts@healinghadc.org</a></p>
+        <p>Phone: <a href="tel:+17138240018">(713) 824-0018</a></p>
+      </div>
+      <div class="footer-col social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
+          <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
+          <a href="#"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      © 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.
     </div>
   </footer>
+
+  <!-- NAV TOGGLE & ACCORDION SCRIPTS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.main-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => nav.classList.toggle('open'));
+      }
+      document.querySelectorAll('.has-dropdown > a').forEach(link => {
+        link.addEventListener('click', e => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            link.parentElement.classList.toggle('open');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-
