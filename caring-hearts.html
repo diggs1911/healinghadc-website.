@@ -4,14 +4,20 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Caring Hearts Independent Living — Healing H.A.D.C., Inc.</title>
+
   <!-- Montserrat Font -->
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" 
-    rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/main.css"/>
+
   <style>
     /* ===== Page-Specific CSS ===== */
+
+    /* HERO */
     .hero-bg {
       background: url('/images/Caring_Hearts_Banner.png') center/cover no-repeat;
       height: 50vh;
@@ -26,6 +32,8 @@
       color: #fff;
       text-align: center;
       text-shadow: 1px 2px 4px rgba(0,0,0,0.6);
+      padding: 0 1rem;
+      width: min(900px, 95%);
     }
     .hero-overlay h1 {
       font-size: 2.5rem;
@@ -33,9 +41,11 @@
     }
     .hero-overlay p {
       font-size: 1.2rem;
-      max-width: 600px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
+    /* SECTIONS */
     .section {
       padding: 4rem 0;
     }
@@ -46,6 +56,7 @@
       margin-bottom: 1.5rem;
     }
 
+    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -55,53 +66,132 @@
     .about-grid img {
       width: 100%;
       border-radius: 8px;
+      display: block;
     }
     .about-text p {
       margin-bottom: 1.5rem;
       line-height: 1.75;
     }
 
+    /* CORE SERVICES (PHOTO CARDS) */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
+
     .service-card {
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
       overflow: hidden;
-      text-align: center;
-      padding: 1rem;
-      transition: transform .2s;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 360px;
     }
+
     .service-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+      border-color: rgba(0,106,100,0.25);
     }
-    .service-card img {
-      max-width: 80px;
-      margin-bottom: .75rem;
+
+    .service-media {
+      height: 180px;
+      background: var(--gray-light);
+      overflow: hidden;
+      border-bottom: 1px solid #eee;
     }
-    .service-card h3 {
+
+    .service-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-body {
+      padding: 1.25rem;
+      flex: 1;
+      text-align: left;
+    }
+
+    .service-body h3 {
       color: var(--teal);
       margin-bottom: .5rem;
       font-size: 1.25rem;
-    }
-    .service-card p {
-      color: var(--gray-mid);
-      font-size: 1rem;
+      line-height: 1.2;
     }
 
-    @media (max-width:768px) {
+    .service-body p {
+      color: var(--gray-mid);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* TESTIMONIAL */
+    .testimonial-section {
+      background: var(--gray-light);
+    }
+
+    .testimonial-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+      border-left: 6px solid var(--gold);
+    }
+
+    .testimonial-card blockquote {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--gray-dark);
+      margin: 0;
+    }
+
+    .testimonial-card figcaption {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .15rem;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .testimonial-role {
+      color: var(--gray-mid);
+      font-size: .95rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
       .about-grid {
         grid-template-columns: 1fr;
       }
       .hero-bg {
         height: 30vh;
       }
+      .hero-overlay h1 {
+        font-size: 1.75rem;
+      }
+      .hero-overlay p {
+        font-size: 1rem;
+      }
+      .service-media {
+        height: 170px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -109,11 +199,14 @@
     <a href="index.html" class="logo-link">
       <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
     </a>
+
     <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
     <nav class="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+
         <li class="has-dropdown">
           <a href="#">Services ▾</a>
           <ul class="dropdown">
@@ -123,6 +216,7 @@
             <li><a href="heartreach.html">HeartReach Community Services</a></li>
           </ul>
         </li>
+
         <li><a href="foundation.html">Foundation</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -133,23 +227,34 @@
   <section class="hero-bg">
     <div class="hero-overlay">
       <h1>Caring Hearts Independent Living</h1>
-      <p>Compassionate caregivers onsite daily, with doctors and nurse practitioners engaged per your personalized healthcare plan.</p>
+      <p>
+        Compassionate caregivers onsite daily, with doctors and nurse practitioners engaged per your
+        personalized healthcare plan.
+      </p>
     </div>
   </section>
 
   <!-- ABOUT US -->
   <section class="section container">
     <h2>About Caring Hearts</h2>
+
     <div class="about-grid">
       <div class="about-images">
         <img src="/images/CaringHearts_Facility.jpg" alt="Residents enjoying community activities"/>
       </div>
+
       <div class="about-text">
         <p>
-          At Caring Hearts Independent Living, we provide a warm, community-focused environment for adults needing daily support with activities of living. Our compassionate caregivers are onsite each day, and we partner with doctors and nurse practitioners—assigned according to each resident’s healthcare plan—to ensure comprehensive medical oversight.
+          At Caring Hearts Independent Living, we provide a warm, community-focused environment for adults needing
+          daily support with activities of living. Our compassionate caregivers are onsite each day, and we partner
+          with doctors and nurse practitioners—assigned according to each resident’s healthcare plan—to ensure
+          comprehensive medical oversight.
         </p>
+
         <p>
-          Residents share comfortable suites and communal living spaces, enjoy meals prepared under the Texas Department of Agriculture’s Adult Food Program guidelines, and participate in engaging wellness and social programs designed to foster connection and joy.
+          Residents share comfortable suites and communal living spaces, enjoy meals prepared under the Texas
+          Department of Agriculture’s Adult Food Program guidelines, and participate in engaging wellness and social
+          programs designed to foster connection and joy.
         </p>
       </div>
     </div>
@@ -158,37 +263,82 @@
   <!-- CORE SERVICES -->
   <section class="section container">
     <h2>Our Core Services</h2>
+
     <div class="services-grid">
-      <div class="service-card">
-        <img src="/images/icon-meal.svg" alt="Adult Food Program"/>
-        <h3>Nutritious Meal Service</h3>
-        <p>Delicious meals prepared daily in accordance with the Texas Dept. of Agriculture Adult Food Program standards.</p>
-      </div>
-      <div class="service-card">
-        <img src="/images/icon-therapy.svg" alt="Therapeutic Activities"/>
-        <h3>Therapeutic Activities</h3>
-        <p>Weekly art and music sessions, exercise classes, and wellness workshops led by trained facilitators.</p>
-      </div>
-      <div class="service-card">
-        <img src="/images/icon-nurse.svg" alt="Nursing Care"/>
-        <h3>Nursing & Health Monitoring</h3>
-        <p>Licensed nurses provide medication administration and health monitoring, with doctors & NPs consulted per plan.</p>
-      </div>
-      <div class="service-card">
-        <img src="/images/icon-transport.svg" alt="Transportation"/>
-        <h3>Transportation Assistance</h3>
-        <p>Coordinated rides for medical appointments, community events, and family visits.</p>
-      </div>
+
+      <article class="service-card">
+        <div class="service-media">
+          <img src="/images/services/nutrition-meals.jpg" alt="Nutritious meal service and meal planning">
+        </div>
+        <div class="service-body">
+          <h3>Nutrition &amp; Meal Services</h3>
+          <p>
+            Balanced, home-style meals and nutrition support tailored to individual needs, preferences,
+            and wellness goals—served in a safe, supportive environment.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-media">
+          <img src="/images/services/therapeutic-services.jpg" alt="Therapeutic support and wellness activities">
+        </div>
+        <div class="service-body">
+          <h3>Therapeutic Services</h3>
+          <p>
+            Supportive therapeutic resources and structured wellness activities that encourage
+            emotional well-being, confidence, and connection.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-media">
+          <img src="/images/services/nursing-health.jpg" alt="Nursing support and health monitoring">
+        </div>
+        <div class="service-body">
+          <h3>Nursing &amp; Health Monitoring</h3>
+          <p>
+            Medication support and ongoing health monitoring with licensed nursing oversight,
+            plus coordination with providers as needed.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-media">
+          <img src="/images/services/transportation.jpg" alt="Transportation assistance for appointments and community outings">
+        </div>
+        <div class="service-body">
+          <h3>Transportation Services</h3>
+          <p>
+            Reliable transportation support for appointments, errands, and community activities—helping
+            residents maintain independence.
+          </p>
+        </div>
+      </article>
+
     </div>
   </section>
 
   <!-- TESTIMONIAL -->
-  <section class="section container">
-    <h2>Resident & Family Testimonial</h2>
-    <blockquote style="font-style:italic; color:var(--gray-mid); max-width:800px; margin:1rem auto; text-align:center;">
-      “My father receives excellent care here and loves joining the daily activities. The team truly treats him like family.”  
-      <br/><strong>— Kevin L., son of resident</strong>
-    </blockquote>
+  <section class="section testimonial-section">
+    <div class="container">
+      <h2>Resident &amp; Family Testimonial</h2>
+
+      <figure class="testimonial-card">
+        <blockquote>
+          “Caring Hearts Independent Living has been a true blessing for our family. The staff treats my loved one
+          with dignity and patience, and the home feels warm, structured, and safe. Communication is consistent,
+          and I’m grateful knowing she’s supported day-to-day with genuine care.”
+        </blockquote>
+
+        <figcaption>
+          <span class="testimonial-name">Sharon T</span>
+          <span class="testimonial-role">Aunt of Resident</span>
+        </figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -199,6 +349,7 @@
         <p>Email: <a href="mailto:caringhearts@healinghadc.org">caringhearts@healinghadc.org</a></p>
         <p>Phone: <a href="tel:+17138240018">(713) 824-0018</a></p>
       </div>
+
       <div class="footer-col social">
         <h4>Follow Us</h4>
         <div class="social-icons">
@@ -209,6 +360,7 @@
         </div>
       </div>
     </div>
+
     <div class="footer-bottom container">
       © 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.
     </div>
@@ -219,9 +371,11 @@
     document.addEventListener('DOMContentLoaded', () => {
       const toggle = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.main-nav');
+
       if (toggle && nav) {
         toggle.addEventListener('click', () => nav.classList.toggle('open'));
       }
+
       document.querySelectorAll('.has-dropdown > a').forEach(link => {
         link.addEventListener('click', e => {
           if (window.innerWidth <= 768) {
@@ -232,5 +386,6 @@
       });
     });
   </script>
+
 </body>
 </html>
