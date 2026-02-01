@@ -489,3 +489,296 @@ a:hover {
     height: 20vh;
   }
 }
+/* ============================================
+   PREMIUM UPGRADES (ADD AT BOTTOM)
+   Keeps your brand colors exactly
+   ============================================ */
+
+:root{
+  --ink: #0f172a;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.12);
+  --shadow: 0 14px 40px rgba(2, 6, 23, 0.10);
+  --shadow-sm: 0 2px 10px rgba(2, 6, 23, 0.06);
+  --radius: 14px;
+  --radius-lg: 18px;
+}
+
+/* Make header container layout consistent */
+.header .header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+/* Nav CTA (Donate) */
+.main-nav .nav-cta a{
+  background: linear-gradient(135deg, var(--teal), var(--purple));
+  color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Active link */
+.main-nav .nav-link.active{
+  color: var(--teal);
+  text-decoration: none;
+}
+
+/* HERO: add two-column layout option */
+.hero-overlay{
+  padding-top: 12vh;
+  padding-bottom: 10vh;
+}
+
+.hero-inner{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.hero-copy{
+  max-width: 760px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:.75rem;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top: 1.2rem;
+}
+
+/* Replace old .btn-hero with consistent buttons (still works if present) */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: .85rem 1.15rem;
+  border-radius: 10px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+.btn:active{ transform: translateY(1px); }
+
+.btn-primary{
+  background: var(--teal);
+  color: var(--white);
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.12);
+}
+.btn-primary:hover{ background:#005b56; }
+
+.btn-secondary{
+  background: var(--purple);
+  color: var(--white);
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.12);
+}
+.btn-secondary:hover{ background:#4a1e62; }
+
+.btn-gold{
+  background: var(--gold);
+  color: var(--white);
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.12);
+}
+.btn-gold:hover{ background:#b68825; }
+
+.btn-outline{
+  background: rgba(255,255,255,0.90);
+  color: var(--teal);
+  border-color: rgba(0,106,100,0.30);
+}
+.btn-outline:hover{
+  border-color: rgba(0,106,100,0.50);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Trust bar */
+.trustbar{
+  margin-top: 1.5rem;
+  display:grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.trust{
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.trust-title{
+  font-weight: 800;
+  color:#fff;
+  font-size: .95rem;
+}
+
+.trust-text{
+  color: rgba(255,255,255,0.88);
+  font-size: .9rem;
+  margin-top: 4px;
+}
+
+/* Hero card */
+.hero-card{
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 18px;
+  padding: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-card-placeholder{
+  height: 230px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.16);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 800;
+  color: rgba(255,255,255,0.92);
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.35);
+}
+
+.hero-card-mini{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.mini-item{
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.mini-k{ color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 700; }
+.mini-v{ color: #fff; font-size: 14px; font-weight: 800; margin-top: 6px; }
+.mini-v a{ color:#fff; text-decoration:none; }
+.mini-v a:hover{ text-decoration: underline; }
+
+/* Section helpers */
+.section{
+  padding: 3.5rem 0;
+}
+.section-title{
+  font-size: 2rem;
+  color: var(--purple);
+  text-align:center;
+  margin-bottom: .5rem;
+}
+.section-subtitle{
+  text-align:center;
+  max-width: 820px;
+  margin: 0 auto 1.75rem;
+  color: var(--gray-mid);
+  font-size: 1.05rem;
+}
+
+/* Start Here cards */
+.path-grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.path-card{
+  grid-column: span 6;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  position: relative;
+  overflow:hidden;
+}
+
+.path-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(500px 240px at 10% 0%, rgba(0,106,100,.10), transparent 55%),
+    radial-gradient(500px 240px at 95% 10%, rgba(89,35,122,.10), transparent 55%);
+  pointer-events:none;
+}
+
+.path-card h3{
+  position: relative;
+  color: var(--ink);
+  margin-bottom: .35rem;
+}
+
+.path-card p{
+  position: relative;
+  color: var(--muted);
+}
+
+.path-actions{
+  position: relative;
+  display:flex;
+  gap:.65rem;
+  flex-wrap:wrap;
+  margin-top: .85rem;
+}
+
+/* Service cards: add heading and link styling */
+.card-content h3{
+  margin-bottom: .5rem;
+  color: var(--teal);
+  font-size: 1.25rem;
+}
+.card-link{
+  display:inline-block;
+  margin-top: .85rem;
+  font-weight: 800;
+  color: var(--teal);
+}
+
+/* CTA band */
+.cta-band{
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, rgba(0,106,100,0.10), rgba(89,35,122,0.08));
+  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  display:grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 1rem;
+  align-items:center;
+}
+.cta-band h3{
+  color: var(--ink);
+  margin-bottom: .25rem;
+}
+.cta-band p{
+  color: var(--muted);
+}
+.cta-actions{
+  display:flex;
+  gap:.75rem;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-inner{ grid-template-columns: 1fr; }
+  .trustbar{ grid-template-columns: 1fr 1fr; }
+  .path-card{ grid-column: span 12; }
+  .cta-band{ grid-template-columns: 1fr; }
+  .cta-actions{ justify-content:flex-start; }
+}
+
+@media (max-width: 520px){
+  .trustbar{ grid-template-columns: 1fr; }
+  .hero-card-mini{ grid-template-columns: 1fr; }
+}
