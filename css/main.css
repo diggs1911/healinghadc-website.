@@ -539,16 +539,16 @@ textarea{ min-height: 120px; }
 }
 /* ============================================
    FOUNDERS PAGE (FOUNDATION / FOUNDER)
-   Paste at the bottom of main.css
+   Replace the entire old founders block with this
    ============================================ */
 
 .founder-hero{
   background:
-    radial-gradient(800px 400px at 15% 10%, rgba(0,106,100,0.10), transparent 55%),
-    radial-gradient(800px 400px at 85% 0%, rgba(89,35,122,0.10), transparent 55%),
-    linear-gradient(135deg, rgba(249,250,252,0.95), rgba(249,250,252,0.70));
+    radial-gradient(900px 420px at 20% 15%, rgba(0,106,100,0.12), transparent 55%),
+    radial-gradient(900px 420px at 80% 0%, rgba(89,35,122,0.12), transparent 55%),
+    linear-gradient(180deg, #F7FAFF, #FFFFFF);
   border-bottom: 1px solid rgba(15,23,42,0.08);
-  padding: 2.4rem 0 2.1rem;
+  padding: 2.6rem 0 2.25rem;
   text-align: center;
 }
 
@@ -556,38 +556,40 @@ textarea{ min-height: 120px; }
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:.6rem;
+  gap:.7rem;
 }
 
 .founder-hero-badge img{
-  height: 56px;
+  height: 60px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(2,6,23,0.10));
+  filter: drop-shadow(0 12px 22px rgba(2,6,23,0.10));
 }
 
 .founder-hero-title{
   margin: 0;
   color: var(--purple);
-  font-size: clamp(2rem, 3.2vw, 2.7rem);
-  letter-spacing: -0.02em;
+  font-size: clamp(2.05rem, 3.4vw, 2.85rem);
+  letter-spacing: -0.03em;
+  font-weight: 900;
 }
 
 .founder-hero-subtitle{
   margin: 0 auto;
-  max-width: 900px;
-  color: var(--gray-mid);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  max-width: 980px;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.85;
+  font-weight: 600;
 }
 
 .founder-wrap{
-  padding: 2.4rem 0 1.2rem;
+  padding: 2.6rem 0 1.2rem;
 }
 
 .founder-grid{
   display:grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 0.95fr 1.05fr;
   gap: 1.4rem;
   align-items:start;
 }
@@ -595,13 +597,13 @@ textarea{ min-height: 120px; }
 .founder-card{
   background: #fff;
   border: 1px solid rgba(15,23,42,0.08);
-  border-radius: 18px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
 .founder-photo{
-  height: 360px;
+  height: 380px;
   background: #f3f5f7;
 }
 
@@ -609,129 +611,130 @@ textarea{ min-height: 120px; }
   width:100%;
   height:100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 18%;
   display:block;
 }
 
 .founder-photo-meta{
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 1.05rem 1.2rem 1.2rem;
 }
 
 .founder-photo-meta h2{
   margin: 0 0 .25rem;
-  color: #0f172a;
-  font-size: 1.35rem;
+  color: var(--ink);
+  font-size: 1.45rem;
+  font-weight: 900;
 }
 
 .founder-photo-meta p{
   margin:0;
-  color: var(--gray-mid);
-  font-weight: 600;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .founder-bio{
   background: #fff;
   border: 1px solid rgba(15,23,42,0.08);
-  border-radius: 18px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
-  padding: 1.25rem 1.25rem 1.35rem;
+  padding: 1.35rem 1.35rem 1.45rem;
 }
 
 .founder-bio-title{
-  margin: 0 0 .65rem;
-  color: #0f172a;
-  font-size: 1.4rem;
+  margin: 0 0 .7rem;
+  color: var(--ink);
+  font-size: 1.55rem;
+  font-weight: 900;
 }
 
 .founder-bio p{
   margin: 0 0 1rem;
   color: #2f3a45;
-  line-height: 1.85;
-  font-size: 1.02rem;
+  line-height: 1.9;
+  font-size: 1.03rem;
+  font-weight: 600;
 }
 
 .founder-quote{
-  margin-top: 1.1rem;
-  padding: .9rem 1rem;
+  margin-top: 1.15rem;
+  padding: 1rem 1.05rem;
   border-left: 4px solid var(--teal);
-  background: linear-gradient(135deg, rgba(0,106,100,0.07), rgba(89,35,122,0.05));
-  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0,106,100,0.08), rgba(89,35,122,0.06));
+  border-radius: 16px;
 }
 .founder-quote p{
   margin:0;
-  font-weight: 800;
-  color: #0f172a;
+  font-weight: 900;
+  color: var(--ink);
 }
 
-/* Legacy programs */
+/* Living Legacy */
 .legacy-gallery{
-  padding: 2rem 0 3.2rem;
+  padding: 2.2rem 0 3.4rem;
 }
 
 .legacy-title{
   text-align:center;
   color: var(--purple);
-  font-size: 2rem;
-  margin: 0 0 .35rem;
+  font-size: 2.05rem;
+  margin: 0 0 .4rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .legacy-subtitle{
   text-align:center;
-  margin: 0 auto 1.4rem;
-  max-width: 860px;
-  color: var(--gray-mid);
-  line-height: 1.8;
+  margin: 0 auto 1.6rem;
+  max-width: 920px;
+  color: var(--muted);
+  line-height: 1.85;
   font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .legacy-grid{
   display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1.25rem;
 }
 
 .legacy-card{
   background:#fff;
   border: 1px solid rgba(15,23,42,0.08);
-  border-radius: 18px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
   overflow:hidden;
 }
 
-/* Legacy images contain text — do NOT crop */
-.legacy-card img{
+/* ✅ EDGE-TO-EDGE IMAGES: no padding, no matte, no white borders */
+.legacy-media{
+  height: 320px;
+  overflow:hidden;
+}
+.legacy-media img{
   width: 100%;
-  height: 260px;            /* consistent image zone */
-  object-fit: contain;      /* SHOW ENTIRE IMAGE */
+  height: 100%;
+  object-fit: cover;     /* fills edge-to-edge */
   object-position: center;
-  background: #f6f7fb;      /* clean matte behind images */
-  display: block;
-  padding: 10px;            /* keeps text away from edges */
-  box-sizing: border-box;
+  display:block;
 }
 
-@media (min-width: 1024px){
-  .legacy-card img{ height: 280px; }
-}
-
-@media (max-width: 980px){
-}
-
+/* Text body */
 .legacy-body{
-  padding: 1.15rem 1.25rem 1.4rem;
+  padding: 1.15rem 1.25rem 1.45rem;
 }
-
 .legacy-body p{
   margin: 0;
   color: #2f3a45;
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 1.01rem;
+  line-height: 1.8;
+  font-weight: 600;
 }
 
 /* Responsive */
 @media (max-width: 980px){
   .founder-grid{ grid-template-columns: 1fr; }
-  .founder-photo{ height: 320px; }
+  .founder-photo{ height: 330px; }
   .legacy-grid{ grid-template-columns: 1fr; }
-  .legacy-card img{ height: 240px; }
+  .legacy-media{ height: 260px; }
 }
