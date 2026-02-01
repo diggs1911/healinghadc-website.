@@ -1,4 +1,119 @@
 /* BUILD-SYSTEM-SITE BRANCH: WORK IN PROGRESS */
+/* =========================
+   HEALING HADC DESIGN SYSTEM
+   Brand + Layout Foundation
+   ========================= */
+
+:root {
+  /* Brand colors */
+  --teal: #006A64;
+  --purple: #59237A;
+  --gold: #C89A2D;
+  --white: #FFFFFF;
+
+  /* Neutrals */
+  --ink: #0b1220;
+  --text: #1f2937;
+  --muted: #475569;
+  --line: #e5e7eb;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+
+  /* Layout */
+  --radius: 16px;
+  --font-sans: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
+
+  --body: 18px;
+  --h1: 40px;
+  --h2: 30px;
+  --h3: 22px;
+
+  --lh-body: 1.65;
+  --lh-head: 1.25;
+}
+
+/* Global base */
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--body);
+  line-height: var(--lh-body);
+  color: var(--text);
+  background: var(--white);
+}
+
+h1, h2 {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  line-height: var(--lh-head);
+  margin: 0 0 12px 0;
+}
+
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+
+h3 {
+  font-family: var(--font-sans);
+  font-size: var(--h3);
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 10px 0;
+}
+
+p, li { color: var(--muted); }
+
+/* Container helper (use where needed, non-breaking) */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Card helper */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Buttons (use these classes without changing your theme colors) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.btn-primary { background: var(--teal); color: var(--white); }
+.btn-secondary { background: var(--surface); border-color: var(--line); color: var(--ink); }
+
+/* Status tags for Active vs In Development */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 800;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  color: var(--ink);
+}
+.tag-active { border-color: rgba(0,106,100,0.25); color: var(--teal); }
+.tag-dev { border-color: rgba(89,35,122,0.25); color: var(--purple); }
+
+/* Mobile readability and “no squeezed columns” rule */
+@media (max-width: 768px) {
+  :root { --body: 19px; --h1: 30px; --h2: 24px; --h3: 21px; }
+}
 /* ===========================
    Healing H.A.D.C. — Main CSS
    Fortune-500 clean + consistent
