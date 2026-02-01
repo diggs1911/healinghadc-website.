@@ -4,17 +4,18 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Placement Referral — Caring Hearts</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css?v=10"/>
 </head>
 
 <body>
 
-  <!-- HEADER (same on every page) -->
+  <!-- HEADER (SAME ON EVERY PAGE) -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link" aria-label="Home">
-        <img src="/images/Healing_HADC.png" alt="Healing H.A.D.C., Inc." class="logo-img"/>
+        <img src="/images/Healing_HADC.png" alt="Healing H.A.D.C., Inc. logo" class="logo-img"/>
       </a>
 
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -25,14 +26,12 @@
           <li><a class="nav-link" href="about.html">About</a></li>
 
           <li class="has-dropdown">
-            <a class="nav-link nav-services" href="#" aria-haspopup="true" aria-expanded="false">
-              Services <span class="chev">▾</span>
-            </a>
-            <div class="dropdown mega">
-              <a class="mega-item" href="vital-path.html">VitalPath Home Health</a>
-              <a class="mega-item" href="mind-path.html">MindPath Behavioral Health</a>
-              <a class="mega-item" href="caring-hearts.html">Caring Hearts Independent Living</a>
-              <a class="mega-item" href="heartreach.html">HeartReach Community Services</a>
+            <a class="nav-link" href="#">Services ▾</a>
+            <div class="dropdown" role="menu">
+              <a href="vital-path.html">VitalPath Home Health</a>
+              <a href="mind-path.html">MindPath Behavioral Health</a>
+              <a href="caring-hearts.html">Caring Hearts Independent Living</a>
+              <a href="heartreach.html">HeartReach Community Services</a>
             </div>
           </li>
 
@@ -46,84 +45,111 @@
     </div>
   </header>
 
-  <!-- PAGE HERO (centered like home) -->
-  <section class="page-hero">
-    <div class="container hero-center">
+  <!-- PAGE HERO (CENTERED) -->
+  <section class="page-hero center">
+    <div class="container">
       <h1>Placement Referral — Caring Hearts</h1>
       <p>
         Please complete this referral to support a safe and accurate placement decision. We use this form to perform an
-        initial fit & safety review. If the resident is a potential match, we will complete an in-person assessment to confirm
-        information, physical needs, and transportation plan.
+        initial fit &amp; safety review. If the resident is a potential match, we will complete an in-person assessment
+        to confirm information, physical needs, and transportation plan.
       </p>
 
-      <div class="callouts">
-        <a class="btn btn-outline-dark" href="/files/Referral_Intake_Placement_Screening_Form.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a class="btn btn-teal" href="tel:+17138240017">Call (713) 824-0017</a>
+      <div class="cta-row">
+        <a class="btn btn-outline" href="/files/Referral_Intake_Placement_Screening_Form.pdf" target="_blank" rel="noopener">
+          Download PDF Referral Form
+        </a>
+        <a class="btn btn-primary" href="tel:+17138240017">Call (713) 824-0017</a>
         <a class="btn btn-gold" href="mailto:info@healinghadc.org">Email info@healinghadc.org</a>
       </div>
     </div>
   </section>
 
-  <section class="wrap">
-    <div class="container grid">
+  <section class="section alt" style="padding-top:2.2rem;">
+    <div class="container grid-2">
 
-      <!-- FORM PANEL -->
+      <!-- FORM -->
       <div class="panel">
-        <h2>Referral Intake</h2>
-        <p class="muted">Step 1 must be complete before Step 2 appears. All questions are required for assessment.</p>
+        <h2 style="font-weight:900; color:var(--ink); font-size:1.25rem;">Referral Intake Form</h2>
+        <p class="helper">
+          Complete Step 1 to unlock Step 2. We use this information to prepare for your in-person assessment and verification.
+        </p>
 
-        <form id="referralForm" method="POST" action="https://formspree.io/f/mojlqpbd">
+        <form id="referralForm" method="POST" action="https://formspree.io/f/mojlqpbd" enctype="multipart/form-data">
           <input type="hidden" name="form_type" value="Referral Intake / Placement Screening"/>
-          <input type="hidden" name="_subject" value="NEW Referral Intake — Caring Hearts"/>
-          <!-- Reply-To support (add this in your HTML, not inside Formspree) -->
-          <input type="hidden" name="_replyto" id="replyto_hidden" value="">
+          <input type="hidden" name="_subject" value="NEW Placement Referral — Caring Hearts"/>
+          <!-- Reply-To support (you asked about this) -->
+          <input type="hidden" name="_replyto" id="replyto_hidden" value=""/>
 
           <!-- STEP 1 -->
-          <div class="step active" id="step1">
+          <div class="step active" data-step="1">
             <fieldset>
-              <legend>Step 1 — Referrer + Resident</legend>
+              <legend>Step 1 — Referring Party</legend>
 
-              <div class="row">
+              <div class="form-row">
                 <div>
                   <label for="ref_org">Referring Organization / Facility</label>
-                  <input id="ref_org" name="ref_org" type="text" required />
+                  <input id="ref_org" name="ref_org" type="text" required/>
                 </div>
                 <div>
                   <label for="ref_contact">Contact Name</label>
-                  <input id="ref_contact" name="ref_contact" type="text" required />
+                  <input id="ref_contact" name="ref_contact" type="text" required/>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="form-row">
                 <div>
                   <label for="ref_phone">Direct Phone</label>
-                  <input id="ref_phone" name="ref_phone" type="tel" required />
+                  <input id="ref_phone" name="ref_phone" type="tel" required/>
                 </div>
                 <div>
                   <label for="ref_email">Email</label>
-                  <input id="ref_email" name="ref_email" type="email" required />
+                  <input id="ref_email" name="ref_email" type="email" required/>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="checkline">
+                <input type="checkbox" id="phi_auth" name="phi_authorized" required/>
+                <label for="phi_auth" style="margin:0;">
+                  I confirm I’m authorized to share this information for placement review.
+                </label>
+              </div>
+
+              <div class="checkline">
+                <input type="checkbox" id="notRobot" required/>
+                <label for="notRobot" style="margin:0;">I’m not a robot</label>
+              </div>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-primary" data-next>Continue</button>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="step" data-step="2">
+            <fieldset>
+              <legend>Step 2 — Resident Details</legend>
+
+              <div class="form-row">
                 <div>
                   <label for="resident_name">Resident Full Name</label>
-                  <input id="resident_name" name="resident_name" type="text" required />
+                  <input id="resident_name" name="resident_name" type="text" required/>
                 </div>
                 <div>
-                  <label for="dob">DOB (if known)</label>
-                  <input id="dob" name="dob" type="date" required />
+                  <label for="dob">DOB</label>
+                  <input id="dob" name="dob" type="date" required/>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="form-row">
                 <div>
                   <label for="requested_movein">Requested Move-in Date</label>
-                  <input id="requested_movein" name="requested_movein" type="date" required />
+                  <input id="requested_movein" name="requested_movein" type="date" required/>
                 </div>
                 <div>
                   <label for="current_location">Current Location</label>
-                  <input id="current_location" name="current_location" type="text" required placeholder="Hospital / rehab / home (city)" />
+                  <input id="current_location" name="current_location" type="text" placeholder="Hospital / rehab / home (city)" required/>
                 </div>
               </div>
 
@@ -131,33 +157,22 @@
               <textarea id="placement_reason" name="placement_reason" required
                 placeholder="Why is placement needed? Any immediate safety/staffing concerns?"></textarea>
 
-              <div class="checkline">
-                <input type="checkbox" id="phi_auth" name="phi_authorized" required />
-                <label for="phi_auth" style="margin:0;">
-                  I confirm I’m authorized to share this information for placement review.
-                </label>
-              </div>
-
-              <div class="checkline">
-                <input type="checkbox" id="notRobot" required />
-                <label for="notRobot" style="margin:0;">I’m not a robot</label>
-              </div>
-
-              <div class="actions">
-                <button type="button" class="btn btn-teal" id="toStep2">Continue →</button>
+              <div class="step-actions">
+                <button type="button" class="btn btn-ghost" data-back>Back</button>
+                <button type="button" class="btn btn-primary" data-next>Continue</button>
               </div>
             </fieldset>
           </div>
 
-          <!-- STEP 2 -->
-          <div class="step" id="step2">
+          <!-- STEP 3 -->
+          <div class="step" data-step="3">
             <fieldset>
-              <legend>Step 2 — Fit & Safety Screening</legend>
+              <legend>Step 3 — Fit &amp; Safety</legend>
 
-              <div class="row">
+              <div class="form-row">
                 <div>
                   <label for="primary_dx">Primary Diagnosis</label>
-                  <input id="primary_dx" name="primary_dx" type="text" required />
+                  <input id="primary_dx" name="primary_dx" type="text" required/>
                 </div>
                 <div>
                   <label for="mobility">Mobility</label>
@@ -173,7 +188,7 @@
                 </div>
               </div>
 
-              <div class="row">
+              <div class="form-row">
                 <div>
                   <label for="overnight_awake">Awake overnight often?</label>
                   <select id="overnight_awake" name="overnight_awake" required>
@@ -197,34 +212,22 @@
               <label for="behavior_notes">Behavior / Wandering / Aggression notes</label>
               <textarea id="behavior_notes" name="behavior_notes" required></textarea>
 
-              <div class="actions">
-                <button type="button" class="btn btn-outline-dark" id="backTo1">← Back</button>
-                <button type="button" class="btn btn-teal" id="toStep3">Continue →</button>
-              </div>
-            </fieldset>
-          </div>
-
-          <!-- STEP 3 -->
-          <div class="step" id="step3">
-            <fieldset>
-              <legend>Step 3 — Medical / Skilled Needs</legend>
-
-              <label for="skilled_needs">Oxygen, wounds, diabetes, devices, recent hospitalization (detail)</label>
-              <textarea id="skilled_needs" name="skilled_needs" required></textarea>
-
-              <div class="actions">
-                <button type="button" class="btn btn-outline-dark" id="backTo2">← Back</button>
-                <button type="button" class="btn btn-teal" id="toStep4">Continue →</button>
+              <div class="step-actions">
+                <button type="button" class="btn btn-ghost" data-back>Back</button>
+                <button type="button" class="btn btn-primary" data-next>Continue</button>
               </div>
             </fieldset>
           </div>
 
           <!-- STEP 4 -->
-          <div class="step" id="step4">
+          <div class="step" data-step="4">
             <fieldset>
-              <legend>Step 4 — Payor / Benefits + Documents</legend>
+              <legend>Step 4 — Medical, Payor &amp; Documents</legend>
 
-              <div class="row">
+              <label for="skilled_needs">Medical / Skilled Needs (oxygen, wounds, diabetes, devices, recent hospitalization)</label>
+              <textarea id="skilled_needs" name="skilled_needs" required></textarea>
+
+              <div class="form-row">
                 <div>
                   <label for="payor">Primary Payor</label>
                   <select id="payor" name="payor" required>
@@ -239,15 +242,22 @@
                 </div>
                 <div>
                   <label for="mco">Managed Care Plan (if any)</label>
-                  <input id="mco" name="mco" type="text" required />
+                  <input id="mco" name="mco" type="text" required/>
                 </div>
               </div>
 
-              <label for="attachments">Upload documents (if available)</label>
-              <input id="attachments" name="attachments" type="file" multiple required />
+              <label for="attachments">Documents Upload (if available)</label>
+              <input id="attachments" name="attachments" type="file" multiple/>
 
-              <div class="actions">
-                <button type="button" class="btn btn-outline-dark" id="backTo3">← Back</button>
+              <div class="checkline">
+                <input type="checkbox" id="docs_ok" name="docs_ok" required/>
+                <label for="docs_ok" style="margin:0;">
+                  I understand we will confirm all information during the in-person assessment (including physical assessment and transportation plan).
+                </label>
+              </div>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-ghost" data-back>Back</button>
                 <button type="submit" class="btn btn-gold">Submit Referral</button>
               </div>
 
@@ -259,19 +269,19 @@
       </div>
 
       <!-- SIDE PANEL -->
-      <aside class="panel sticky">
-        <h2>What happens next</h2>
-        <p class="muted">
-          1) Fit & safety review<br/>
-          2) Bed availability & staffing confirmation<br/>
-          3) Records request (if needed)<br/>
-          4) In-person assessment & transportation planning
+      <aside class="panel">
+        <h2 style="font-weight:900; color:var(--ink); font-size:1.2rem;">What happens next</h2>
+        <p class="helper">
+          1) We review fit &amp; safety<br/>
+          2) Confirm bed availability &amp; staffing<br/>
+          3) Request missing records<br/>
+          4) Schedule in-person assessment &amp; verification
         </p>
 
         <div style="height:12px;"></div>
 
-        <h2>Contact</h2>
-        <p class="muted">
+        <h2 style="font-weight:900; color:var(--ink); font-size:1.2rem;">Contact</h2>
+        <p class="helper">
           Phone: <a href="tel:+17138240017">(713) 824-0017</a><br/>
           Email: <a href="mailto:info@healinghadc.org">info@healinghadc.org</a><br/>
           Fax: (713) 730-3601
@@ -305,108 +315,82 @@
     </div>
   </footer>
 
+  <script src="js/site.js?v=10"></script>
+
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Year
-      const y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
+    // Referral: Step gating + Formspree AJAX + Reply-To assignment
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("referralForm");
+      const steps = Array.from(document.querySelectorAll(".step"));
+      const success = document.getElementById("successMsg");
 
-      // Mobile nav
-      const toggleBtn = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.main-nav');
-      if (toggleBtn && nav) {
-        toggleBtn.addEventListener('click', () => {
-          nav.classList.toggle('open');
-          toggleBtn.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
-        });
-      }
-
-      // Services dropdown
-      const servicesLink = document.querySelector('.nav-services');
-      const ddParent = servicesLink?.closest('.has-dropdown');
-      if (servicesLink && ddParent) {
-        servicesLink.addEventListener('click', (e) => {
-          e.preventDefault();
-          ddParent.classList.toggle('open');
-          const dd = ddParent.querySelector('.dropdown.mega');
-          if (dd) dd.style.display = ddParent.classList.contains('open') ? 'grid' : 'none';
-        });
-        document.addEventListener('click', (e) => {
-          if (!ddParent.contains(e.target)) {
-            ddParent.classList.remove('open');
-            const dd = ddParent.querySelector('.dropdown.mega');
-            if (dd) dd.style.display = 'none';
-          }
-        });
-      }
-
-      // Reply-to mapping (Formspree)
-      const refEmail = document.getElementById('ref_email');
-      const replyTo = document.getElementById('replyto_hidden');
+      const refEmail = document.getElementById("ref_email");
+      const replyTo = document.getElementById("replyto_hidden");
       if (refEmail && replyTo) {
-        refEmail.addEventListener('input', () => replyTo.value = refEmail.value.trim());
+        const syncReply = () => replyTo.value = (refEmail.value || "").trim();
+        refEmail.addEventListener("input", syncReply);
+        syncReply();
       }
 
-      // Step gating helpers
-      const step1 = document.getElementById('step1');
-      const step2 = document.getElementById('step2');
-      const step3 = document.getElementById('step3');
-      const step4 = document.getElementById('step4');
+      let current = 0;
+      const showStep = (idx) => {
+        steps.forEach((s, i) => s.classList.toggle("active", i === idx));
+        current = idx;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
 
-      function showStep(n){
-        [step1,step2,step3,step4].forEach(s => s.classList.remove('active'));
-        const target = [step1,step2,step3,step4][n-1];
-        target.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      const validateStep = (idx) => {
+        const step = steps[idx];
+        const requiredFields = Array.from(step.querySelectorAll("input, select, textarea"))
+          .filter(el => el.hasAttribute("required"));
+        return requiredFields.every(el => el.checkValidity());
+      };
 
-      function validStep(stepEl){
-        const requiredFields = stepEl.querySelectorAll('input[required], select[required], textarea[required]');
-        for (const f of requiredFields){
-          if (f.type === 'checkbox' && !f.checked) return false;
-          if (f.type === 'file' && (!f.files || f.files.length === 0)) return false;
-          if (!f.value || !f.value.toString().trim()) return false;
-        }
-        return true;
-      }
-
-      document.getElementById('toStep2')?.addEventListener('click', () => {
-        if (!validStep(step1)) return alert('Please complete all required fields in Step 1.');
-        showStep(2);
+      document.querySelectorAll("[data-next]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          if (!validateStep(current)) {
+            // Trigger native validation UI
+            const step = steps[current];
+            const firstInvalid = step.querySelector(":invalid");
+            if (firstInvalid) firstInvalid.reportValidity();
+            return;
+          }
+          showStep(Math.min(current + 1, steps.length - 1));
+        });
       });
-      document.getElementById('backTo1')?.addEventListener('click', () => showStep(1));
-      document.getElementById('toStep3')?.addEventListener('click', () => {
-        if (!validStep(step2)) return alert('Please complete all required fields in Step 2.');
-        showStep(3);
-      });
-      document.getElementById('backTo2')?.addEventListener('click', () => showStep(2));
-      document.getElementById('toStep4')?.addEventListener('click', () => {
-        if (!validStep(step3)) return alert('Please complete all required fields in Step 3.');
-        showStep(4);
-      });
-      document.getElementById('backTo3')?.addEventListener('click', () => showStep(3));
 
-      // AJAX submit
-      const form = document.getElementById('referralForm');
-      const success = document.getElementById('successMsg');
+      document.querySelectorAll("[data-back]").forEach(btn => {
+        btn.addEventListener("click", () => showStep(Math.max(current - 1, 0)));
+      });
+
+      // AJAX submit to Formspree
       if (form) {
-        form.addEventListener('submit', async (e) => {
+        form.addEventListener("submit", async (e) => {
           e.preventDefault();
-          if (!validStep(step4)) return alert('Please complete all required fields in Step 4.');
+
+          // Final validation across all steps
+          for (let i = 0; i < steps.length; i++) {
+            const invalid = steps[i].querySelector(":invalid");
+            if (invalid) {
+              showStep(i);
+              invalid.reportValidity();
+              return;
+            }
+          }
 
           const data = new FormData(form);
           const resp = await fetch(form.action, {
-            method: 'POST',
+            method: "POST",
             body: data,
-            headers: { 'Accept': 'application/json' }
+            headers: { "Accept": "application/json" }
           });
 
           if (resp.ok) {
             form.reset();
-            if (success) success.style.display = 'block';
-            showStep(1);
+            if (success) success.style.display = "block";
+            showStep(0);
           } else {
-            alert('Oops! There was a problem submitting your referral. Please email info@healinghadc.org or use the PDF.');
+            alert("Oops! There was a problem submitting your referral. Please email info@healinghadc.org or use the PDF.");
           }
         });
       }
