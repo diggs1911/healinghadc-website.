@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="container header-inner">
+    <a href="/index.html" aria-label="Healing HADC Home">
+      <img class="logo-img" src="/images/Healing HADC.png" alt="Healing HADC, Inc.">
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
+
+    <nav class="main-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a class="nav-link" href="/about.html">About</a></li>
+
+        <li class="has-dropdown">
+          <a class="nav-link" href="#" onclick="event.preventDefault(); this.parentElement.classList.toggle('open');">
+            Divisions ▾
+          </a>
+          <div class="dropdown">
+            <a href="/caring-hearts.html">Caring Hearts</a>
+            <a href="/vital-path.html">VitalPath</a>
+            <a href="/mind-path.html">MindPath</a>
+            <a href="/heartreach.html">HeartReach</a>
+            <a href="/foundation.html">Foundation</a>
+          </div>
+        </li>
+
+        <li><a class="nav-link" href="/services.html">Services</a></li>
+        <li><a class="nav-link" href="/contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="/referral.html">Make a Referral</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
