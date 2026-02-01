@@ -5,13 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Mary Williams Foundation — Hope & Healing</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css?v=10"/>
+
+  <style>
+    /* Foundation page-only elegance */
+    .found-hero {
+      padding: 3rem 0 2.6rem;
+      background:
+        radial-gradient(1100px 480px at 50% 0%, rgba(89,35,122,0.16), transparent 60%),
+        radial-gradient(1100px 480px at 15% 10%, rgba(0,106,100,0.14), transparent 60%),
+        linear-gradient(180deg, #F7FAFF, #FFFFFF);
+      border-bottom: 1px solid rgba(15,23,42,0.06);
+      text-align: center;
+    }
+    .found-hero h1 { color: var(--purple); font-weight: 900; letter-spacing:-0.02em; font-size: clamp(2.0rem, 3vw, 2.8rem); }
+    .found-hero p { color: var(--muted); max-width: 980px; margin: 12px auto 0; font-weight: 600; }
+
+    .bio {
+      display:grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    .bio-card {
+      border-radius: var(--radius-lg);
+      overflow:hidden;
+      border: 1px solid rgba(15,23,42,0.08);
+      box-shadow: var(--shadow);
+      background:#fff;
+    }
+    .bio-photo {
+      height: 420px;
+      background: #fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 14px;
+    }
+    .bio-photo img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+    .bio-body { padding: 18px 18px 22px; }
+    .bio-body h2 { color: var(--teal); font-weight: 900; font-size: 1.5rem; }
+    .bio-body .subtitle { color: var(--muted); font-weight: 700; margin-top: 6px; }
+    .bio-body .quote {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(0,106,100,0.06);
+      border: 1px solid rgba(0,106,100,0.14);
+      font-weight: 700;
+      color: var(--gray-700);
+    }
+
+    .img-panels{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+    .img-panel{
+      grid-column: span 4;
+      background:#fff;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(15,23,42,0.08);
+      box-shadow: var(--shadow-sm);
+      overflow:hidden;
+    }
+    .img-panel .media{
+      height: 170px;
+      background: linear-gradient(135deg, rgba(0,106,100,0.06), rgba(89,35,122,0.06));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 14px;
+      border-bottom: 1px solid rgba(15,23,42,0.06);
+    }
+    .img-panel .media img{
+      width: 92%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .img-panel .body{ padding: 16px 16px 18px; }
+    .img-panel h3{ font-weight: 900; color: var(--ink); }
+    .img-panel p{ margin-top: 10px; color: var(--muted); font-weight: 600; }
+
+    @media (max-width: 900px){
+      .bio{ grid-template-columns: 1fr; }
+      .bio-photo{ height: 360px; }
+      .img-panel{ grid-column: span 12; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER (SAME ON EVERY PAGE) -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link" aria-label="Home">
@@ -26,13 +119,13 @@
           <li><a class="nav-link" href="about.html">About</a></li>
 
           <li class="has-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" aria-expanded="false">Services ▾</a>
-            <ul class="dropdown" aria-label="Services menu">
-              <li><a href="vital-path.html">VitalPath Home Health</a></li>
-              <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
-              <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
-              <li><a href="heartreach.html">HeartReach Community Services</a></li>
-            </ul>
+            <a class="nav-link" href="#">Services ▾</a>
+            <div class="dropdown" role="menu">
+              <a href="vital-path.html">VitalPath Home Health</a>
+              <a href="mind-path.html">MindPath Behavioral Health</a>
+              <a href="caring-hearts.html">Caring Hearts Independent Living</a>
+              <a href="heartreach.html">HeartReach Community Services</a>
+            </div>
           </li>
 
           <li><a class="nav-link active" href="foundation.html">Foundation</a></li>
@@ -45,97 +138,100 @@
     </div>
   </header>
 
-  <!-- FOUNDATION HERO -->
-  <section class="foundation-hero">
-    <div class="container foundation-hero-inner">
-      <div>
-        <h1>Mary Williams Foundation<br/>for Hope & Healing</h1>
-        <p>
-          A living legacy honoring Mary Ja Ne Williams — built on compassion, dignity, and service.
-          This foundation exists to uplift families, strengthen communities, and open doors for the next generation
-          of healthcare and human service leaders.
-        </p>
-        <div style="margin-top: 1.1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="donate.html">Donate</a>
-          <a class="btn btn-outline" href="contact.html">Partner With Us</a>
-        </div>
-      </div>
-
-      <div class="founder-card" aria-label="Founder">
-        <div class="founder-photo">
-          <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Ja Ne Williams"/>
-        </div>
-        <div class="founder-caption">
-          <div class="name">Mary Ja Ne Williams</div>
-          <div class="line">A heart for people. A life of service. A legacy of hope.</div>
-        </div>
-      </div>
+  <!-- HERO -->
+  <section class="found-hero">
+    <div class="container">
+      <h1>Mary Williams Foundation for Hope &amp; Healing</h1>
+      <p>
+        Honoring a life of service by investing in people — scholarships, community support, and pathways
+        that restore dignity, strengthen families, and expand hope.
+      </p>
     </div>
   </section>
 
-  <!-- BIO + VISION -->
-  <section class="foundation-section">
-    <div class="container foundation-two">
-      <div class="foundation-block">
-        <h2>Her Story</h2>
-        <p class="muted">
-          Mary Ja Ne Williams was the kind of woman who didn’t just believe in care — she lived it.
-          She served with strength and tenderness, holding people up when life tried to push them down.
-          Her life was marked by faith, dignity, and a deep commitment to helping others stand on their feet again.
-        </p>
-        <p class="muted" style="margin-top:.8rem;">
-          Through her work supporting adults with disabilities and seniors, she created environments where people felt safe,
-          valued, and seen — not as “cases,” but as human beings deserving of respect. This foundation carries her name because
-          her love was not seasonal. It was consistent. It was intentional. It was legacy.
-        </p>
+  <!-- BIO / LEGACY -->
+  <section class="section">
+    <div class="container bio">
 
-        <div class="foundation-gallery">
-          <div class="img-card">
-            <img src="/images/Our_Mission.png" alt="Our Mission"/>
-          </div>
-          <div class="img-card">
-            <img src="/images/Our_Values.png" alt="Our Values"/>
+      <div class="bio-card">
+        <div class="bio-photo">
+          <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Williams"/>
+        </div>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-body">
+          <h2>Mary Williams</h2>
+          <div class="subtitle">Founder • Servant-Leader • Builder of Community</div>
+
+          <p class="helper" style="margin-top:14px;">
+            Mary Williams lived with purpose and generosity — serving families with compassion, advocating for the vulnerable,
+            and creating spaces where people could feel safe, seen, and supported.
+          </p>
+
+          <p class="helper" style="margin-top:12px;">
+            This foundation carries her legacy forward through practical help and future-focused opportunity:
+            support for children and families, scholarships for emerging caregivers and community leaders,
+            and initiatives that strengthen wellness and stability.
+          </p>
+
+          <div class="quote">
+            “Legacy isn’t what we leave behind — it’s who we lift while we’re here.”
           </div>
         </div>
       </div>
 
-      <div class="foundation-block">
-        <h2>What We Do</h2>
-        <p class="muted">
-          We invest in people — because that’s what Mary did. Our work focuses on building pathways to stability,
-          education, and wellness through programs that are practical, compassionate, and community-centered.
-        </p>
+    </div>
+  </section>
 
-        <div style="display:grid; gap:1rem; margin-top: 1rem;">
-          <div class="panel" style="box-shadow: var(--shadow-sm);">
-            <h2 style="font-size:1.1rem;">Legacy Scholarships</h2>
-            <p class="muted">Scholarships and support for students entering medical, social, and behavioral health fields.</p>
-            <div style="margin-top:.75rem;">
-              <img src="/images/Legacy_Scholarships.png" alt="Legacy Scholarships" style="border-radius: 16px; border: 1px solid rgba(15,23,42,0.08);"/>
-            </div>
-          </div>
+  <!-- MISSION / VALUES / PROGRAMS (IMAGE-DRIVEN) -->
+  <section class="section alt">
+    <div class="container">
+      <h2 class="section-title">A Living Legacy</h2>
+      <p class="section-subtitle">
+        Thoughtfully designed programs that reflect excellence, dignity, and real impact.
+      </p>
 
-          <div class="panel" style="box-shadow: var(--shadow-sm);">
-            <h2 style="font-size:1.1rem;">Hearts of Hope</h2>
-            <p class="muted">Community initiatives that strengthen families and support vulnerable adults with dignity.</p>
-            <div style="margin-top:.75rem;">
-              <img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope" style="border-radius: 16px; border: 1px solid rgba(15,23,42,0.08);"/>
-            </div>
-          </div>
-
-          <div class="panel" style="box-shadow: var(--shadow-sm);">
-            <h2 style="font-size:1.1rem;">Hope & Healing Summer</h2>
-            <p class="muted">Seasonal outreach focused on wellness, education, and community connection.</p>
-            <div style="margin-top:.75rem;">
-              <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer" style="border-radius: 16px; border: 1px solid rgba(15,23,42,0.08);"/>
-            </div>
+      <div class="img-panels">
+        <div class="img-panel">
+          <div class="media"><img src="/images/Our_Mission.png" alt="Our Mission"/></div>
+          <div class="body">
+            <h3>Our Mission</h3>
+            <p>Extend hope through scholarships, community support, and dignified care initiatives.</p>
           </div>
         </div>
 
-        <p class="muted" style="margin-top: 1rem;">
-          If you want to sponsor a scholarship, support a family, or partner with us, use the Donate tab above or reach out
-          through the Contact page. We’ll respond quickly.
-        </p>
+        <div class="img-panel">
+          <div class="media"><img src="/images/Our_Values.png" alt="Our Values"/></div>
+          <div class="body">
+            <h3>Our Values</h3>
+            <p>Compassion, excellence, integrity, and service — anchored in respect for every person.</p>
+          </div>
+        </div>
+
+        <div class="img-panel">
+          <div class="media"><img src="/images/Legacy_Scholarships.png" alt="Legacy Scholarships"/></div>
+          <div class="body">
+            <h3>Legacy Scholarships</h3>
+            <p>Scholarships and training pathways for future leaders in health, behavioral health, and human services.</p>
+          </div>
+        </div>
+
+        <div class="img-panel">
+          <div class="media"><img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope"/></div>
+          <div class="body">
+            <h3>Hearts of Hope</h3>
+            <p>Support for families navigating hardship — tangible help and wrap-around community connection.</p>
+          </div>
+        </div>
+
+        <div class="img-panel">
+          <div class="media"><img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer"/></div>
+          <div class="body">
+            <h3>Hope &amp; Healing</h3>
+            <p>Seasonal initiatives focused on wellness, stability, and restoring dignity through coordinated care.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -164,38 +260,6 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Year
-      const y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
-
-      // Mobile nav
-      const toggleBtn = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.main-nav');
-      if (toggleBtn && nav) {
-        toggleBtn.addEventListener('click', () => {
-          nav.classList.toggle('open');
-          toggleBtn.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
-        });
-      }
-
-      // Services dropdown click opens menu (no navigation)
-      document.querySelectorAll('.dropdown-toggle').forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const parent = link.closest('.has-dropdown');
-          const expanded = link.getAttribute('aria-expanded') === 'true';
-          link.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-
-          if (window.innerWidth <= 900) {
-            parent.classList.toggle('open');
-            const dd = parent.querySelector('.dropdown');
-            if (dd) dd.style.display = parent.classList.contains('open') ? 'block' : 'none';
-          }
-        });
-      });
-    });
-  </script>
+  <script src="js/site.js?v=10"></script>
 </body>
 </html>
