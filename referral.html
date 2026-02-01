@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Placement Referral — Caring Hearts Independent Living</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css?v=10"/>
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link" aria-label="Home">
-        <img src="/images/Healing_HADC.png" alt="Healing H.A.D.C., Inc. logo" class="logo-img"/>
+        <img src="images/Healing_HADC.png" alt="Healing H.A.D.C., Inc. logo" class="logo-img"/>
       </a>
 
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -26,335 +26,370 @@
           <li><a class="nav-link" href="about.html">About</a></li>
 
           <li class="has-dropdown">
-            <a class="nav-link" href="#" id="servicesMenu" aria-haspopup="true" aria-expanded="false">Services ▾</a>
-            <ul class="dropdown">
+            <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services ▾</a>
+            <ul class="dropdown" aria-label="Services submenu">
+              <li><a href="services.html">All Services</a></li>
               <li><a href="vital-path.html">VitalPath Home Health</a></li>
               <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
               <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
               <li><a href="heartreach.html">HeartReach Community Services</a></li>
-              <li><a href="services.html">All Services Overview</a></li>
             </ul>
           </li>
 
           <li><a class="nav-link" href="foundation.html">Foundation</a></li>
           <li><a class="nav-link active" href="referral.html">Referrals</a></li>
           <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+
           <li class="nav-cta"><a href="donate.html">Donate</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- PAGE HERO (MATCHES THEME) -->
   <section class="page-hero">
     <div class="container">
       <h1>Placement Referral — Caring Hearts</h1>
       <p>
-        Please complete this referral to support a safe and accurate placement decision. We use this form to
-        perform an initial fit & safety review. If the resident is a potential match, we will complete an
-        in-person assessment to confirm information, physical needs, and transportation plan.
+        Please complete this referral to support a safe and accurate placement decision.
+        We use this form for an initial fit &amp; safety review. If the resident is a potential match,
+        we will complete an in-person assessment to confirm information, physical needs, and transportation plan.
       </p>
 
-      <div class="callouts">
-        <a class="chip" href="/files/Referral_Intake_Placement_Screening_Form.pdf" target="_blank" rel="noopener">Download PDF Referral Form</a>
-        <a class="chip" href="tel:+17138240017">Call (713) 824-0017</a>
-        <a class="chip" href="mailto:info@healinghadc.org">Email info@healinghadc.org</a>
+      <div class="badge-row">
+        <a class="btn btn-primary" href="files/Referral_Intake_Placement_Screening_Form.pdf" target="_blank" rel="noopener">
+          Download PDF Referral Form
+        </a>
+        <a class="btn btn-outline" href="tel:+17138240017">Call (713) 824-0017</a>
+        <a class="btn btn-gold" href="mailto:info@healinghadc.org">Email info@healinghadc.org</a>
       </div>
     </div>
   </section>
 
-  <section class="wrap">
+  <section class="form-wrap">
     <div class="container grid">
 
-      <!-- FORM PANEL -->
+      <!-- FORM -->
       <div class="panel">
-        <h2>Referral Intake</h2>
-        <p class="muted">Complete each section to unlock the next step. This prevents missing critical details.</p>
-
-        <!-- Progress -->
-        <div class="progress" aria-label="Progress">
-          <span class="dot active" id="dot1"></span>
-          <span class="dot" id="dot2"></span>
-          <span class="dot" id="dot3"></span>
-          <span class="dot" id="dot4"></span>
-          <span class="dot" id="dot5"></span>
-        </div>
+        <h2>Placement Referral Intake</h2>
+        <p class="muted">
+          Step-by-step: you will only see the next section after completing the current section.
+        </p>
 
         <form id="referralForm" method="POST" action="https://formspree.io/f/mojlqpbd" enctype="multipart/form-data">
-          <!-- Formspree helpers -->
+          <!-- Formspree metadata -->
           <input type="hidden" name="form_type" value="Referral Intake / Placement Screening"/>
           <input type="hidden" name="_subject" value="NEW Referral Intake — Caring Hearts"/>
+          <!-- Reply-to helper for your team -->
           <input type="hidden" name="_replyto" id="replyto_hidden" value=""/>
 
           <!-- STEP 1 -->
-          <fieldset data-step="1">
-            <legend>Step 1 — Referring Party & Basic Details</legend>
+          <div class="step active" data-step="1">
+            <fieldset>
+              <legend>Step 1 — Referral & Resident Basics</legend>
 
-            <div class="row">
-              <div>
-                <label for="ref_org">Referring Organization / Facility</label>
-                <input id="ref_org" name="ref_org" type="text" required />
+              <div class="row">
+                <div>
+                  <label for="ref_org">Referring Organization / Facility</label>
+                  <input id="ref_org" name="ref_org" type="text" required />
+                </div>
+                <div>
+                  <label for="ref_contact">Contact Name</label>
+                  <input id="ref_contact" name="ref_contact" type="text" required />
+                </div>
               </div>
-              <div>
-                <label for="ref_contact">Contact Name</label>
-                <input id="ref_contact" name="ref_contact" type="text" required />
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <label for="ref_phone">Direct Phone</label>
-                <input id="ref_phone" name="ref_phone" type="tel" required />
+              <div class="row">
+                <div>
+                  <label for="ref_phone">Direct Phone</label>
+                  <input id="ref_phone" name="ref_phone" type="tel" required />
+                </div>
+                <div>
+                  <label for="ref_email">Email</label>
+                  <input id="ref_email" name="ref_email" type="email" required />
+                </div>
               </div>
-              <div>
-                <label for="ref_email">Email</label>
-                <input id="ref_email" name="ref_email" type="email" required />
-                <div class="note">We’ll use this email as the reply-to address.</div>
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <label for="resident_name">Resident Full Name</label>
-                <input id="resident_name" name="resident_name" type="text" required />
+              <div class="row">
+                <div>
+                  <label for="resident_name">Resident Full Name</label>
+                  <input id="resident_name" name="resident_name" type="text" required />
+                </div>
+                <div>
+                  <label for="dob">DOB</label>
+                  <input id="dob" name="dob" type="date" required />
+                </div>
               </div>
-              <div>
-                <label for="dob">DOB</label>
-                <input id="dob" name="dob" type="date" required />
+
+              <div class="row">
+                <div>
+                  <label for="requested_movein">Requested Move-in Date</label>
+                  <input id="requested_movein" name="requested_movein" type="date" required />
+                </div>
+                <div>
+                  <label for="current_location">Current Location</label>
+                  <input id="current_location" name="current_location" type="text" required
+                         placeholder="Hospital / rehab / home (city)" />
+                </div>
               </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <label for="current_location">Current Location</label>
-                <input id="current_location" name="current_location" type="text" placeholder="Hospital / rehab / home (city)" required />
+              <label for="placement_reason">Reason for Placement / Key Notes</label>
+              <textarea id="placement_reason" name="placement_reason" required
+                placeholder="Why is placement needed? Any immediate safety/staffing concerns?"></textarea>
+
+              <div class="checkline">
+                <input type="checkbox" id="phi_auth" name="phi_authorized" required />
+                <label for="phi_auth" style="margin:0;">
+                  I confirm I’m authorized to share this information for placement review.
+                </label>
               </div>
-              <div>
-                <label for="requested_movein">Requested Move-in Date</label>
-                <input id="requested_movein" name="requested_movein" type="date" required />
+
+              <div class="checkline">
+                <input type="checkbox" id="notRobot" required />
+                <label for="notRobot" style="margin:0;">I’m not a robot</label>
               </div>
-            </div>
 
-            <label for="placement_reason">Reason for Placement / Discharge Notes</label>
-            <textarea id="placement_reason" name="placement_reason" required
-              placeholder="Why is placement needed? Include any known concerns, supervision needs, or discharge plan."></textarea>
+              <div class="step-actions">
+                <button type="button" class="btn btn-primary" data-next>Next: Fit &amp; Safety</button>
+              </div>
 
-            <div class="checkline">
-              <input type="checkbox" id="phi_auth" name="phi_authorized" required />
-              <label for="phi_auth" style="margin:0;">I confirm I’m authorized to share this information for placement review.</label>
-            </div>
-
-            <div class="checkline">
-              <input type="checkbox" id="notRobot" required />
-              <label for="notRobot" style="margin:0;">I’m not a robot</label>
-            </div>
-          </fieldset>
+              <div class="step-note">
+                Tip: If you’re unsure on a field, select “Unknown” (where available) — but please don’t leave blanks.
+              </div>
+            </fieldset>
+          </div>
 
           <!-- STEP 2 -->
-          <fieldset class="step-hidden" data-step="2">
-            <legend>Step 2 — Fit & Safety Screening</legend>
+          <div class="step" data-step="2">
+            <fieldset>
+              <legend>Step 2 — Fit &amp; Safety Screening</legend>
 
-            <div class="row">
-              <div>
-                <label for="primary_dx">Primary Diagnosis</label>
-                <input id="primary_dx" name="primary_dx" type="text" required />
+              <div class="row">
+                <div>
+                  <label for="primary_dx">Primary Diagnosis</label>
+                  <input id="primary_dx" name="primary_dx" type="text" required />
+                </div>
+                <div>
+                  <label for="mobility">Mobility</label>
+                  <select id="mobility" name="mobility" required>
+                    <option value="">Select</option>
+                    <option>Independent</option>
+                    <option>Walker</option>
+                    <option>Wheelchair</option>
+                    <option>1-person assist</option>
+                    <option>2-person assist</option>
+                    <option>Hoyer lift</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
               </div>
-              <div>
-                <label for="secondary_dx">Secondary Diagnosis (if any)</label>
-                <input id="secondary_dx" name="secondary_dx" type="text" required />
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <label for="mobility">Mobility</label>
-                <select id="mobility" name="mobility" required>
-                  <option value="">Select</option>
-                  <option>Independent</option>
-                  <option>Walker</option>
-                  <option>Wheelchair</option>
-                  <option>1-person assist</option>
-                  <option>2-person assist</option>
-                  <option>Hoyer lift</option>
-                </select>
+              <div class="row">
+                <div>
+                  <label for="overnight_awake">Awake overnight often?</label>
+                  <select id="overnight_awake" name="overnight_awake" required>
+                    <option value="">Select</option>
+                    <option>No</option>
+                    <option>Sometimes</option>
+                    <option>Frequently</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="requires_1to1">Requires 1:1 / sitter?</label>
+                  <select id="requires_1to1" name="requires_1to1" required>
+                    <option value="">Select</option>
+                    <option>No</option>
+                    <option>Yes</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
               </div>
-              <div>
-                <label for="falls_risk">Falls Risk</label>
-                <select id="falls_risk" name="falls_risk" required>
-                  <option value="">Select</option>
-                  <option>Low</option>
-                  <option>Moderate</option>
-                  <option>High</option>
-                  <option>Unknown</option>
-                </select>
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <label for="overnight_awake">Awake overnight often?</label>
-                <select id="overnight_awake" name="overnight_awake" required>
-                  <option value="">Select</option>
-                  <option>No</option>
-                  <option>Sometimes</option>
-                  <option>Frequently</option>
-                </select>
-              </div>
-              <div>
-                <label for="requires_1to1">Requires 1:1 / sitter?</label>
-                <select id="requires_1to1" name="requires_1to1" required>
-                  <option value="">Select</option>
-                  <option>No</option>
-                  <option>Yes</option>
-                  <option>Unknown</option>
-                </select>
-              </div>
-            </div>
+              <label for="behavior_notes">Behavior / Wandering / Aggression notes</label>
+              <textarea id="behavior_notes" name="behavior_notes" required
+                placeholder="Describe behaviors, triggers, elopement risk, aggression history, etc."></textarea>
 
-            <label for="behavior_notes">Behavior / Wandering / Aggression notes</label>
-            <textarea id="behavior_notes" name="behavior_notes" required
-              placeholder="Include elopement risk, aggression history, triggers, redirection needs, restraints, etc."></textarea>
-          </fieldset>
+              <div class="step-actions">
+                <button type="button" class="btn btn-outline" data-back>Back</button>
+                <button type="button" class="btn btn-primary" data-next>Next: Medical Needs</button>
+              </div>
+            </fieldset>
+          </div>
 
           <!-- STEP 3 -->
-          <fieldset class="step-hidden" data-step="3">
-            <legend>Step 3 — ADLs & Supervision Level</legend>
+          <div class="step" data-step="3">
+            <fieldset>
+              <legend>Step 3 — Medical / Skilled Needs</legend>
 
-            <div class="row">
-              <div>
-                <label for="adl_bathing">Bathing</label>
-                <select id="adl_bathing" name="adl_bathing" required>
-                  <option value="">Select</option>
-                  <option>Independent</option>
-                  <option>Supervision</option>
-                  <option>Partial Assist</option>
-                  <option>Full Assist</option>
-                </select>
+              <div class="row">
+                <div>
+                  <label for="oxygen">Oxygen?</label>
+                  <select id="oxygen" name="oxygen" required>
+                    <option value="">Select</option>
+                    <option>No</option>
+                    <option>Yes</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="diabetes">Diabetes?</label>
+                  <select id="diabetes" name="diabetes" required>
+                    <option value="">Select</option>
+                    <option>No</option>
+                    <option>Yes</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
               </div>
-              <div>
-                <label for="adl_toileting">Toileting</label>
-                <select id="adl_toileting" name="adl_toileting" required>
-                  <option value="">Select</option>
-                  <option>Independent</option>
-                  <option>Supervision</option>
-                  <option>Partial Assist</option>
-                  <option>Full Assist</option>
-                  <option>Incontinent</option>
-                </select>
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <label for="adl_transfer">Transfers</label>
-                <select id="adl_transfer" name="adl_transfer" required>
-                  <option value="">Select</option>
-                  <option>Independent</option>
-                  <option>1-person assist</option>
-                  <option>2-person assist</option>
-                  <option>Mechanical lift</option>
-                </select>
-              </div>
-              <div>
-                <label for="adl_feeding">Feeding</label>
-                <select id="adl_feeding" name="adl_feeding" required>
-                  <option value="">Select</option>
-                  <option>Independent</option>
-                  <option>Setup</option>
-                  <option>Assist</option>
-                  <option>Total Assist</option>
-                </select>
-              </div>
-            </div>
+              <label for="skilled_needs">Skilled needs / conditions (details)</label>
+              <textarea id="skilled_needs" name="skilled_needs" required
+                placeholder="Wounds, devices, fall risk, seizures, dialysis, recent hospitalization, meds complexity, etc."></textarea>
 
-            <label for="supervision_notes">Supervision Notes</label>
-            <textarea id="supervision_notes" name="supervision_notes" required
-              placeholder="Describe supervision schedule, redirection needs, nighttime checks, and any staffing constraints."></textarea>
-          </fieldset>
+              <div class="row">
+                <div>
+                  <label for="med_admin">Medication administration required?</label>
+                  <select id="med_admin" name="med_admin" required>
+                    <option value="">Select</option>
+                    <option>No</option>
+                    <option>Yes</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="adl_level">ADL Support Level</label>
+                  <select id="adl_level" name="adl_level" required>
+                    <option value="">Select</option>
+                    <option>Minimal</option>
+                    <option>Moderate</option>
+                    <option>High</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-outline" data-back>Back</button>
+                <button type="button" class="btn btn-primary" data-next>Next: Payor & Logistics</button>
+              </div>
+            </fieldset>
+          </div>
 
           <!-- STEP 4 -->
-          <fieldset class="step-hidden" data-step="4">
-            <legend>Step 4 — Medical Status & Skilled Needs</legend>
+          <div class="step" data-step="4">
+            <fieldset>
+              <legend>Step 4 — Payor, Guardianship, Transportation</legend>
 
-            <div class="row">
-              <div>
-                <label for="oxygen">Oxygen?</label>
-                <select id="oxygen" name="oxygen" required>
-                  <option value="">Select</option>
-                  <option>No</option>
-                  <option>Yes — PRN</option>
-                  <option>Yes — Continuous</option>
-                </select>
+              <div class="row">
+                <div>
+                  <label for="payor">Primary Payor</label>
+                  <select id="payor" name="payor" required>
+                    <option value="">Select</option>
+                    <option>SSI</option>
+                    <option>SSDI</option>
+                    <option>Medicaid</option>
+                    <option>Private Pay</option>
+                    <option>VA</option>
+                    <option>Other</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="mco">Managed Care Plan (if any)</label>
+                  <input id="mco" name="mco" type="text" required placeholder="Enter plan or type N/A" />
+                </div>
               </div>
-              <div>
-                <label for="diabetes">Diabetes?</label>
-                <select id="diabetes" name="diabetes" required>
-                  <option value="">Select</option>
-                  <option>No</option>
-                  <option>Yes — Oral meds</option>
-                  <option>Yes — Insulin</option>
-                </select>
+
+              <div class="row">
+                <div>
+                  <label for="guardian">Legal Guardian / Responsible Party</label>
+                  <input id="guardian" name="guardian" type="text" required placeholder="Name + relationship" />
+                </div>
+                <div>
+                  <label for="guardian_phone">Guardian Phone</label>
+                  <input id="guardian_phone" name="guardian_phone" type="tel" required />
+                </div>
               </div>
-            </div>
 
-            <label for="skilled_needs">Wounds / Devices / Skilled needs</label>
-            <textarea id="skilled_needs" name="skilled_needs" required
-              placeholder="Wound care, catheters, ostomy, dialysis, tube feeds, seizure disorder, recent hospitalizations, etc."></textarea>
+              <div class="row">
+                <div>
+                  <label for="transportation">Transportation Plan</label>
+                  <select id="transportation" name="transportation" required>
+                    <option value="">Select</option>
+                    <option>Family provides</option>
+                    <option>Facility arranges</option>
+                    <option>Medical transport</option>
+                    <option>Unknown</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="transport_notes">Transportation notes</label>
+                  <input id="transport_notes" name="transport_notes" type="text" required placeholder="Mobility, stairs, equipment, etc." />
+                </div>
+              </div>
 
-            <label for="meds_summary">Medication Summary (high level)</label>
-            <textarea id="meds_summary" name="meds_summary" required
-              placeholder="List key medications + administration concerns. (You may attach med list if available.)"></textarea>
-          </fieldset>
+              <div class="step-actions">
+                <button type="button" class="btn btn-outline" data-back>Back</button>
+                <button type="button" class="btn btn-primary" data-next>Next: Documents</button>
+              </div>
+            </fieldset>
+          </div>
 
           <!-- STEP 5 -->
-          <fieldset class="step-hidden" data-step="5">
-            <legend>Step 5 — Payor, Records, Transportation & Attestation</legend>
+          <div class="step" data-step="5">
+            <fieldset>
+              <legend>Step 5 — Documents (upload if available)</legend>
 
-            <div class="row">
-              <div>
-                <label for="payor">Primary Payor</label>
-                <select id="payor" name="payor" required>
-                  <option value="">Select</option>
-                  <option>SSI</option>
-                  <option>SSDI</option>
-                  <option>Medicaid</option>
-                  <option>Private Pay</option>
-                  <option>VA</option>
-                  <option>Other</option>
-                </select>
+              <label for="documents_available">Do you have records to share now?</label>
+              <select id="documents_available" name="documents_available" required>
+                <option value="">Select</option>
+                <option>Yes — uploading now</option>
+                <option>No — will email/fax after submission</option>
+                <option>Unknown</option>
+              </select>
+
+              <label for="attachments">Upload documents (if available)</label>
+              <input id="attachments" name="attachments" type="file" multiple />
+
+              <div class="step-note">
+                If file uploads aren’t supported by your Formspree plan, submit anyway and send records by email or fax.
               </div>
-              <div>
-                <label for="mco">Managed Care Plan (if any)</label>
-                <input id="mco" name="mco" type="text" required />
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-outline" data-back>Back</button>
+                <button type="button" class="btn btn-gold" data-next>Review & Submit</button>
               </div>
-            </div>
+            </fieldset>
+          </div>
 
-            <label for="records_available">Records Available Now</label>
-            <textarea id="records_available" name="records_available" required
-              placeholder="What records can you provide today? (Face sheet, H&P, TB, psych notes, MAR, care plan, etc.)"></textarea>
+          <!-- STEP 6 -->
+          <div class="step" data-step="6">
+            <fieldset>
+              <legend>Final — Submit</legend>
 
-            <label for="transport_plan">Transportation Plan for Assessment / Move-in</label>
-            <textarea id="transport_plan" name="transport_plan" required
-              placeholder="Who will transport resident for in-person assessment and/or move-in? Include timing and constraints."></textarea>
+              <p class="muted">
+                By submitting, you confirm the information provided is accurate to the best of your knowledge.
+                We will verify details during the in-person assessment if the resident is a potential match.
+              </p>
 
-            <label for="attachments">Upload Documents (Recommended)</label>
-            <input id="attachments" name="attachments" type="file" multiple />
-            <div class="note">If your Formspree plan doesn’t support uploads, submit anyway and we’ll request documents by email/fax.</div>
+              <div class="checkline">
+                <input type="checkbox" id="confirm_accuracy" name="confirm_accuracy" required />
+                <label for="confirm_accuracy" style="margin:0;">
+                  I confirm this information is complete and accurate for initial review.
+                </label>
+              </div>
 
-            <div class="checkline">
-              <input type="checkbox" id="attest" name="attestation" required />
-              <label for="attest" style="margin:0;">
-                I attest this information is accurate to the best of my knowledge. I understand an in-person assessment will be completed to confirm.
-              </label>
-            </div>
+              <div class="step-actions">
+                <button type="button" class="btn btn-outline" data-back>Back</button>
+                <button type="submit" class="btn btn-primary">Submit Referral</button>
+              </div>
 
-            <div class="actions">
-              <button type="submit" class="btn btn-primary">Submit Referral</button>
-              <a class="btn btn-outline" href="/files/Referral_Intake_Placement_Screening_Form.pdf" target="_blank" rel="noopener">Use PDF Instead</a>
-            </div>
-
-            <div id="successMsg" class="success">Thank you — your referral intake has been submitted.</div>
-          </fieldset>
+              <p id="successMsg" style="display:none; margin-top:.9rem; color: var(--teal); font-weight: 900;">
+                Thank you — your referral intake has been submitted.
+              </p>
+            </fieldset>
+          </div>
         </form>
       </div>
 
@@ -362,11 +397,10 @@
       <aside class="panel sticky">
         <h2>What happens next</h2>
         <p class="muted">
-          1) We review fit & safety<br/>
-          2) Confirm bed availability & staffing<br/>
+          1) Initial fit &amp; safety review<br/>
+          2) Confirm availability &amp; staffing<br/>
           3) Request missing records<br/>
-          4) Schedule in-person assessment<br/>
-          5) Confirm transportation plan
+          4) Schedule in-person assessment
         </p>
 
         <div style="height:12px;"></div>
@@ -394,10 +428,10 @@
       <div class="footer-col social">
         <h4>Follow Us</h4>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
-          <a href="#" aria-label="Twitter"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
-          <a href="#" aria-label="LinkedIn"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
-          <a href="#" aria-label="Instagram"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
+          <a href="#" aria-label="Facebook"><img src="images/icon-facebook.svg" alt="Facebook"/></a>
+          <a href="#" aria-label="Twitter"><img src="images/icon-twitter.svg" alt="Twitter"/></a>
+          <a href="#" aria-label="LinkedIn"><img src="images/icon-linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#" aria-label="Instagram"><img src="images/icon-instagram.svg" alt="Instagram"/></a>
         </div>
       </div>
     </div>
@@ -408,11 +442,11 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // year
+      // Year
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
 
-      // mobile nav
+      // Mobile nav toggle
       const toggleBtn = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.main-nav');
       if (toggleBtn && nav) {
@@ -422,85 +456,64 @@
         });
       }
 
-      // Services dropdown click-open
-      const servicesMenu = document.getElementById('servicesMenu');
-      const servicesLi = servicesMenu ? servicesMenu.parentElement : null;
-      if (servicesMenu && servicesLi) {
-        servicesMenu.addEventListener('click', (e) => {
+      // Services dropdown click behavior
+      document.querySelectorAll('.has-dropdown > a').forEach(a => {
+        a.addEventListener('click', (e) => {
           e.preventDefault();
-          servicesLi.classList.toggle('open');
-          servicesMenu.setAttribute('aria-expanded', servicesLi.classList.contains('open') ? 'true' : 'false');
+          const li = a.parentElement;
+          if (window.innerWidth <= 900) li.classList.toggle('open');
         });
-        document.addEventListener('click', (e) => {
-          if (!servicesLi.contains(e.target)) {
-            servicesLi.classList.remove('open');
-            servicesMenu.setAttribute('aria-expanded', 'false');
-          }
-        });
-      }
-
-      // Form step gating
-      const form = document.getElementById('referralForm');
-      const steps = Array.from(form.querySelectorAll('fieldset[data-step]'));
-      const dots = [1,2,3,4,5].map(n => document.getElementById('dot'+n));
-      const success = document.getElementById('successMsg');
-      const refEmail = document.getElementById('ref_email');
-      const replyToHidden = document.getElementById('replyto_hidden');
-
-      // Keep reply-to synced
-      if (refEmail && replyToHidden) {
-        const syncReplyTo = () => replyToHidden.value = (refEmail.value || '').trim();
-        refEmail.addEventListener('input', syncReplyTo);
-        syncReplyTo();
-      }
-
-      function allRequiredFilled(stepEl){
-        const required = Array.from(stepEl.querySelectorAll('[required]'));
-        return required.every(el => {
-          if (el.type === 'checkbox') return el.checked;
-          return String(el.value || '').trim().length > 0;
-        });
-      }
-
-      function showStep(stepNumber){
-        steps.forEach(s => {
-          const n = Number(s.getAttribute('data-step'));
-          if (n <= stepNumber) s.classList.remove('step-hidden');
-          else s.classList.add('step-hidden');
-        });
-
-        dots.forEach((d, idx) => {
-          if (!d) return;
-          d.classList.toggle('active', idx < stepNumber);
-        });
-      }
-
-      // Start at step 1
-      showStep(1);
-
-      // On input, unlock next step if current complete
-      form.addEventListener('input', () => {
-        for (let i = 0; i < steps.length; i++){
-          const stepNum = i + 1;
-          if (allRequiredFilled(steps[i])) {
-            showStep(stepNum + 1);
-          } else {
-            showStep(stepNum);
-            break;
-          }
-        }
       });
 
-      // Submit via AJAX
+      // Formspree reply-to mapping (THIS is what you asked about)
+      const refEmail = document.getElementById('ref_email');
+      const replyTo = document.getElementById('replyto_hidden');
+      if (refEmail && replyTo) {
+        const sync = () => replyTo.value = refEmail.value.trim();
+        refEmail.addEventListener('input', sync);
+        sync();
+      }
+
+      // Step flow
+      const form = document.getElementById('referralForm');
+      const steps = Array.from(document.querySelectorAll('.step'));
+      let current = 0;
+
+      const showStep = (idx) => {
+        steps.forEach((s, i) => s.classList.toggle('active', i === idx));
+        current = idx;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      const validateStep = (idx) => {
+        const fields = steps[idx].querySelectorAll('input, select, textarea');
+        for (const el of fields) {
+          if (!el.checkValidity()) {
+            el.reportValidity();
+            return false;
+          }
+        }
+        return true;
+      };
+
+      document.querySelectorAll('[data-next]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (!validateStep(current)) return;
+          if (current < steps.length - 1) showStep(current + 1);
+        });
+      });
+
+      document.querySelectorAll('[data-back]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (current > 0) showStep(current - 1);
+        });
+      });
+
+      // AJAX submit
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Ensure all steps completed
-        const lastStep = steps[steps.length - 1];
-        if (!allRequiredFilled(lastStep)) {
-          alert('Please complete all sections before submitting.');
-          return;
-        }
+        if (!validateStep(current)) return;
 
         const data = new FormData(form);
         const resp = await fetch(form.action, {
@@ -511,15 +524,13 @@
 
         if (resp.ok) {
           form.reset();
-          showStep(1);
-          if (success) success.style.display = 'block';
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          document.getElementById('successMsg').style.display = 'block';
+          showStep(0);
         } else {
           alert('Oops! There was a problem submitting your referral. Please email info@healinghadc.org or use the PDF.');
         }
       });
     });
   </script>
-
 </body>
 </html>
