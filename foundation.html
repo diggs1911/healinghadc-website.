@@ -6,12 +6,12 @@
   <title>Founder — Mary Ja Ne Williams | Mary Williams Foundation</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/main.css?v=9"/>
+  <link rel="stylesheet" href="css/main.css?v=20"/>
 </head>
 
 <body>
 
-  <!-- HEADER (same structure across all pages) -->
+  <!-- HEADER (KEEP IDENTICAL ON EVERY PAGE) -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link" aria-label="Home">
@@ -26,8 +26,8 @@
           <li><a class="nav-link" href="about.html">About</a></li>
 
           <li class="has-dropdown">
-            <a class="nav-link" href="services.html">Services ▾</a>
-            <ul class="dropdown">
+            <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">Services ▾</a>
+            <ul class="dropdown" aria-label="Services menu">
               <li><a href="vital-path.html">VitalPath Home Health</a></li>
               <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
               <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
@@ -45,60 +45,59 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO (CENTERED + SUBTITLE BLACK) -->
   <section class="founder-hero">
     <div class="container founder-hero-inner">
       <div class="founder-hero-badge" aria-hidden="true">
-        <img src="/images/Mary_Williams_Foundation-logo.png" alt="Mary Williams Foundation logo"/>
+        <img src="/images/Mary_Williams_Foundation-logo.png" alt="" />
       </div>
 
       <h1 class="founder-hero-title">A Living Legacy</h1>
 
-      <p class="founder-hero-subtitle">
-        The Mary Williams Foundation for Hope and Healing exists to honor a life devoted to faith, education,
-        and dignified care, building pathways that uplift families and strengthen communities.
+      <!-- MUST BE BLACK per your instruction -->
+      <p class="founder-hero-subtitle founder-hero-subtitle--ink">
+        The Mary Williams Foundation for Hope and Healing exists to honor a life devoted to faith, education, and dignified care, building pathways that uplift families and strengthen communities.
       </p>
     </div>
   </section>
 
-  <!-- FOUNDER CONTENT -->
+  <!-- FOUNDER SECTION -->
   <section class="founder-wrap">
     <div class="container founder-grid">
 
       <!-- LEFT: PHOTO CARD -->
-      <div class="founder-card">
+      <article class="founder-card" aria-label="Founder profile">
         <div class="founder-photo">
-          <img src="/images/Founder_Mary_Williams.JPG" alt="Founder Mary Ja Ne Williams"/>
+          <img
+            src="/images/Founder_Mary_Williams.JPG"
+            alt="Founder Mary Ja Ne Williams"
+            loading="lazy"
+          />
         </div>
         <div class="founder-photo-meta">
           <h2>Mary Ja Ne Williams</h2>
-          <p>Founder • Educator • Community Builder • Care Advocate</p>
+
+          <!-- Make this line stand out (no dashes, no AI tone) -->
+          <p class="founder-meta-strong">Founder • Educator • Community Builder • Care Advocate</p>
         </div>
-      </div>
+      </article>
 
       <!-- RIGHT: BIO -->
-      <article class="founder-bio" aria-label="Founder biography">
+      <article class="founder-bio" aria-label="Founder story">
         <h2 class="founder-bio-title">Her Story</h2>
 
+        <!-- Bio text: keep human, clean, and faithful to your wording -->
         <p>
-          In 1985, Mary Ja Ne Williams earned her Bachelor of Arts in Business Administration, laying a foundation
-          for a life defined by service, faith, and community impact. Guided by unwavering purpose, she founded
-          Choo Choo Train Christian Academy in 1995.
+          In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life’s mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
+        </p>
+        <p>
+          Mary’s profound dedication to uplifting those around her extended far beyond education. She actively engaged in numerous community initiatives, becoming a recognized leader and advocate for families, youth, and seniors alike. Her compassionate spirit inspired her next significant endeavor—transitioning into adult care. Answering a divine call, she established Healing H.A.D.C., Inc., a comprehensive 24/7 adult care facility rooted in the same compassion, empathy, and devotion that characterized her educational ventures.
+        </p>
+        <p>
+          Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well-being.
         </p>
 
-        <p>
-          What began with five children grew into a thriving educational community serving over 300 students,
-          and expanded into a charter school, youth camp, and a Head Start program that strengthened families
-          and shaped futures.
-        </p>
-
-        <p>
-          Her commitment extended beyond education into advocacy for youth, seniors, and families navigating hardship.
-          Answering a divine call to care for adults with dignity, Mary established Healing H.A.D.C., Inc., a 24/7 adult
-          care home rooted in compassion, stability, and respect for the whole person.
-        </p>
-
-        <div class="founder-quote" role="note" aria-label="Legacy statement">
+        <div class="founder-quote" aria-label="Legacy statement">
           <p>Healing H.A.D.C., Inc. stands as a living testament to her love serving with dignity, compassion, and excellence.</p>
         </div>
       </article>
@@ -106,7 +105,7 @@
     </div>
   </section>
 
-  <!-- LIVING LEGACY -->
+  <!-- LIVING LEGACY PROGRAMS (NO HEADINGS INSIDE CARDS) -->
   <section class="legacy-gallery">
     <div class="container">
       <h2 class="legacy-title">Living Legacy Programs</h2>
@@ -115,51 +114,46 @@
       </p>
 
       <div class="legacy-grid">
-
-        <!-- Hope & Healing Summer Institute -->
+        <!-- Summer Institute -->
         <article class="legacy-card">
           <div class="legacy-media">
-            <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute"/>
+            <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute" loading="lazy"/>
           </div>
           <div class="legacy-body">
             <p>
-              A dynamic one-week camp for teens and adults designed to educate, empower, and inspire through mental wellness,
-              cancer awareness, nutritional guidance, and holistic personal development activities.
+              A dynamic one-week camp for teens and adults designed to educate, empower, and inspire through mental wellness, cancer awareness, nutritional guidance, and holistic personal development activities.
             </p>
           </div>
         </article>
 
-        <!-- Legacy Scholarships -->
+        <!-- Scholarships (NOTE: EXACT filename you provided: Leagacy_Scholarships.png) -->
         <article class="legacy-card">
           <div class="legacy-media">
-            <img src="/images/Legacy_Scholarships.png" alt="Legacy Scholarships"/>
+            <img src="/images/Leagacy_Scholarships.png" alt="Legacy Scholarships" loading="lazy"/>
           </div>
           <div class="legacy-body">
             <p>
-              Awards for students in Galveston and surrounding areas pursuing careers in healthcare, behavioral health, or social work
-              building pathways for future community-focused professionals and compassionate leaders.
+              Awards for students in Galveston and surrounding areas pursuing careers in healthcare, behavioral health, or social work—building pathways for future community-focused professionals and compassionate leaders.
             </p>
           </div>
         </article>
 
-        <!-- Hearts of Hope Banquet -->
+        <!-- Banquet -->
         <article class="legacy-card">
           <div class="legacy-media">
-            <img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope Banquet"/>
+            <img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope Banquet" loading="lazy"/>
           </div>
           <div class="legacy-body">
             <p>
-              An annual gala event celebrating community partners, awarding student scholarships, and presenting the Distinguished Community
-              Healing Award to those making a transformative local and regional impact.
+              An annual gala event celebrating community partners, awarding student scholarships, and presenting the Distinguished Community Healing Award to those making transformative local and regional impact.
             </p>
           </div>
         </article>
-
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (KEEP IDENTICAL ON EVERY PAGE) -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
@@ -168,6 +162,7 @@
         <p>Phone: <a href="tel:+17138240017">(713) 824-0017</a></p>
         <p>Fax: (713) 730-3601</p>
       </div>
+
       <div class="footer-col social">
         <h4>Follow Us</h4>
         <div class="social-icons">
@@ -178,22 +173,22 @@
         </div>
       </div>
     </div>
+
     <div class="footer-bottom container">
-      <p>© 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
+      <p>© <span id="year"></span> Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
     </div>
   </footer>
 
-  <!-- NAV + YEAR JS (same on every page) -->
+  <!-- SCRIPT: NAV CONSISTENCY + DROPDOWN FIX (COPY TO EVERY PAGE) -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Year
+      // Footer year
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
 
       // Mobile nav toggle
       const toggleBtn = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.main-nav');
-
       if (toggleBtn && nav) {
         toggleBtn.addEventListener('click', () => {
           nav.classList.toggle('open');
@@ -201,26 +196,31 @@
         });
       }
 
-      // Mobile dropdown toggle
-      const dropLink = document.querySelector('.has-dropdown > a');
-      const dropWrap = document.querySelector('.has-dropdown');
-      if (dropLink && dropWrap) {
-        dropLink.addEventListener('click', (e) => {
-          if (window.innerWidth <= 900) {
-            e.preventDefault();
-            dropWrap.classList.toggle('open');
+      // Services dropdown (click on desktop + mobile; closes on outside click)
+      const dd = document.querySelector('.has-dropdown');
+      const ddLink = dd ? dd.querySelector('a.nav-link') : null;
+
+      if (dd && ddLink) {
+        ddLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          dd.classList.toggle('open');
+          ddLink.setAttribute('aria-expanded', dd.classList.contains('open') ? 'true' : 'false');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!dd.contains(e.target)) {
+            dd.classList.remove('open');
+            ddLink.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            dd.classList.remove('open');
+            ddLink.setAttribute('aria-expanded', 'false');
           }
         });
       }
-
-      // Close menus on resize to prevent "stuck" states
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 900) {
-          nav?.classList.remove('open');
-          dropWrap?.classList.remove('open');
-          toggleBtn?.setAttribute('aria-expanded', 'false');
-        }
-      });
     });
   </script>
 
