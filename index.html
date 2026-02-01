@@ -7,166 +7,11 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css?v=10"/>
-
-  <style>
-    /* ===== HOME PAGE CLEAN OVERRIDES (minimal) ===== */
-
-    /* ensure dropdown sits above hero */
-    .header { position: relative; z-index: 1000; }
-    .has-dropdown .dropdown { z-index: 1200; }
-
-    /* HERO (clean / not busy) */
-    .hero{
-      position: relative;
-      min-height: 72vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-    .hero-bg{
-      position:absolute; inset:0;
-      background: url('/images/hero-banner.png') center/cover no-repeat;
-      transform: scale(1.02);
-    }
-    .hero::after{
-      content:"";
-      position:absolute; inset:0;
-      background: linear-gradient(90deg, rgba(0,0,0,0.58), rgba(0,0,0,0.32));
-    }
-    .hero-overlay{
-      position:relative;
-      z-index:2;
-      padding: 4.25rem 0;
-      width: 100%;
-      color: #fff;
-      text-shadow: 1px 2px 4px rgba(0,0,0,0.55);
-      text-align: left;
-    }
-    .hero-overlay h1{
-      font-size: clamp(2.2rem, 4vw, 3.25rem);
-      line-height: 1.08;
-      margin-bottom: .65rem;
-      max-width: 760px;
-    }
-    .hero-overlay p{
-      font-size: 1.1rem;
-      max-width: 650px;
-      color: rgba(255,255,255,0.92);
-      margin-bottom: 1.2rem;
-    }
-    .hero-actions{
-      display:flex;
-      gap:.75rem;
-      flex-wrap:wrap;
-      margin-top: .75rem;
-    }
-    .hero-mini{
-      margin-top: 1.35rem;
-      display:flex;
-      gap:.75rem;
-      flex-wrap:wrap;
-      max-width: 760px;
-    }
-    .hero-pill{
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 999px;
-      padding: .45rem .7rem;
-      font-weight: 800;
-      font-size: .9rem;
-      color: rgba(255,255,255,0.92);
-    }
-
-    /* Sections spacing */
-    .section{
-      padding: 3.25rem 0;
-    }
-    .section-title{
-      font-size: 2rem;
-      color: var(--purple);
-      text-align: center;
-      margin-bottom: .4rem;
-    }
-    .section-subtitle{
-      text-align:center;
-      max-width: 820px;
-      margin: 0 auto 1.75rem;
-      color: var(--gray-mid);
-      font-size: 1.05rem;
-    }
-
-    /* Start Here (clean) */
-    .path-grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1rem;
-    }
-    .path-card{
-      grid-column: span 6;
-      background:#fff;
-      border: 1px solid rgba(15,23,42,0.10);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      padding: 1.15rem 1.15rem;
-      position: relative;
-      overflow:hidden;
-    }
-    .path-card::before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        radial-gradient(500px 240px at 10% 0%, rgba(0,106,100,.10), transparent 55%),
-        radial-gradient(500px 240px at 95% 10%, rgba(89,35,122,.10), transparent 55%);
-      pointer-events:none;
-    }
-    .path-card h3{ position:relative; margin-bottom: .35rem; color: var(--ink); }
-    .path-card p{ position:relative; margin:0; color: var(--muted); }
-    .path-actions{
-      position:relative;
-      display:flex;
-      gap:.65rem;
-      flex-wrap:wrap;
-      margin-top: .85rem;
-    }
-
-    /* CTA band (single clean band) */
-    .cta-band{
-      margin-top: 1.25rem;
-      background: linear-gradient(135deg, rgba(0,106,100,0.10), rgba(89,35,122,0.08));
-      border: 1px solid rgba(15,23,42,0.08);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      padding: 1.15rem;
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 1rem;
-      align-items:center;
-    }
-    .cta-band h3{ margin:0 0 .25rem; color: var(--ink); }
-    .cta-band p{ margin:0; color: var(--muted); }
-    .cta-actions{
-      display:flex;
-      gap:.75rem;
-      justify-content:flex-end;
-      flex-wrap:wrap;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .hero{ min-height: 62vh; }
-      .hero-overlay{ text-align:center; }
-      .hero-actions{ justify-content:center; }
-      .hero-mini{ justify-content:center; }
-      .path-card{ grid-column: span 12; }
-      .cta-band{ grid-template-columns: 1fr; }
-      .cta-actions{ justify-content:flex-start; }
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- HEADER & NAV -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link" aria-label="Home">
@@ -180,21 +25,21 @@
           <li><a class="nav-link active" href="index.html">Home</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
 
+          <!-- IMPORTANT: Services now opens dropdown instead of navigating away -->
           <li class="has-dropdown">
-            <!-- IMPORTANT: not #, so Services is a real page -->
-            <a class="nav-link" href="services.html">Services ▾</a>
-            <ul class="dropdown">
+            <a class="nav-link" href="#" id="servicesMenu" aria-haspopup="true" aria-expanded="false">Services ▾</a>
+            <ul class="dropdown" aria-label="Services submenu">
               <li><a href="vital-path.html">VitalPath Home Health</a></li>
               <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
               <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
               <li><a href="heartreach.html">HeartReach Community Services</a></li>
+              <li><a href="services.html">All Services Overview</a></li>
             </ul>
           </li>
 
           <li><a class="nav-link" href="foundation.html">Foundation</a></li>
           <li><a class="nav-link" href="referral.html">Referrals</a></li>
           <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-
           <li class="nav-cta"><a href="donate.html">Donate</a></li>
         </ul>
       </nav>
@@ -202,49 +47,49 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero" aria-label="Homepage hero">
-    <div class="hero-bg"></div>
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
 
-    <div class="hero-overlay">
+    <div class="hero-content">
       <div class="container">
-        <h1>Empowering Independence,<br/>One Heart at a Time</h1>
-        <p>
-          Compassionate care across home health, behavioral health, independent living, community outreach,
-          and a mission-driven foundation honoring a legacy of service.
-        </p>
+        <div class="hero-copy">
+          <h1>Empowering Independence,<br/>One Heart at a Time</h1>
+          <p>
+            Compassionate care across home health, behavioral health, independent living,
+            community outreach, and a mission-driven foundation honoring a legacy of service.
+          </p>
 
-        <!-- CLEAN CTA: no duplicates -->
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#start-here">Get Started</a>
-          <a class="btn btn-outline" href="#pillars">View Services</a>
-        </div>
+          <!-- CLEAN CTA (no duplicates) -->
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#start-here">Get Started</a>
+            <a class="btn btn-outline" href="#pillars">View Services</a>
+            <a class="btn btn-gold" href="referral.html">Make a Referral</a>
+          </div>
 
-        <!-- light support info (no big cards, no overlap) -->
-        <div class="hero-mini" aria-label="Key values">
-          <span class="hero-pill">Clear next steps</span>
-          <span class="hero-pill">Dignity-first care</span>
-          <span class="hero-pill">Family partnership</span>
-          <span class="hero-pill">Community support</span>
+          <!-- Centered brand “value pills” -->
+          <div class="hero-pills" aria-label="Key values">
+            <span class="pill">Clear next steps</span>
+            <span class="pill">Dignity-first care</span>
+            <span class="pill">Family partnership</span>
+            <span class="pill">Community support</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- START HERE -->
-  <section id="start-here" class="section">
+  <section class="section" id="start-here">
     <div class="container">
       <h2 class="section-title">Start Here</h2>
-      <p class="section-subtitle">
-        Choose what best describes your need and we’ll guide you to the right next step.
-      </p>
+      <p class="section-subtitle">Choose what best describes your need and we’ll guide you to the right next step.</p>
 
       <div class="path-grid">
         <div class="path-card">
           <h3>I need placement / housing support</h3>
-          <p>Request a placement screening for Caring Hearts Independent Living.</p>
+          <p>Looking for a safe, stable living environment with daily support and structure.</p>
           <div class="path-actions">
-            <!-- ONLY referral CTA lives here + in nav -->
-            <a class="btn btn-primary" href="referral.html">Make a Referral</a>
+            <a class="btn btn-primary" href="referral.html">Start Referral</a>
             <a class="btn btn-outline" href="caring-hearts.html">Learn More</a>
           </div>
         </div>
@@ -276,35 +121,21 @@
           </div>
         </div>
       </div>
-
-      <!-- ONE clean band (no duplicates) -->
-      <div class="cta-band">
-        <div>
-          <h3>Not sure where to start?</h3>
-          <p>Send a message and we’ll help you choose the right pathway—fast and with clarity.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="contact.html">Contact Us</a>
-          <a class="btn btn-outline" href="contact.html#faq">Read FAQ</a>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- PILLARS OF CARE -->
-  <section id="pillars" class="section" style="background: var(--gray-light);">
+  <!-- PILLARS -->
+  <section class="section" id="pillars">
     <div class="container">
       <h2 class="section-title">Our Pillars of Care</h2>
-      <p class="section-subtitle">
-        Connected service lines working together to support the whole person.
-      </p>
+      <p class="section-subtitle">Connected service lines working together to support the whole person.</p>
 
       <div class="service-grid">
         <div class="card">
           <img src="/images/Vital_Path_Home_Health-logo.png" alt="VitalPath Home Health"/>
           <div class="card-content">
             <h3>VitalPath Home Health</h3>
-            <p>Compassionate in-home nursing and therapy designed to support safe, effective healing.</p>
+            <p>Compassionate, in-home nursing and therapy designed to support safe, effective healing.</p>
             <a class="card-link" href="vital-path.html">Learn More →</a>
           </div>
         </div>
@@ -322,7 +153,7 @@
           <img src="/images/Caring_Hearts-logo.png" alt="Caring Hearts Independent Living"/>
           <div class="card-content">
             <h3>Caring Hearts Independent Living</h3>
-            <p>A nurturing residential community supporting dignity, independence, and meaningful engagement.</p>
+            <p>A nurturing community supporting dignity, independence, and meaningful engagement.</p>
             <a class="card-link" href="caring-hearts.html">Learn More →</a>
           </div>
         </div>
@@ -345,6 +176,17 @@
           </div>
         </div>
       </div>
+
+      <div class="cta-band">
+        <div>
+          <h3>Not sure where to start?</h3>
+          <p>Send a message and we’ll help you choose the right pathway—fast and with clarity.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="contact.html">Contact Us</a>
+          <a class="btn btn-outline" href="referral.html">Make a Referral</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -357,6 +199,7 @@
         <p>Phone: <a href="tel:+17138240017">(713) 824-0017</a></p>
         <p>Fax: (713) 730-3601</p>
       </div>
+
       <div class="footer-col social">
         <h4>Follow Us</h4>
         <div class="social-icons">
@@ -367,6 +210,7 @@
         </div>
       </div>
     </div>
+
     <div class="footer-bottom container">
       <p>© <span id="year"></span> Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
     </div>
@@ -374,28 +218,37 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Year
+      // year
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
 
-      // Mobile nav toggle
+      // mobile nav
       const toggleBtn = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.main-nav');
-
       if (toggleBtn && nav) {
         toggleBtn.addEventListener('click', () => {
           nav.classList.toggle('open');
           toggleBtn.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
         });
+      }
 
-        // Mobile dropdown open (keeps service links clickable)
-        document.querySelectorAll('.has-dropdown > a').forEach(a => {
-          a.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-              e.preventDefault();
-              a.parentElement.classList.toggle('open');
-            }
-          });
+      // Services dropdown: click opens menu (does not navigate away)
+      const servicesMenu = document.getElementById('servicesMenu');
+      const servicesLi = servicesMenu ? servicesMenu.parentElement : null;
+
+      if (servicesMenu && servicesLi) {
+        servicesMenu.addEventListener('click', (e) => {
+          e.preventDefault();
+          servicesLi.classList.toggle('open');
+          servicesMenu.setAttribute('aria-expanded', servicesLi.classList.contains('open') ? 'true' : 'false');
+        });
+
+        // Close dropdown if user clicks outside
+        document.addEventListener('click', (e) => {
+          if (!servicesLi.contains(e.target)) {
+            servicesLi.classList.remove('open');
+            servicesMenu.setAttribute('aria-expanded', 'false');
+          }
         });
       }
     });
