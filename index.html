@@ -4,8 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Healing H.A.D.C., Inc. — Empowering Independence</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css?v=10"/>
 </head>
 
@@ -25,21 +24,21 @@
           <li><a class="nav-link active" href="index.html">Home</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
 
-          <!-- IMPORTANT: Services now opens dropdown instead of navigating away -->
+          <!-- IMPORTANT: Services opens dropdown only (no Services overview link) -->
           <li class="has-dropdown">
-            <a class="nav-link" href="#" id="servicesMenu" aria-haspopup="true" aria-expanded="false">Services ▾</a>
-            <ul class="dropdown" aria-label="Services submenu">
+            <a class="nav-link dropdown-toggle" href="#" aria-expanded="false">Services ▾</a>
+            <ul class="dropdown" aria-label="Services menu">
               <li><a href="vital-path.html">VitalPath Home Health</a></li>
               <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
               <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
               <li><a href="heartreach.html">HeartReach Community Services</a></li>
-              <li><a href="services.html">All Services Overview</a></li>
             </ul>
           </li>
 
           <li><a class="nav-link" href="foundation.html">Foundation</a></li>
           <li><a class="nav-link" href="referral.html">Referrals</a></li>
           <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+
           <li class="nav-cta"><a href="donate.html">Donate</a></li>
         </ul>
       </nav>
@@ -48,74 +47,71 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-bg"></div>
 
-    <div class="hero-content">
-      <div class="container">
-        <div class="hero-copy">
-          <h1>Empowering Independence,<br/>One Heart at a Time</h1>
-          <p>
-            Compassionate care across home health, behavioral health, independent living,
-            community outreach, and a mission-driven foundation honoring a legacy of service.
-          </p>
+    <div class="hero-overlay">
+      <div class="container hero-copy">
+        <h1>Empowering Independence,<br/>One Heart at a Time</h1>
 
-          <!-- CLEAN CTA (no duplicates) -->
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#start-here">Get Started</a>
-            <a class="btn btn-outline" href="#pillars">View Services</a>
-            <a class="btn btn-gold" href="referral.html">Make a Referral</a>
-          </div>
+        <p>
+          Compassionate care across home health, behavioral health, independent living,
+          community outreach, and a mission-driven foundation honoring a legacy of service.
+        </p>
 
-          <!-- Centered brand “value pills” -->
-          <div class="hero-pills" aria-label="Key values">
-            <span class="pill">Clear next steps</span>
-            <span class="pill">Dignity-first care</span>
-            <span class="pill">Family partnership</span>
-            <span class="pill">Community support</span>
-          </div>
+        <!-- CLEAN CTA: no duplicate referral CTA here -->
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#start-here">Get Started</a>
+          <a class="btn btn-outline" href="#pillars">View Services</a>
+        </div>
+
+        <div class="hero-chips" aria-label="Highlights">
+          <span class="chip">Clear next steps</span>
+          <span class="chip">Dignity-first care</span>
+          <span class="chip">Family partnership</span>
+          <span class="chip">Community support</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- START HERE -->
-  <section class="section" id="start-here">
+  <section id="start-here" class="section">
     <div class="container">
       <h2 class="section-title">Start Here</h2>
       <p class="section-subtitle">Choose what best describes your need and we’ll guide you to the right next step.</p>
 
-      <div class="path-grid">
-        <div class="path-card">
+      <div class="start-grid">
+        <div class="start-card">
           <h3>I need placement / housing support</h3>
           <p>Looking for a safe, stable living environment with daily support and structure.</p>
-          <div class="path-actions">
+          <div class="start-actions">
             <a class="btn btn-primary" href="referral.html">Start Referral</a>
             <a class="btn btn-outline" href="caring-hearts.html">Learn More</a>
           </div>
         </div>
 
-        <div class="path-card">
+        <div class="start-card">
           <h3>I need in-home support</h3>
           <p>Skilled visits and care coordination to support recovery and long-term wellness at home.</p>
-          <div class="path-actions">
+          <div class="start-actions">
             <a class="btn btn-primary" href="contact.html">Request Consultation</a>
             <a class="btn btn-outline" href="vital-path.html">Learn More</a>
           </div>
         </div>
 
-        <div class="path-card">
+        <div class="start-card">
           <h3>I need behavioral health support</h3>
           <p>Therapy and guidance built around compassion, clarity, and resilience.</p>
-          <div class="path-actions">
+          <div class="start-actions">
             <a class="btn btn-secondary" href="contact.html">Request Appointment</a>
             <a class="btn btn-outline" href="mind-path.html">Learn More</a>
           </div>
         </div>
 
-        <div class="path-card">
+        <div class="start-card">
           <h3>I want to donate or volunteer</h3>
           <p>Support scholarships, outreach initiatives, and resident wellness programs.</p>
-          <div class="path-actions">
+          <div class="start-actions">
             <a class="btn btn-gold" href="donate.html">Donate</a>
             <a class="btn btn-outline" href="contact.html">Volunteer</a>
           </div>
@@ -125,67 +121,66 @@
   </section>
 
   <!-- PILLARS -->
-  <section class="section" id="pillars">
+  <section id="pillars" class="section" style="background: var(--gray-light);">
     <div class="container">
       <h2 class="section-title">Our Pillars of Care</h2>
       <p class="section-subtitle">Connected service lines working together to support the whole person.</p>
 
-      <div class="service-grid">
-        <div class="card">
-          <img src="/images/Vital_Path_Home_Health-logo.png" alt="VitalPath Home Health"/>
-          <div class="card-content">
-            <h3>VitalPath Home Health</h3>
-            <p>Compassionate, in-home nursing and therapy designed to support safe, effective healing.</p>
-            <a class="card-link" href="vital-path.html">Learn More →</a>
+      <div class="pillars-grid">
+        <article class="pillar-card">
+          <div class="pillar-logo">
+            <img src="/images/Vital_Path_Home_Health-logo.png" alt="VitalPath Home Health"/>
           </div>
-        </div>
+          <div class="pillar-body">
+            <h3>VitalPath Home Health</h3>
+            <p>Compassionate in-home nursing and specialized therapy designed to support safe, effective healing.</p>
+            <a href="vital-path.html">Learn More →</a>
+          </div>
+        </article>
 
-        <div class="card">
-          <img src="/images/MindPath_Behavioral_Health-logo.png" alt="MindPath Behavioral Health"/>
-          <div class="card-content">
+        <article class="pillar-card">
+          <div class="pillar-logo">
+            <img src="/images/MindPath_Behavioral_Health-logo.png" alt="MindPath Behavioral Health"/>
+          </div>
+          <div class="pillar-body">
             <h3>MindPath Behavioral Health</h3>
             <p>Emotional wellness through counseling, psychiatric care, and support tailored to each individual.</p>
-            <a class="card-link" href="mind-path.html">Learn More →</a>
+            <a href="mind-path.html">Learn More →</a>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="/images/Caring_Hearts-logo.png" alt="Caring Hearts Independent Living"/>
-          <div class="card-content">
+        <article class="pillar-card">
+          <div class="pillar-logo">
+            <img src="/images/Caring_Hearts-logo.png" alt="Caring Hearts Independent Living"/>
+          </div>
+          <div class="pillar-body">
             <h3>Caring Hearts Independent Living</h3>
-            <p>A nurturing community supporting dignity, independence, and meaningful engagement.</p>
-            <a class="card-link" href="caring-hearts.html">Learn More →</a>
+            <p>A supportive community where adults with disabilities and seniors thrive with dignity and engagement.</p>
+            <a href="caring-hearts.html">Learn More →</a>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="/images/HeartReach-logo.png" alt="HeartReach Community Services"/>
-          <div class="card-content">
+        <article class="pillar-card">
+          <div class="pillar-logo">
+            <img src="/images/HeartReach-logo.png" alt="HeartReach Community Services"/>
+          </div>
+          <div class="pillar-body">
             <h3>HeartReach Community Services</h3>
-            <p>Outreach programs that connect individuals to resources and strengthen support systems.</p>
-            <a class="card-link" href="heartreach.html">Learn More →</a>
+            <p>Outreach programs connecting individuals to resources and strengthening support systems.</p>
+            <a href="heartreach.html">Learn More →</a>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="/images/Mary_Williams_Foundation-logo.png" alt="Mary Williams Foundation"/>
-          <div class="card-content">
+        <article class="pillar-card">
+          <div class="pillar-logo">
+            <img src="/images/Mary_Williams_Foundation-logo.png" alt="Mary Williams Foundation"/>
+          </div>
+          <div class="pillar-body">
             <h3>Mary Williams Foundation</h3>
-            <p>Scholarships, education, and community initiatives empowering the next generation of leaders.</p>
-            <a class="card-link" href="foundation.html">Learn More →</a>
+            <p>Honoring Mary Ja Ne Williams through scholarships, education, and initiatives that empower the next generation.</p>
+            <a href="foundation.html">Learn More →</a>
           </div>
-        </div>
-      </div>
-
-      <div class="cta-band">
-        <div>
-          <h3>Not sure where to start?</h3>
-          <p>Send a message and we’ll help you choose the right pathway—fast and with clarity.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="contact.html">Contact Us</a>
-          <a class="btn btn-outline" href="referral.html">Make a Referral</a>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -199,7 +194,6 @@
         <p>Phone: <a href="tel:+17138240017">(713) 824-0017</a></p>
         <p>Fax: (713) 730-3601</p>
       </div>
-
       <div class="footer-col social">
         <h4>Follow Us</h4>
         <div class="social-icons">
@@ -210,7 +204,6 @@
         </div>
       </div>
     </div>
-
     <div class="footer-bottom container">
       <p>© <span id="year"></span> Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
     </div>
@@ -218,11 +211,11 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // year
+      // Year
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
 
-      // mobile nav
+      // Mobile nav toggle
       const toggleBtn = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.main-nav');
       if (toggleBtn && nav) {
@@ -232,27 +225,23 @@
         });
       }
 
-      // Services dropdown: click opens menu (does not navigate away)
-      const servicesMenu = document.getElementById('servicesMenu');
-      const servicesLi = servicesMenu ? servicesMenu.parentElement : null;
-
-      if (servicesMenu && servicesLi) {
-        servicesMenu.addEventListener('click', (e) => {
+      // Services dropdown (click opens menu; does NOT navigate)
+      document.querySelectorAll('.dropdown-toggle').forEach(link => {
+        link.addEventListener('click', (e) => {
           e.preventDefault();
-          servicesLi.classList.toggle('open');
-          servicesMenu.setAttribute('aria-expanded', servicesLi.classList.contains('open') ? 'true' : 'false');
-        });
+          const parent = link.closest('.has-dropdown');
+          const expanded = link.getAttribute('aria-expanded') === 'true';
+          link.setAttribute('aria-expanded', expanded ? 'false' : 'true');
 
-        // Close dropdown if user clicks outside
-        document.addEventListener('click', (e) => {
-          if (!servicesLi.contains(e.target)) {
-            servicesLi.classList.remove('open');
-            servicesMenu.setAttribute('aria-expanded', 'false');
+          // mobile: toggle open class
+          if (window.innerWidth <= 900) {
+            parent.classList.toggle('open');
+            const dd = parent.querySelector('.dropdown');
+            if (dd) dd.style.display = parent.classList.contains('open') ? 'block' : 'none';
           }
         });
-      }
+      });
     });
   </script>
-
 </body>
 </html>
