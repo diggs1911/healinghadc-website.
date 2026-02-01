@@ -3,108 +3,17 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Mary Williams Foundation — Hope & Healing</title>
+  <title>Founder — Mary Ja Ne Williams | Healing H.A.D.C., Inc.</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/main.css?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css?v=12"/>
 
-  <style>
-    /* Foundation page-only elegance */
-    .found-hero {
-      padding: 3rem 0 2.6rem;
-      background:
-        radial-gradient(1100px 480px at 50% 0%, rgba(89,35,122,0.16), transparent 60%),
-        radial-gradient(1100px 480px at 15% 10%, rgba(0,106,100,0.14), transparent 60%),
-        linear-gradient(180deg, #F7FAFF, #FFFFFF);
-      border-bottom: 1px solid rgba(15,23,42,0.06);
-      text-align: center;
-    }
-    .found-hero h1 { color: var(--purple); font-weight: 900; letter-spacing:-0.02em; font-size: clamp(2.0rem, 3vw, 2.8rem); }
-    .found-hero p { color: var(--muted); max-width: 980px; margin: 12px auto 0; font-weight: 600; }
-
-    .bio {
-      display:grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 18px;
-      align-items: center;
-    }
-    .bio-card {
-      border-radius: var(--radius-lg);
-      overflow:hidden;
-      border: 1px solid rgba(15,23,42,0.08);
-      box-shadow: var(--shadow);
-      background:#fff;
-    }
-    .bio-photo {
-      height: 420px;
-      background: #fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding: 14px;
-    }
-    .bio-photo img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 18px;
-    }
-    .bio-body { padding: 18px 18px 22px; }
-    .bio-body h2 { color: var(--teal); font-weight: 900; font-size: 1.5rem; }
-    .bio-body .subtitle { color: var(--muted); font-weight: 700; margin-top: 6px; }
-    .bio-body .quote {
-      margin-top: 14px;
-      padding: 14px;
-      border-radius: 16px;
-      background: rgba(0,106,100,0.06);
-      border: 1px solid rgba(0,106,100,0.14);
-      font-weight: 700;
-      color: var(--gray-700);
-    }
-
-    .img-panels{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 18px;
-      margin-top: 20px;
-    }
-    .img-panel{
-      grid-column: span 4;
-      background:#fff;
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(15,23,42,0.08);
-      box-shadow: var(--shadow-sm);
-      overflow:hidden;
-    }
-    .img-panel .media{
-      height: 170px;
-      background: linear-gradient(135deg, rgba(0,106,100,0.06), rgba(89,35,122,0.06));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding: 14px;
-      border-bottom: 1px solid rgba(15,23,42,0.06);
-    }
-    .img-panel .media img{
-      width: 92%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .img-panel .body{ padding: 16px 16px 18px; }
-    .img-panel h3{ font-weight: 900; color: var(--ink); }
-    .img-panel p{ margin-top: 10px; color: var(--muted); font-weight: 600; }
-
-    @media (max-width: 900px){
-      .bio{ grid-template-columns: 1fr; }
-      .bio-photo{ height: 360px; }
-      .img-panel{ grid-column: span 12; }
-    }
-  </style>
+  <meta name="description" content="Founder story and legacy programs honoring Mary Ja Ne Williams — faith-led service, education, and dignified adult care."/>
 </head>
 
 <body>
 
-  <!-- HEADER (SAME ON EVERY PAGE) -->
+  <!-- HEADER (match across all pages) -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link" aria-label="Home">
@@ -118,14 +27,15 @@
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
 
+          <!-- IMPORTANT: Services should open dropdown, NOT navigate to an overview page -->
           <li class="has-dropdown">
-            <a class="nav-link" href="#">Services ▾</a>
-            <div class="dropdown" role="menu">
-              <a href="vital-path.html">VitalPath Home Health</a>
-              <a href="mind-path.html">MindPath Behavioral Health</a>
-              <a href="caring-hearts.html">Caring Hearts Independent Living</a>
-              <a href="heartreach.html">HeartReach Community Services</a>
-            </div>
+            <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">Services ▾</a>
+            <ul class="dropdown">
+              <li><a href="vital-path.html">VitalPath Home Health</a></li>
+              <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
+              <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
+              <li><a href="heartreach.html">HeartReach Community Services</a></li>
+            </ul>
           </li>
 
           <li><a class="nav-link active" href="foundation.html">Foundation</a></li>
@@ -139,104 +49,113 @@
   </header>
 
   <!-- HERO -->
-  <section class="found-hero">
-    <div class="container">
-      <h1>Mary Williams Foundation for Hope &amp; Healing</h1>
-      <p>
-        Honoring a life of service by investing in people — scholarships, community support, and pathways
-        that restore dignity, strengthen families, and expand hope.
+  <section class="founder-hero">
+    <div class="container founder-hero-inner">
+      <div class="founder-hero-badge">
+        <img src="/images/Mary_Williams_Foundation-logo.png" alt="Mary Williams Foundation logo"/>
+      </div>
+
+      <h1 class="founder-hero-title">A Founder’s Legacy</h1>
+      <p class="founder-hero-subtitle">
+        Honoring the life and service of <strong>Mary Ja Ne Williams</strong> — a faith-led builder of people, purpose,
+        and dignified care.
       </p>
     </div>
   </section>
 
-  <!-- BIO / LEGACY -->
-  <section class="section">
-    <div class="container bio">
+  <!-- FOUNDER FEATURE -->
+  <section class="founder-wrap">
+    <div class="container founder-grid">
 
-      <div class="bio-card">
-        <div class="bio-photo">
-          <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Williams"/>
+      <!-- PHOTO CARD -->
+      <aside class="founder-card">
+        <div class="founder-photo">
+          <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Ja Ne Williams"/>
         </div>
-      </div>
-
-      <div class="bio-card">
-        <div class="bio-body">
-          <h2>Mary Williams</h2>
-          <div class="subtitle">Founder • Servant-Leader • Builder of Community</div>
-
-          <p class="helper" style="margin-top:14px;">
-            Mary Williams lived with purpose and generosity — serving families with compassion, advocating for the vulnerable,
-            and creating spaces where people could feel safe, seen, and supported.
-          </p>
-
-          <p class="helper" style="margin-top:12px;">
-            This foundation carries her legacy forward through practical help and future-focused opportunity:
-            support for children and families, scholarships for emerging caregivers and community leaders,
-            and initiatives that strengthen wellness and stability.
-          </p>
-
-          <div class="quote">
-            “Legacy isn’t what we leave behind — it’s who we lift while we’re here.”
-          </div>
+        <div class="founder-photo-meta">
+          <h2>Mary Ja Ne Williams</h2>
+          <p>Founder • Educator • Community Advocate</p>
         </div>
-      </div>
+      </aside>
+
+      <!-- BIO -->
+      <article class="founder-bio">
+        <h2 class="founder-bio-title">Her Story</h2>
+
+        <p>
+          In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a strong
+          foundation for a life devoted to service. Guided by unwavering faith and a deep commitment to her community,
+          she founded <strong>Choo Choo Train Christian Academy</strong> in 1995.
+        </p>
+
+        <p>
+          What began with just five children grew under her dedicated leadership into a thriving educational community
+          serving more than 300 students — including the development of a charter school, a youth camp, and a Head Start
+          program that created opportunity and stability for families who needed it most.
+        </p>
+
+        <p>
+          Mary’s service expanded beyond education into community leadership and advocacy for youth, families, and seniors.
+          Answering what she believed was a divine call, she established <strong>Healing H.A.D.C., Inc.</strong> — a comprehensive
+          24/7 adult care facility rooted in compassion, dignity, and consistent support. Today, her legacy lives on through
+          the people she helped, the programs she built, and the standard of care she set.
+        </p>
+
+        <div class="founder-quote">
+          <p>“A life of faith isn’t measured by words — it’s proven by what you build for others.”</p>
+        </div>
+      </article>
 
     </div>
   </section>
 
-  <!-- MISSION / VALUES / PROGRAMS (IMAGE-DRIVEN) -->
-  <section class="section alt">
+  <!-- LEGACY PROGRAMS -->
+  <section class="legacy-gallery">
     <div class="container">
-      <h2 class="section-title">A Living Legacy</h2>
-      <p class="section-subtitle">
-        Thoughtfully designed programs that reflect excellence, dignity, and real impact.
+      <h2 class="legacy-title">A Living Legacy</h2>
+      <p class="legacy-subtitle">
+        Signature programs designed to uplift, educate, and strengthen the communities she served.
       </p>
 
-      <div class="img-panels">
-        <div class="img-panel">
-          <div class="media"><img src="/images/Our_Mission.png" alt="Our Mission"/></div>
-          <div class="body">
-            <h3>Our Mission</h3>
-            <p>Extend hope through scholarships, community support, and dignified care initiatives.</p>
-          </div>
-        </div>
+      <div class="legacy-grid">
 
-        <div class="img-panel">
-          <div class="media"><img src="/images/Our_Values.png" alt="Our Values"/></div>
-          <div class="body">
-            <h3>Our Values</h3>
-            <p>Compassion, excellence, integrity, and service — anchored in respect for every person.</p>
+        <article class="legacy-card">
+          <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute"/>
+          <div class="legacy-body">
+            <p>
+              A dynamic one-week camp for teens and adults designed to educate, empower, and inspire through mental wellness,
+              cancer awareness, nutritional guidance, and holistic personal development activities.
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="img-panel">
-          <div class="media"><img src="/images/Legacy_Scholarships.png" alt="Legacy Scholarships"/></div>
-          <div class="body">
-            <h3>Legacy Scholarships</h3>
-            <p>Scholarships and training pathways for future leaders in health, behavioral health, and human services.</p>
+        <article class="legacy-card">
+          <!-- NOTE: your file list shows "Leagacy_Scholarships.png" (spelled that way).
+               If you rename it to "Legacy_Scholarships.png", update this path. -->
+          <img src="/images/Leagacy_Scholarships.png" alt="Legacy Scholarships"/>
+          <div class="legacy-body">
+            <p>
+              Awards for students in Galveston and surrounding areas pursuing careers in healthcare, behavioral health,
+              or social work — building pathways for future community-focused professionals and compassionate leaders.
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="img-panel">
-          <div class="media"><img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope"/></div>
-          <div class="body">
-            <h3>Hearts of Hope</h3>
-            <p>Support for families navigating hardship — tangible help and wrap-around community connection.</p>
+        <article class="legacy-card">
+          <img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope Banquet"/>
+          <div class="legacy-body">
+            <p>
+              An annual gala event celebrating community partners, awarding student scholarships, and presenting the
+              Distinguished Community Healing Award to those making transformative local and regional impact.
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="img-panel">
-          <div class="media"><img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer"/></div>
-          <div class="body">
-            <h3>Hope &amp; Healing</h3>
-            <p>Seasonal initiatives focused on wellness, stability, and restoring dignity through coordinated care.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (match across all pages) -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
@@ -260,6 +179,35 @@
     </div>
   </footer>
 
-  <script src="js/site.js?v=10"></script>
+  <!-- NAV + YEAR -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Footer year
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+
+      // Mobile nav toggle
+      const toggleBtn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.main-nav');
+
+      if (toggleBtn && nav) {
+        toggleBtn.addEventListener('click', () => {
+          nav.classList.toggle('open');
+          toggleBtn.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+        });
+
+        // Dropdown accordion on mobile
+        document.querySelectorAll('.has-dropdown > a').forEach(a => {
+          a.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              a.parentElement.classList.toggle('open');
+            }
+          });
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
