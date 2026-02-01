@@ -698,11 +698,24 @@ textarea{ min-height: 120px; }
   overflow:hidden;
 }
 
+/* Legacy images contain text — do NOT crop */
 .legacy-card img{
-  width:100%;
-  height: 260px;
-  object-fit: cover;
-  display:block;
+  width: 100%;
+  height: 260px;            /* consistent image zone */
+  object-fit: contain;      /* SHOW ENTIRE IMAGE */
+  object-position: center;
+  background: #f6f7fb;      /* clean matte behind images */
+  display: block;
+  padding: 10px;            /* keeps text away from edges */
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px){
+  .legacy-card img{ height: 280px; }
+}
+
+@media (max-width: 980px){
+  .legacy-card img{ height: 240px; }
 }
 
 .legacy-body{
