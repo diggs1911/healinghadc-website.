@@ -2,83 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mary Ja Ne Williams Foundation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/main.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mary Williams Foundation — Healing H.A.D.C., Inc.</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css?v=10"/>
 </head>
+
 <body>
 
-  <!-- HEADER & NAV -->
-  <header class="header container">
-    <a href="index.html" class="logo-link">
-      <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
-    </a>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="has-dropdown">
-          <a href="#">Services ▾</a>
-          <ul class="dropdown">
-            <li><a href="vital-path.html">VitalPath Home Health</a></li>
-            <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
-            <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
-            <li><a href="heartreach.html">HeartReach Community Services</a></li>
-          </ul>
-        </li>
-        <li><a href="foundation.html">Foundation</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link" aria-label="Home">
+        <img src="/images/Healing_HADC.png" alt="Healing H.A.D.C., Inc. logo" class="logo-img"/>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+
+          <li class="has-dropdown">
+            <a class="nav-link" href="#" id="servicesMenu" aria-haspopup="true" aria-expanded="false">Services ▾</a>
+            <ul class="dropdown">
+              <li><a href="vital-path.html">VitalPath Home Health</a></li>
+              <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
+              <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
+              <li><a href="heartreach.html">HeartReach Community Services</a></li>
+              <li><a href="services.html">All Services Overview</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link active" href="foundation.html">Foundation</a></li>
+          <li><a class="nav-link" href="referral.html">Referrals</a></li>
+          <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-cta"><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- FOUNDER BANNER -->
-  <section class="foundation-banner">
-    <img src="/images/Founder_Mary_Williams.JPG" alt="Mary Ja Ne Williams"/>
+  <!-- HERO -->
+  <section class="foundation-hero">
+    <div class="container">
+      <h1>Mary Williams Foundation for Hope & Healing</h1>
+      <p>
+        Honoring the legacy of service through scholarships, education, and community initiatives that empower
+        the next generation of healthcare and human service leaders.
+      </p>
+    </div>
   </section>
 
-  <!-- FOUNDER DETAILS -->
-  <section class="foundation-founder">
-    <h2>Mary Ja Ne Williams</h2>
-    <h3>About the Founder</h3>
-  </section>
+  <section class="foundation-wrap">
+    <div class="container founder-grid">
 
-  <!-- FOUNDER STORY -->
-  <section class="foundation-story">
-    <p>
-      In 1985, Mary Ja Ne Williams earned her Bachelor of Arts degree in Business Administration, laying a solid foundation for her life’s mission of service. Guided by unwavering faith and a deep-seated commitment to her community, she founded Choo Choo Train Christian Academy in 1995. What began humbly with just five children blossomed under her dedicated leadership into a vibrant educational community serving over 300 students, along with the establishment of a successful charter school, youth camp, and impactful Head Start program.
-    </p>
-    <p>
-      Mary’s profound dedication to uplifting those around her extended far beyond education. She actively engaged in numerous community initiatives, becoming a recognized leader and advocate for families, youth, and seniors alike. Her compassionate spirit inspired her next significant endeavor—transitioning into adult care. Answering a divine call, she established Healing H.A.D.C., Inc., a comprehensive 24/7 adult care facility rooted in the same compassion, empathy, and devotion that characterized her educational ventures.
-    </p>
-    <p>
-      Healing H.A.D.C., Inc. now stands as a lasting testament to Mary’s tireless service and enduring legacy of love. It continues to embody her lifelong commitment to dignity, care, and holistic community well-being.
-    </p>
-  </section>
+      <!-- LEFT: Founder card -->
+      <div class="founder-card">
+        <!-- Replace the src below with your actual mom photo filename in /images/ -->
+        <img class="founder-photo" src="/images/Mary_Williams.png" alt="Mary Ja Ne Williams"/>
+        <div class="founder-meta">
+          <h2>Mary Ja Ne Williams</h2>
+          <p>Legacy of compassion • dignity • service</p>
+        </div>
+      </div>
 
-  <!-- CORE PROGRAMS -->
-  <section class="pillars container">
-    <h2 class="pillar-header">Core Programs &amp; Services</h2>
-    <div class="service-grid">
-      <div class="card">
-        <img src="/images/Leagacy_Scholarships.png" alt="Legacy Scholarships"/>
-        <div class="card-content">
-          <p>Awards for students in Galveston and surrounding areas pursuing careers in healthcare, behavioral health, or social work—building pathways for future community-focused professionals and compassionate leaders.</p>
+      <!-- RIGHT: Story -->
+      <div class="story-card">
+        <h2>Our Mission</h2>
+        <p>
+          The Mary Williams Foundation exists to extend hope and healing through purposeful investment in people—
+          especially students and emerging professionals entering medical, social, and behavioral health fields.
+        </p>
+        <p>
+          We believe real change happens when communities are supported, families are strengthened, and those called
+          to serve are equipped with resources and opportunity.
+        </p>
+
+        <div class="focus-grid">
+          <div class="focus">
+            <h3>Scholarships</h3>
+            <p>Supporting education for future caregivers, clinicians, and community leaders.</p>
+          </div>
+          <div class="focus">
+            <h3>Community Support</h3>
+            <p>Helping families and individuals access practical, life-stabilizing resources.</p>
+          </div>
+          <div class="focus">
+            <h3>Legacy Projects</h3>
+            <p>Programs that reflect Mary’s lifelong commitment to compassion and service.</p>
+          </div>
+        </div>
+
+        <div class="cta-band" style="margin-top:1.25rem;">
+          <div>
+            <h3>Partner with the mission</h3>
+            <p>Donate, volunteer, or connect us with community opportunities.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-gold" href="donate.html">Donate</a>
+            <a class="btn btn-outline" href="contact.html">Contact Us</a>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img src="/images/Hope_Healing_Summer.png" alt="Hope & Healing Summer Institute"/>
-        <div class="card-content">
-          <p>A dynamic one-week camp for teens and adults designed to educate, empower, and inspire through mental wellness, cancer awareness, nutritional guidance, and holistic personal development activities.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/images/Hearts_Of_Hope.png" alt="Hearts of Hope Banquet"/>
-        <div class="card-content">
-          <p>An annual gala event celebrating community partners, awarding student scholarships, and presenting the Distinguished Community Healing Award to those making transformative local and regional impact.</p>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -94,17 +123,48 @@
       <div class="footer-col social">
         <h4>Follow Us</h4>
         <div class="social-icons">
-          <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
-          <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
-          <a href="#"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
-          <a href="#"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
+          <a href="#" aria-label="Facebook"><img src="/images/icon-facebook.svg" alt="Facebook"/></a>
+          <a href="#" aria-label="Twitter"><img src="/images/icon-twitter.svg" alt="Twitter"/></a>
+          <a href="#" aria-label="LinkedIn"><img src="/images/icon-linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#" aria-label="Instagram"><img src="/images/icon-instagram.svg" alt="Instagram"/></a>
         </div>
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
+      <p>© <span id="year"></span> Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+
+      const toggleBtn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.main-nav');
+      if (toggleBtn && nav) {
+        toggleBtn.addEventListener('click', () => {
+          nav.classList.toggle('open');
+          toggleBtn.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+        });
+      }
+
+      const servicesMenu = document.getElementById('servicesMenu');
+      const servicesLi = servicesMenu ? servicesMenu.parentElement : null;
+      if (servicesMenu && servicesLi) {
+        servicesMenu.addEventListener('click', (e) => {
+          e.preventDefault();
+          servicesLi.classList.toggle('open');
+          servicesMenu.setAttribute('aria-expanded', servicesLi.classList.contains('open') ? 'true' : 'false');
+        });
+        document.addEventListener('click', (e) => {
+          if (!servicesLi.contains(e.target)) {
+            servicesLi.classList.remove('open');
+            servicesMenu.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
