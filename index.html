@@ -4,85 +4,249 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Healing H.A.D.C., Inc. — Empowering Independence</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
 </head>
+
 <body>
 
   <!-- HEADER & NAV -->
-  <header class="header container">
-    <a href="index.html" class="logo-link">
-      <img src="/images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="has-dropdown">
-          <a href="#">Services ▾</a>
-          <ul class="dropdown">
-            <li><a href="vital-path.html">VitalPath Home Health</a></li>
-            <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
-            <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
-            <li><a href="heartreach.html">HeartReach Community Services</a></li>
-          </ul>
-        </li>
-        <li><a href="foundation.html">Foundation</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link" aria-label="Home">
+        <img src="/images/Healing_HADC.png" alt="Healing H.A.D.C., Inc. logo" class="logo-img"/>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a class="nav-link active" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+
+          <li class="has-dropdown">
+            <a class="nav-link" href="services.html">Services ▾</a>
+            <ul class="dropdown">
+              <li><a href="vital-path.html">VitalPath Home Health</a></li>
+              <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
+              <li><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
+              <li><a href="heartreach.html">HeartReach Community Services</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link" href="foundation.html">Foundation</a></li>
+
+          <!-- New: conversion links (recommended) -->
+          <li><a class="nav-link" href="referral.html">Referrals</a></li>
+          <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+          <!-- New: donate CTA -->
+          <li class="nav-cta"><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
+
     <div class="hero-overlay">
-      <h1>Empowering Independence,<br/>One Heart at a Time</h1>
-      <p>Compassionate care across home health, behavioral health, and community services.</p>
-      <a href="about.html" class="btn-hero">Learn More</a>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Empowering Independence,<br/>One Heart at a Time</h1>
+          <p>
+            Compassionate care across home health, behavioral health, independent living, community outreach,
+            and a mission-driven foundation honoring a legacy of service.
+          </p>
+
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">Request Help</a>
+            <a href="services.html" class="btn btn-outline">Explore Services</a>
+            <a href="referral.html" class="btn btn-gold">Make a Referral</a>
+          </div>
+
+          <div class="trustbar" aria-label="Quick trust signals">
+            <div class="trust">
+              <div class="trust-title">Clear next steps</div>
+              <div class="trust-text">Assessment → plan → support</div>
+            </div>
+            <div class="trust">
+              <div class="trust-title">Dignity-first care</div>
+              <div class="trust-text">Respectful, person-centered</div>
+            </div>
+            <div class="trust">
+              <div class="trust-title">Family partnership</div>
+              <div class="trust-text">Better communication & clarity</div>
+            </div>
+            <div class="trust">
+              <div class="trust-title">Get involved</div>
+              <div class="trust-text">Volunteer / donate / sponsor</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional: hero card area (leave blank if you don’t want it) -->
+        <div class="hero-card" aria-label="Hero image card">
+          <div class="hero-card-placeholder">Replace with real photo</div>
+          <div class="hero-card-mini">
+            <div class="mini-item">
+              <div class="mini-k">Phone</div>
+              <div class="mini-v"><a href="tel:+17138240017">(713) 824-0017</a></div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-k">Email</div>
+              <div class="mini-v"><a href="mailto:info@healinghadc.org">info@healinghadc.org</a></div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-k">Referrals</div>
+              <div class="mini-v"><a href="referral.html">Start intake</a></div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-k">Donate</div>
+              <div class="mini-v"><a href="donate.html">Support the mission</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- START HERE (Audience pathways) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Start Here</h2>
+      <p class="section-subtitle">
+        Choose what best describes your need and we’ll guide you to the right next step.
+      </p>
+
+      <div class="path-grid">
+        <article class="path-card">
+          <h3>I need placement / housing support</h3>
+          <p>Looking for a safe, stable living environment with daily support and structure.</p>
+          <div class="path-actions">
+            <a class="btn btn-primary" href="referral.html">Start Referral</a>
+            <a class="btn btn-outline" href="caring-hearts.html">Learn More</a>
+          </div>
+        </article>
+
+        <article class="path-card">
+          <h3>I need in-home support</h3>
+          <p>Skilled visits and care coordination to support recovery and long-term wellness at home.</p>
+          <div class="path-actions">
+            <a class="btn btn-primary" href="contact.html">Request Consultation</a>
+            <a class="btn btn-outline" href="vital-path.html">Learn More</a>
+          </div>
+        </article>
+
+        <article class="path-card">
+          <h3>I need behavioral health support</h3>
+          <p>Therapy and guidance built around compassion, clarity, and resilience.</p>
+          <div class="path-actions">
+            <a class="btn btn-secondary" href="contact.html">Request Appointment</a>
+            <a class="btn btn-outline" href="mind-path.html">Learn More</a>
+          </div>
+        </article>
+
+        <article class="path-card">
+          <h3>I want to donate or volunteer</h3>
+          <p>Support scholarships, outreach initiatives, and resident wellness programs.</p>
+          <div class="path-actions">
+            <a class="btn btn-gold" href="donate.html">Donate</a>
+            <a class="btn btn-outline" href="volunteer.html">Volunteer</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- PILLARS OF CARE -->
-  <section class="pillars container">
-    <h2>Our Pillars of Care</h2>
-    <div class="service-grid">
-      <div class="card">
-        <img src="/images/Vital_Path_Home_Health-logo.png" alt="VitalPath Home Health"/>
-        <div class="card-content">
-          <p>Compassionate, in-home nursing and specialized therapy designed to support safe, effective healing in the comfort of home. Our skilled clinicians walk beside each client with attentive, personalized care. Whether recovering from surgery or managing chronic conditions, we bring comfort, professionalism, and peace of mind to your doorstep.</p>
-          <a href="vital-path.html">Learn More →</a>
+  <section class="pillars section">
+    <div class="container">
+      <h2 class="section-title">Our Pillars of Care</h2>
+      <p class="section-subtitle">
+        Connected service lines working together to support the whole person.
+      </p>
+
+      <div class="service-grid">
+
+        <div class="card">
+          <img src="/images/Vital_Path_Home_Health-logo.png" alt="VitalPath Home Health logo"/>
+          <div class="card-content">
+            <h3>VitalPath Home Health</h3>
+            <p>
+              Compassionate, in-home nursing and specialized therapy designed to support safe, effective healing.
+              Our skilled clinicians walk beside each client with attentive, personalized care.
+            </p>
+            <a class="card-link" href="vital-path.html">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/MindPath_Behavioral_Health-logo.png" alt="MindPath Behavioral Health logo"/>
+          <div class="card-content">
+            <h3>MindPath Behavioral Health</h3>
+            <p>
+              Empowering emotional wellness through counseling, psychiatric care, and mental health support tailored to each individual.
+              We provide compassionate guidance to restore clarity and promote balance.
+            </p>
+            <a class="card-link" href="mind-path.html">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/Caring_Hearts-logo.png" alt="Caring Hearts Independent Living logo"/>
+          <div class="card-content">
+            <h3>Caring Hearts Independent Living</h3>
+            <p>
+              A nurturing, supportive residential community where adults with disabilities and seniors can thrive.
+              We foster independence and daily engagement in a safe, home-like environment.
+            </p>
+            <a class="card-link" href="caring-hearts.html">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/HeartReach-logo.png" alt="HeartReach Community Services logo"/>
+          <div class="card-content">
+            <h3>HeartReach Community Services</h3>
+            <p>
+              Outreach programs and family-centered services that connect individuals to vital resources and support systems.
+              We extend hope and strengthen futures through community partnership.
+            </p>
+            <a class="card-link" href="heartreach.html">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/Mary_Williams_Foundation-logo.png" alt="Mary Williams Foundation logo"/>
+          <div class="card-content">
+            <h3>Mary Williams Foundation</h3>
+            <p>
+              Honoring the legacy of Mary Ja Ne Williams through scholarships, education, and community initiatives that empower
+              the next generation of healthcare and human service leaders.
+            </p>
+            <a class="card-link" href="foundation.html">Learn More →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA band -->
+      <div class="cta-band">
+        <div>
+          <h3>Not sure where to start?</h3>
+          <p>
+            Send a message and we’ll help you choose the right pathway—fast and with clarity.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="contact.html">Contact Us</a>
+          <a class="btn btn-outline" href="faq.html">Read FAQ</a>
         </div>
       </div>
-      <div class="card">
-        <img src="/images/MindPath_Behavioral_Health-logo.png" alt="MindPath Behavioral Health"/>
-        <div class="card-content">
-          <p>Empowering emotional wellness through counseling, psychiatric care, and mental health support tailored to each individual. From anxiety and depression to trauma and life transitions, we provide compassionate guidance and treatment to restore mental clarity and promote lasting balance.</p>
-          <a href="mind-path.html">Learn More →</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/images/Caring_Hearts-logo.png" alt="Caring Hearts Independent Living"/>
-        <div class="card-content">
-          <p>A nurturing, supportive residential community where adults with disabilities and seniors can thrive. We foster independence, encourage daily engagement, and build meaningful social connections in a safe, home-like environment that values dignity and quality of life.</p>
-          <a href="caring-hearts.html">Learn More →</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/images/HeartReach-logo.png" alt="HeartReach Community Services"/>
-        <div class="card-content">
-          <p>We extend our hand to the community through outreach programs and family-centered services. HeartReach connects individuals and families with vital resources, community partners, and support systems that offer hope, healing, and a stronger future.</p>
-          <a href="heartreach.html">Learn More →</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/images/Mary_Williams_Foundation-logo.png" alt="Mary Williams Foundation"/>
-        <div class="card-content">
-          <p>Honoring the legacy of Mary Ja Ne Williams, our foundation provides scholarships, educational programs, and community initiatives that empower the next generation of healthcare and human service leaders.</p>
-          <a href="foundation.html">Learn More →</a>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -95,6 +259,7 @@
         <p>Phone: <a href="tel:+17138240017">(713) 824-0017</a></p>
         <p>Fax: (713) 730-3601</p>
       </div>
+
       <div class="footer-col social">
         <h4>Follow Us</h4>
         <div class="social-icons">
@@ -105,20 +270,37 @@
         </div>
       </div>
     </div>
+
     <div class="footer-bottom container">
-      <p>© 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
+      <p>© <span id="year"></span> Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.</p>
     </div>
   </footer>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.main-nav');
-    if (!toggleBtn || !nav) return;
 
-    toggleBtn.addEventListener('click', () => {
-      nav.classList.toggle('open');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const toggleBtn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.main-nav');
+      if (!toggleBtn || !nav) return;
+
+      toggleBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const expanded = nav.classList.contains('open');
+        toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      });
+
+      // Mobile dropdown accordion
+      document.querySelectorAll('.has-dropdown > a').forEach(a => {
+        a.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            a.parentElement.classList.toggle('open');
+          }
+        });
+      });
     });
-  });
-</script>
+  </script>
+
 </body>
 </html>
