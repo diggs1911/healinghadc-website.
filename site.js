@@ -34,5 +34,9 @@
   document.addEventListener("DOMContentLoaded", () => {
     inject("site-header", "header.html");
     inject("site-footer", "footer.html");
+    const yearCurrent = document.getElementById("year-current");
+if (yearCurrent) {
+  yearCurrent.textContent = new Date().getFullYear();
+}
   });
 })();
