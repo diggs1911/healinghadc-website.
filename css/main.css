@@ -937,3 +937,89 @@ textarea{ min-height: 120px; }
 .home-hero-media img{
   height: 300px;
 }
+/* ====== LOGO FILL FIX (HOME DIVISIONS) ====== */
+.pillar-media{
+  height: 140px;
+  padding: 10px;
+}
+.pillar-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.18);
+}
+@media (max-width: 640px){
+  .pillar-media{ height: 120px; }
+  .pillar-media img{ transform: scale(1.12); }
+}
+/* ====== DIVISION HERO UPGRADE ====== */
+.division-hero{
+  padding: 2.2rem 0 2rem;
+  background:
+    radial-gradient(900px 340px at 30% 0%, rgba(0,106,100,0.10), transparent 60%),
+    radial-gradient(900px 340px at 70% 0%, rgba(89,35,122,0.10), transparent 60%),
+    linear-gradient(180deg, #F7FAFF, #FFFFFF);
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  text-align: center;
+}
+
+.division-hero .logo{
+  height: 84px;
+  width: auto;
+  filter: drop-shadow(0 10px 20px rgba(2,6,23,0.10));
+}
+
+.division-hero h1{
+  margin: 14px 0 0;
+  color: var(--purple);
+  font-size: clamp(2.0rem, 3.0vw, 2.8rem);
+  font-weight: 900;
+}
+
+.division-hero .lede{
+  margin: 14px auto 0;
+  max-width: 980px;
+  color: var(--gray-700);
+  line-height: 1.9;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.division-hero .cta-row{
+  margin-top: 18px;
+  display:flex;
+  justify-content:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.feature-strip{
+  margin-top: 18px;
+  display:flex;
+  justify-content:center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.feature-pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(15,23,42,0.10);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  color: var(--ink);
+  font-weight: 800;
+}
+.feature-pill span{
+  display:inline-flex;
+  width: 28px;
+  height: 28px;
+  border-radius: 12px;
+  align-items:center;
+  justify-content:center;
+  background: rgba(0,106,100,0.10);
+  color: var(--teal);
+}
