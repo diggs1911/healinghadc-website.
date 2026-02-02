@@ -3,173 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Caring Hearts | Healing HADC, Inc.</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/main.css" />
+  <title>Caring Hearts | Healing HADC</title>
+  <link rel="stylesheet" href="css/main.css" />
 </head>
-
 <body>
-  <div id="site-header"></div>
 
-<section class="page-hero division-hero center">
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" aria-label="Healing HADC Home">
+      <img class="logo-img" src="images/Healing_HADC.png" alt="Healing HADC, Inc.">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" type="button">Menu</button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a class="nav-link" href="services.html">Care Pillars</a>
+          <div class="dropdown">
+            <a href="caring-hearts.html">Caring Hearts Adult Independent Living</a>
+            <a href="vital-path.html">VitalPath Home Health</a>
+            <a href="mind-path.html">MindPath Behavioral Health</a>
+            <a href="heartreach.html">HeartReach</a>
+          </div>
+        </li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-primary nav-cta" href="referral.html">Make a Referral</a>
+  </div>
+</header>
+
+<section class="page-hero center">
   <div class="container">
-    <img class="logo" src="images/Caring_Hearts-logo.png" alt="Caring Hearts Adult Independent Living">
-
-    <h1>Caring Hearts Adult Independent Living</h1>
-
-    <p style="margin-top:12px;">
-      <span class="tag tag-active">Currently Serving</span>
+    <img src="images/Caring_Hearts-logo.png" alt="Caring Hearts" style="height:64px;width:auto;margin:0 auto 10px;">
+    <h1>Caring Hearts</h1>
+    <p><span class="tag tag-active">Currently Serving</span></p>
+    <p>
+      Caring Hearts Adult Independent Living provides structured support and coordinated follow-through for adults who need stability, oversight, and safe daily living support.
     </p>
-
-    <p class="lede">
-      Adult independent living support with structured stability, daily support, and coordinated follow-through.
-      Built for families and partners who need reliable outcomes.
-    </p>
-
     <div class="cta-row">
       <a class="btn btn-primary" href="referral.html">Make a Referral</a>
       <a class="btn btn-outline" href="contact.html">Request Consultation</a>
     </div>
+  </div>
+</section>
 
-    <div class="feature-strip">
-      <div class="feature-pill"><span>✓</span> Clear point of contact</div>
-      <div class="feature-pill"><span>✓</span> Structured support plan</div>
-      <div class="feature-pill"><span>✓</span> Partner-ready coordination</div>
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">What Caring Hearts Delivers</h2>
+    <p class="section-subtitle">
+      Clear support, predictable routines, and coordinated communication across families and providers.
+    </p>
+
+    <div class="card-grid">
+      <div class="card-tile">
+        <div class="icon">✓</div>
+        <h3>Structured daily support</h3>
+        <p>Reliable routines and support to maintain stability and reduce preventable disruptions.</p>
+      </div>
+      <div class="card-tile">
+        <div class="icon">✓</div>
+        <h3>Care coordination</h3>
+        <p>Communication support across families, providers, and community services.</p>
+      </div>
+      <div class="card-tile">
+        <div class="icon">✓</div>
+        <h3>Safety and follow-through</h3>
+        <p>Documentation and check-ins aligned to the care plan.</p>
+      </div>
+      <div class="card-tile">
+        <div class="icon">✓</div>
+        <h3>Partner-friendly handoffs</h3>
+        <p>A consistent intake and referral process designed for trust.</p>
+      </div>
     </div>
   </div>
 </section>
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">What Caring Hearts Delivers</h2>
-      <p class="section-subtitle">
-        Caring Hearts exists to reduce instability, prevent crises, and increase independence through structured daily support.
+
+<footer class="footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img src="images/Healing_HADC.png" alt="Healing HADC, Inc." class="footer-logo">
+      <p class="footer-tagline">
+        Nonprofit care coordination and community health organization supporting families, providers, and health systems.
       </p>
+    </div>
 
-      <div class="pillar-grid" style="margin-top:18px;">
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Safe, Stable Living</h3>
-            <p>Placement and housing support designed to protect continuity and reduce disruption.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Daily Support and Structure</h3>
-            <p>Support routines that strengthen independence, stability, and consistent follow-through.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Care Coordination</h3>
-            <p>Coordinated support across services so families and providers do not carry the full burden alone.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Partner Communication</h3>
-            <p>Clear communication and responsive coordination that protects trust and reduces friction.</p>
-          </div>
-        </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="about.html">About</a>
+        <a href="services.html">Our Care Pillars</a>
+        <a href="contact.html">Contact</a>
       </div>
 
-      <div style="text-align:center; margin-top:18px;">
-        <a class="btn btn-primary" href="/referral.html">Start a Referral</a>
-        <a class="btn btn-ghost" href="/about.html" style="margin-left:10px;">Governance and Oversight</a>
+      <div class="footer-col">
+        <h4>Divisions</h4>
+        <a href="caring-hearts.html">Caring Hearts</a>
+        <a href="vital-path.html">VitalPath</a>
+        <a href="mind-path.html">MindPath</a>
+        <a href="heartreach.html">HeartReach</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="accessibility.html">Accessibility</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="section alt">
-    <div class="container">
-      <h2 class="section-title">Who We Serve</h2>
-      <p class="section-subtitle">
-        Caring Hearts serves adults who need structured support to live safely and maintain independence.
-      </p>
+  <div class="container footer-bottom">
+    © <span id="year-current"></span> Healing HADC, Inc. All rights reserved.
+  </div>
+</footer>
 
-      <div class="pillar-grid" style="margin-top:18px;">
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Families and Guardians</h3>
-            <p>Support when care coordination and stability become difficult to manage alone.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Hospitals and Discharge Teams</h3>
-            <p>Stability-focused transitions that reduce bounce-backs and prevent unsafe discharge outcomes.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Community Partners</h3>
-            <p>Coordination with community services to reinforce a stable care plan.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Providers</h3>
-            <p>Better adherence and follow-through through structured daily support.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">How Referrals Work</h2>
-      <p class="section-subtitle">
-        Fast intake. Clear eligibility. Coordinated follow-up. Documentation that supports partner workflows.
-      </p>
-
-      <div class="grid-2" style="margin-top:18px;">
-        <div class="panel">
-          <h3>Referral Intake</h3>
-          <p class="helper">Submit the referral form. Our team confirms intake within one business day.</p>
-
-          <h3 style="margin-top:14px;">Review and Planning</h3>
-          <p class="helper">We review needs, living stability, and support requirements. We coordinate next steps with the referring party.</p>
-
-          <h3 style="margin-top:14px;">Activation</h3>
-          <p class="helper">We activate services and provide a clear point of contact for ongoing coordination.</p>
-
-          <div style="margin-top:16px;">
-            <a class="btn btn-primary" href="/referral.html">Make a Referral</a>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>What Partners Get</h3>
-          <ul>
-            <li>Clear point of contact</li>
-            <li>Structured support plan</li>
-            <li>Reduced coordination burden</li>
-            <li>Predictable follow-through</li>
-          </ul>
-
-          <div style="margin-top:16px;">
-            <a class="btn btn-outline" href="/contact.html">Request Consultation</a>
-          </div>
-
-          <p class="helper" style="margin-top:12px;">
-            If you need a fast handoff from a hospital, include discharge date and urgency in the referral notes.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div id="site-footer"></div>
- <script src="layout.js?v=1"></script>
+<script src="site.js?v=1"></script>
 </body>
 </html>

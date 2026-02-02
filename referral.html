@@ -3,96 +3,320 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Referral | Healing HADC</title>
+  <title>Referral Form | Healing HADC</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body class="referral-page">
-  <div id="site-header"></div>
 
-  <section class="section">
-    <div class="container">
-      <h1>Make a Referral</h1>
-      <p class="section-subtitle" style="text-align:left; margin-left:0;">
-        Complete the referral in a few steps. If you need help, contact our team.
-      </p>
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" aria-label="Healing HADC Home">
+      <img class="logo-img" src="images/Healing_HADC.png" alt="Healing HADC, Inc.">
+    </a>
 
-      <div class="panel" style="margin-top:18px;">
-        <div class="stepper">
-          <div class="stepper-row">
-            <div class="stepper-step active" data-dot="1">Referral</div>
-            <div class="stepper-step" data-dot="2">Person</div>
-            <div class="stepper-step" data-dot="3">Details</div>
-            <div class="stepper-step" data-dot="4">Submit</div>
+    <button class="nav-toggle" id="navToggle" type="button">Menu</button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="has-dropdown">
+          <a class="nav-link" href="services.html">Care Pillars</a>
+          <div class="dropdown">
+            <a href="caring-hearts.html">Caring Hearts Adult Independent Living</a>
+            <a href="vital-path.html">VitalPath Home Health</a>
+            <a href="mind-path.html">MindPath Behavioral Health</a>
+            <a href="heartreach.html">HeartReach</a>
+          </div>
+        </li>
+
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-primary nav-cta" href="referral.html">Make a Referral</a>
+  </div>
+</header>
+
+<section class="ref-hero">
+  <div class="container">
+    <div class="ref-hero-row">
+      <div>
+        <div class="ref-eyebrow">Online Referral Form</div>
+        <h1 class="ref-title">Submit a Referral</h1>
+        <p class="ref-subtitle">
+          Use this form to refer a patient or client to Healing HADC. If you need help, contact our team from the Contact page.
+        </p>
+
+        <div class="ref-note">
+          <div class="ref-note-title">What to expect</div>
+          <ul class="ref-bullets">
+            <li>Complete the form below. A team member reviews within one business day.</li>
+            <li>Attach key documents at the end if available.</li>
+            <li>Fields marked Required must be completed.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ref-badge">
+        <div class="ref-badge-inner">
+          <div class="ref-badge-title">Need a faster handoff</div>
+          <div class="ref-badge-text">
+            Include discharge date, urgency, and best contact method in the Notes section.
+          </div>
+          <a class="btn btn-outline" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <form class="ref-form" action="https://formspree.io/f/mojlqpbd" method="POST" enctype="multipart/form-data">
+
+      <fieldset class="ref-fieldset">
+        <legend>Referring Information</legend>
+
+        <div class="ref-grid">
+          <div class="ref-field">
+            <label for="org_name">Organization or Individual <span class="req">Required</span></label>
+            <input id="org_name" name="referrer_org" required>
+          </div>
+
+          <div class="ref-field">
+            <label for="ref_role">Role or Title</label>
+            <input id="ref_role" name="referrer_role">
+          </div>
+
+          <div class="ref-field">
+            <label for="ref_first">First Name <span class="req">Required</span></label>
+            <input id="ref_first" name="referrer_first_name" required>
+          </div>
+
+          <div class="ref-field">
+            <label for="ref_last">Last Name <span class="req">Required</span></label>
+            <input id="ref_last" name="referrer_last_name" required>
+          </div>
+
+          <div class="ref-field">
+            <label for="ref_phone">Phone <span class="req">Required</span></label>
+            <input id="ref_phone" name="referrer_phone" required>
+          </div>
+
+          <div class="ref-field">
+            <label for="ref_email">Email <span class="req">Required</span></label>
+            <input id="ref_email" type="email" name="referrer_email" required>
+          </div>
+
+          <div class="ref-field ref-span-2">
+            <label for="pref_contact">Preferred method of initial contact <span class="req">Required</span></label>
+            <select id="pref_contact" name="preferred_contact_method" required>
+              <option value="">Select one</option>
+              <option>Phone</option>
+              <option>Email</option>
+              <option>Either</option>
+            </select>
           </div>
         </div>
+      </fieldset>
 
-        <form id="referralForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <section class="step active" data-step="1">
-            <h3>Referral type</h3>
-            <label>Referring organization or individual</label>
-            <input name="referrer_name" required />
+      <fieldset class="ref-fieldset">
+        <legend>Patient or Client Information</legend>
 
-            <label>Phone</label>
-            <input name="referrer_phone" required />
+        <div class="ref-grid">
+          <div class="ref-field">
+            <label for="pt_first">First Name <span class="req">Required</span></label>
+            <input id="pt_first" name="patient_first_name" required>
+          </div>
 
-            <label>Email</label>
-            <input type="email" name="referrer_email" required />
-          </section>
+          <div class="ref-field">
+            <label for="pt_last">Last Name <span class="req">Required</span></label>
+            <input id="pt_last" name="patient_last_name" required>
+          </div>
 
-          <section class="step" data-step="2">
-            <h3>Person receiving services</h3>
+          <div class="ref-field">
+            <label for="pt_dob">Birthdate</label>
+            <input id="pt_dob" type="date" name="patient_dob">
+          </div>
 
-            <label>Full name</label>
-            <input name="client_name" required />
+          <div class="ref-field">
+            <label for="pt_sex">Legal Sex</label>
+            <select id="pt_sex" name="patient_legal_sex">
+              <option value="">Select one</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Other</option>
+              <option>Prefer not to say</option>
+            </select>
+          </div>
 
-            <label>Date of birth</label>
-            <input type="date" name="client_dob" />
+          <div class="ref-field">
+            <label for="pt_phone">Preferred Phone</label>
+            <input id="pt_phone" name="patient_phone">
+          </div>
 
-            <label>Primary phone</label>
-            <input name="client_phone" />
-          </section>
+          <div class="ref-field">
+            <label for="pt_email">Email</label>
+            <input id="pt_email" type="email" name="patient_email">
+          </div>
 
-          <section class="step" data-step="3">
-            <h3>Needs and notes</h3>
+          <div class="ref-field ref-span-2">
+            <label for="pt_address">Street Address</label>
+            <input id="pt_address" name="patient_address">
+          </div>
 
-            <label>Requested division</label>
-            <select name="requested_division" required>
+          <div class="ref-field">
+            <label for="pt_city">City</label>
+            <input id="pt_city" name="patient_city">
+          </div>
+
+          <div class="ref-field">
+            <label for="pt_state">State</label>
+            <input id="pt_state" name="patient_state">
+          </div>
+
+          <div class="ref-field">
+            <label for="pt_zip">Zip Code</label>
+            <input id="pt_zip" name="patient_zip">
+          </div>
+
+          <div class="ref-field">
+            <label for="language">Interpreter needed</label>
+            <select id="language" name="interpreter_needed">
+              <option value="">Select one</option>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="ref-fieldset">
+        <legend>Insurance Information</legend>
+
+        <div class="ref-grid">
+          <div class="ref-field">
+            <label for="ins_primary">Primary insurance</label>
+            <input id="ins_primary" name="primary_insurance">
+          </div>
+
+          <div class="ref-field">
+            <label for="ins_id">Subscriber or Member ID</label>
+            <input id="ins_id" name="subscriber_id">
+          </div>
+
+          <div class="ref-field">
+            <label for="ins_holder">Name of primary insurance holder</label>
+            <input id="ins_holder" name="primary_holder_name">
+          </div>
+
+          <div class="ref-field">
+            <label for="ins_group">Group number</label>
+            <input id="ins_group" name="group_number">
+          </div>
+
+          <div class="ref-field ref-span-2">
+            <label for="ins_other">Additional or supplemental insurance</label>
+            <input id="ins_other" name="additional_insurance">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="ref-fieldset">
+        <legend>Referral Reason and Program Selection</legend>
+
+        <div class="ref-grid">
+          <div class="ref-field ref-span-2">
+            <label for="division">Requested division <span class="req">Required</span></label>
+            <select id="division" name="requested_division" required>
               <option value="">Select one</option>
               <option>Caring Hearts Adult Independent Living</option>
               <option>VitalPath Home Health</option>
               <option>MindPath Behavioral Health</option>
               <option>HeartReach</option>
             </select>
-
-            <label>Notes</label>
-            <textarea name="notes" placeholder="Key needs, safety concerns, timeline, and best contact method."></textarea>
-          </section>
-
-          <section class="step" data-step="4">
-            <h3>Review and submit</h3>
-            <p class="helper">When you submit, our team will follow up based on capacity and program status.</p>
-
-            <label class="checkline">
-              <input type="checkbox" required />
-              <span>I confirm the information provided is accurate to the best of my knowledge.</span>
-            </label>
-
-            <div class="success" id="successMsg">Submitted. Thank you.</div>
-          </section>
-
-          <div class="step-actions" style="margin-top:16px;">
-            <button type="button" class="btn btn-ghost" id="prevBtn">Back</button>
-            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
-            <button type="submit" class="btn btn-primary" id="submitBtn" style="display:none;">Submit</button>
           </div>
-        </form>
+
+          <div class="ref-field ref-span-2">
+            <label for="reason">Reason for referral <span class="req">Required</span></label>
+            <textarea id="reason" name="reason_for_referral" required placeholder="Summary of needs, risks, timeline, and what success looks like."></textarea>
+          </div>
+
+          <div class="ref-field ref-span-2">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" placeholder="Urgency, discharge date, contact preference, and other context."></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="ref-fieldset">
+        <legend>Attachments</legend>
+
+        <div class="ref-grid">
+          <div class="ref-field ref-span-2">
+            <label for="docs">Upload documents</label>
+            <input id="docs" type="file" name="attachments" multiple>
+            <div class="ref-help">Examples: face sheet, discharge summary, care plan, medication list.</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="ref-submit">
+        <label class="ref-check">
+          <input type="checkbox" name="confirm_accuracy" required>
+          <span>I confirm the information provided is accurate to the best of my knowledge. <span class="req">Required</span></span>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Submit Referral</button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img src="images/Healing_HADC.png" alt="Healing HADC, Inc." class="footer-logo">
+      <p class="footer-tagline">
+        Nonprofit care coordination and community health organization supporting families, providers, and health systems.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="about.html">About</a>
+        <a href="services.html">Our Care Pillars</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Divisions</h4>
+        <a href="caring-hearts.html">Caring Hearts</a>
+        <a href="vital-path.html">VitalPath</a>
+        <a href="mind-path.html">MindPath</a>
+        <a href="heartreach.html">HeartReach</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="accessibility.html">Accessibility</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <div id="site-footer"></div>
-  <script src="layout.js?v=1"></script>
-  <script src="referral.js?v=1"></script>
+  <div class="container footer-bottom">
+    © <span id="year-current"></span> Healing HADC, Inc. All rights reserved.
+  </div>
+</footer>
+
+<script src="site.js?v=2"></script>
 </body>
 </html>

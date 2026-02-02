@@ -1,32 +1,12 @@
-(function () {
-  function getBasePath() {
-    const isGithub = location.hostname.includes("github.io");
-    if (!isGithub) return "";
-    const parts = location.pathname.split("/").filter(Boolean);
-    return parts.length ? "/" + parts[0] : "";
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("navToggle");
+  const nav = document.getElementById("mainNav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("is-open");
+    });
   }
 
-  async function inject(targetId, fileName) {
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    const base = getBasePath();
-    const url = `${base}/${fileName}`;
-
-    try {
-      const res = await fetch(url, { cache: "no-store" });
-      if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
-      target.innerHTML = await res.text();
-    } catch (e) {
-      console.error(`[layout] failed to load ${fileName}`, e);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", async () => {
-    await inject("site-header", "header.html");
-    await inject("site-footer", "footer.html");
-
-    const y = document.getElementById("year-current");
-    if (y) y.textContent = new Date().getFullYear();
-  });
-})();
+  const year = document.getElementById("year-current");
+  if (year) year.textContent = new Date().getFullYear();
+});

@@ -1,34 +1,32 @@
-(function () {
+document.addEventListener("DOMContentLoaded", () => {
   let step = 1;
 
-  function qs(sel) { return document.querySelector(sel); }
-  function qsa(sel) { return Array.from(document.querySelectorAll(sel)); }
+  const steps = Array.from(document.querySelectorAll(".step"));
+  const pills = Array.from(document.querySelectorAll(".stepper-pill"));
 
-  function showStep(n) {
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const submitBtn = document.getElementById("submitBtn");
+
+  function show(n) {
     step = n;
 
-    qsa(".step").forEach(s => s.classList.remove("active"));
-    const current = qs(`.step[data-step="${step}"]`);
-    if (current) current.classList.add("active");
+    steps.forEach(s => s.classList.remove("is-active"));
+    const activeStep = document.querySelector(`.step[data-step="${step}"]`);
+    if (activeStep) activeStep.classList.add("is-active");
 
-    qsa(".stepper-step").forEach((el, idx) => {
-      el.classList.toggle("active", idx + 1 === step);
-    });
+    pills.forEach((p, idx) => p.classList.toggle("is-active", idx + 1 === step));
 
-    const prev = qs("#prevBtn");
-    const next = qs("#nextBtn");
-    const submit = qs("#submitBtn");
-
-    if (prev) prev.style.display = step === 1 ? "none" : "inline-flex";
-    if (next) next.style.display = step === 4 ? "none" : "inline-flex";
-    if (submit) submit.style.display = step === 4 ? "inline-flex" : "none";
+    if (prevBtn) prevBtn.style.display = step === 1 ? "none" : "inline-flex";
+    if (nextBtn) nextBtn.style.display = step === 4 ? "none" : "inline-flex";
+    if (submitBtn) submitBtn.style.display = step === 4 ? "inline-flex" : "none";
   }
 
-  function validateStep() {
-    const current = qs(`.step[data-step="${step}"]`);
-    if (!current) return true;
+  function valid() {
+    const activeStep = document.querySelector(`.step[data-step="${step}"]`);
+    if (!activeStep) return true;
 
-    const required = Array.from(current.querySelectorAll("[required]"));
+    const required = Array.from(activeStep.querySelectorAll("[required]"));
     for (const el of required) {
       if (el.type === "checkbox" && !el.checked) return false;
       if (el.value.trim() === "") return false;
@@ -36,25 +34,11 @@
     return true;
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    showStep(1);
-
-    const prev = qs("#prevBtn");
-    const next = qs("#nextBtn");
-    const form = qs("#referralForm");
-
-    if (prev) prev.addEventListener("click", () => showStep(Math.max(1, step - 1)));
-
-    if (next) next.addEventListener("click", () => {
-      if (!validateStep()) return;
-      showStep(Math.min(4, step + 1));
-    });
-
-    if (form) {
-      form.addEventListener("submit", () => {
-        const msg = qs("#successMsg");
-        if (msg) msg.style.display = "block";
-      });
-    }
+  if (prevBtn) prevBtn.addEventListener("click", () => show(Math.max(1, step - 1)));
+  if (nextBtn) nextBtn.addEventListener("click", () => {
+    if (!valid()) return;
+    show(Math.min(4, step + 1));
   });
-})();
+
+  show(1);
+});

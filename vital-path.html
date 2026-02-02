@@ -3,90 +3,133 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VitalPath Home Health | Healing HADC, Inc.</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
+  <title>VitalPath | Healing HADC</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
-
 <body>
-  <div id="site-header"></div>
 
-  <section class="division-hero">
-    <div class="container">
-      <img class="logo" src="images/Vital_Path_Home_Health-logo.png" alt="VitalPath Home Health">
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" aria-label="Healing HADC Home">
+      <img class="logo-img" src="images/Healing_HADC.png" alt="Healing HADC, Inc.">
+    </a>
 
-      <h1>VitalPath Home Health</h1>
+    <button class="nav-toggle" id="navToggle" type="button">Menu</button>
 
-      <p style="margin-top:12px;">
-        <span class="tag tag-dev">In Development</span>
-      </p>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a class="nav-link" href="services.html">Care Pillars</a>
+          <div class="dropdown">
+            <a href="caring-hearts.html">Caring Hearts Adult Independent Living</a>
+            <a href="vital-path.html">VitalPath Home Health</a>
+            <a href="mind-path.html">MindPath Behavioral Health</a>
+            <a href="heartreach.html">HeartReach</a>
+          </div>
+        </li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-      <p class="lede">
-        VitalPath is being built under board governance and clinical leadership to ensure safe, compliant, partner-ready home health operations.
-      </p>
+    <a class="btn btn-primary nav-cta" href="referral.html">Make a Referral</a>
+  </div>
+</header>
 
-      <div class="cta-row">
-        <a class="btn btn-primary" href="contact.html">Partner Interest</a>
-        <a class="btn btn-outline" href="about.html">Governance and Oversight</a>
+<section class="page-hero center">
+  <div class="container">
+    <img src="images/Vital_Path_Home_Health-logo.png" alt="VitalPath" style="height:64px;width:auto;margin:0 auto 10px;">
+    <h1>VitalPath Home Health</h1>
+    <p><span class="tag tag-dev">In Development</span></p>
+    <p>
+      VitalPath is being built under structured leadership to ensure safe, compliant, partner-ready home health operations.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="contact.html">Partner With VitalPath</a>
+      <a class="btn btn-outline" href="about.html">Learn About Healing HADC</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Planned Scope</h2>
+    <p class="section-subtitle">
+      Sequenced development focused on quality, staffing, and reliable handoffs across care transitions.
+    </p>
+
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <div class="pillar-body">
+          <h3>Skilled visits and coordination</h3>
+          <p>Home-based support designed to strengthen adherence and reduce avoidable disruptions.</p>
+        </div>
       </div>
 
-      <div class="feature-strip">
-        <div class="feature-pill"><span>✓</span> Compliance-first build</div>
-        <div class="feature-pill"><span>✓</span> Partner-ready handoffs</div>
-        <div class="feature-pill"><span>✓</span> Board-led activation</div>
+      <div class="pillar-card">
+        <div class="pillar-body">
+          <h3>Provider and hospital handoffs</h3>
+          <p>Clear intake, documentation, and communication aligned to partner workflows.</p>
+        </div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-body">
+          <h3>Quality and oversight</h3>
+          <p>Structured processes designed to protect patients and partner trust.</p>
+        </div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-body">
+          <h3>Activation sequencing</h3>
+          <p>Phased launch based on readiness and measurable operational outcomes.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Planned Scope</h2>
-      <p class="section-subtitle">
-        We are sequencing launch to protect quality, staffing, clinical reliability, and partner confidence. This page will expand as the division is activated.
+<footer class="footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img src="images/Healing_HADC.png" alt="Healing HADC, Inc." class="footer-logo">
+      <p class="footer-tagline">
+        Nonprofit care coordination and community health organization supporting families, providers, and health systems.
       </p>
+    </div>
 
-      <div class="pillar-grid">
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Skilled visits and care coordination</h3>
-            <p>Home-based coordination designed to support recovery and long-term wellness.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Hospital and provider handoffs</h3>
-            <p>Clear intake, documentation, and communication aligned to partner workflows.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Quality and oversight</h3>
-            <p>Governance-aligned processes that protect patients and ensure reliable follow-through.</p>
-          </div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-body">
-            <h3>Activation sequencing</h3>
-            <p>Phased launch under accountable leadership with measurable quality goals.</p>
-          </div>
-        </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="about.html">About</a>
+        <a href="services.html">Our Care Pillars</a>
+        <a href="contact.html">Contact</a>
       </div>
 
-      <div style="text-align:center; margin-top:18px;">
-        <a class="btn btn-primary" href="contact.html">Request Updates</a>
-        <a class="btn btn-ghost" href="caring-hearts.html" style="margin-left:10px;">Caring Hearts</a>
+      <div class="footer-col">
+        <h4>Divisions</h4>
+        <a href="caring-hearts.html">Caring Hearts</a>
+        <a href="vital-path.html">VitalPath</a>
+        <a href="mind-path.html">MindPath</a>
+        <a href="heartreach.html">HeartReach</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="accessibility.html">Accessibility</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <div id="site-footer"></div>
-  <script src="layout.js?v=1"></script>
+  <div class="container footer-bottom">
+    © <span id="year-current"></span> Healing HADC, Inc. All rights reserved.
+  </div>
+</footer>
+
+<script src="site.js?v=1"></script>
 </body>
 </html>
