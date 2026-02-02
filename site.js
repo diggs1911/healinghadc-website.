@@ -11,9 +11,11 @@
     if (!target) return;
 
     const base = getBasePath();
+    const url = `${base}/${fileName}`;
+
     try {
-      const res = await fetch(`${base}/${fileName}`, { cache: "no-store" });
-      if (!res.ok) throw new Error(`${fileName} not found`);
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
       target.innerHTML = await res.text();
     } catch (e) {
       console.error(`[layout] failed to load ${fileName}`, e);
@@ -24,7 +26,7 @@
     await inject("site-header", "header.html");
     await inject("site-footer", "footer.html");
 
-    const year = document.getElementById("year-current");
-    if (year) year.textContent = new Date().getFullYear();
+    const y = document.getElementById("year-current");
+    if (y) y.textContent = new Date().getFullYear();
   });
 })();
