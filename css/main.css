@@ -36,9 +36,16 @@ img{max-width:100%;display:block;}
 a{color:var(--teal);text-decoration:none;}
 a:hover{text-decoration:underline;}
 
-.container{
-  width:min(92%,var(--container));
-  margin:0 auto;
+.content {
+  width: min(860px, 92%);
+  margin: 0 auto;
+}
+
+.lead {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--muted);
+  font-weight: 650;
 }
 
 h1,h2{
