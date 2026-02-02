@@ -1,411 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Caring Hearts Independent Living — Healing H.A.D.C., Inc.</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Caring Hearts | Healing HADC, Inc.</title>
 
-  <!-- Montserrat Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css/main.css"/>
-
-  <style>
-    /* ===== Page-Specific CSS ===== */
-
-    /* HERO (added color pop overlay) */
-    .hero-bg {
-      background: url('images/Caring_Hearts_Banner.png') center/cover no-repeat;
-      height: 50vh;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        135deg,
-        rgba(89, 35, 122, 0.55),
-        rgba(0, 106, 100, 0.55)
-      );
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: #fff;
-      text-shadow: 1px 2px 6px rgba(0,0,0,0.55);
-      padding: 0 1rem;
-      z-index: 2;
-    }
-    .hero-overlay .hero-inner {
-      width: min(900px, 95%);
-    }
-    .hero-overlay h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.6rem;
-      line-height: 1.1;
-    }
-    .hero-overlay p {
-      font-size: 1.15rem;
-      max-width: 760px;
-      margin: 0 auto;
-      opacity: 0.98;
-    }
-
-    /* SECTIONS */
-    .section {
-      padding: 4rem 0;
-    }
-    .section h2 {
-      font-size: 2rem;
-      color: var(--purple);
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-    .about-grid img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-    }
-    .about-text p {
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
-      color: var(--gray-dark);
-    }
-
-    /* CORE SERVICES (PHOTO CARDS) */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      background: #fff;
-      border-radius: 14px;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      overflow: hidden;
-      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-      display: flex;
-      flex-direction: column;
-      min-height: 380px;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 34px rgba(0,0,0,0.12);
-      border-color: rgba(0,106,100,0.25);
-    }
-
-    .service-media {
-      height: 190px;
-      background: var(--gray-light);
-      overflow: hidden;
-      border-bottom: 1px solid #eee;
-    }
-
-    .service-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .service-body {
-      padding: 1.25rem 1.25rem 1.4rem;
-      flex: 1;
-      text-align: left;
-    }
-
-    .service-body h3 {
-      color: var(--teal);
-      margin-bottom: .55rem;
-      font-size: 1.25rem;
-      line-height: 1.2;
-    }
-
-    .service-body p {
-      color: var(--gray-mid);
-      font-size: 1rem;
-      line-height: 1.75;
-      margin: 0;
-    }
-
-    /* TESTIMONIAL */
-    .testimonial-section {
-      background: var(--gray-light);
-    }
-
-    .testimonial-card {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 14px;
-      padding: 2rem;
-      box-shadow: 0 16px 34px rgba(0,0,0,0.10);
-      border-left: 6px solid var(--gold);
-    }
-
-    .testimonial-card blockquote {
-      font-size: 1.1rem;
-      line-height: 1.9;
-      color: var(--gray-dark);
-      margin: 0;
-    }
-
-    .testimonial-card figcaption {
-      margin-top: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: .15rem;
-    }
-
-    .testimonial-name {
-      font-weight: 700;
-      color: var(--teal);
-    }
-
-    .testimonial-role {
-      color: var(--gray-mid);
-      font-size: .95rem;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero-bg {
-        height: 34vh;
-      }
-      .hero-overlay h1 {
-        font-size: 1.85rem;
-      }
-      .hero-overlay p {
-        font-size: 1rem;
-      }
-      .service-media {
-        height: 175px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/css/main.css" />
 </head>
 
 <body>
+  <div id="site-header"></div>
 
-  <!-- HEADER -->
-  <header class="header container">
-    <a href="index.html" class="logo-link">
-      <img src="images/Healing_HADC.png" alt="Healing HADC Logo" class="logo-img"/>
-    </a>
-
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-
-        <li class="has-dropdown">
-          <a href="#">Services ▾</a>
-          <ul class="dropdown">
-            <li><a href="vital-path.html">VitalPath Home Health</a></li>
-            <li><a href="mind-path.html">MindPath Behavioral Health</a></li>
-            <li class="active"><a href="caring-hearts.html">Caring Hearts Independent Living</a></li>
-            <li><a href="heartreach.html">HeartReach Community Services</a></li>
-          </ul>
-        </li>
-
-        <li><a href="foundation.html">Foundation</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero-bg">
-    <div class="hero-overlay">
-      <div class="hero-inner">
-        <h1>Caring Hearts Independent Living</h1>
-        <p>
-          Compassionate caregivers onsite daily, with doctors and nurse practitioners engaged per your
-          personalized healthcare plan.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT US -->
-  <section class="section container">
-    <h2>About Caring Hearts</h2>
-
-    <div class="about-grid">
-      <div class="about-images">
-        <!-- We'll generate this image for you too -->
-        <img src="images/CaringHearts_Facility.png" alt="Residents enjoying community activities"/>
-      </div>
-
-      <div class="about-text">
-        <p>
-          At Caring Hearts Independent Living, we provide a warm, community-focused environment for adults needing
-          daily support with activities of living. Our compassionate caregivers are onsite each day, and we partner
-          with doctors and nurse practitioners—assigned according to each resident’s healthcare plan—to ensure
-          comprehensive medical oversight.
-        </p>
-
-        <p>
-          Residents share comfortable suites and communal living spaces, enjoy meals prepared under the Texas
-          Department of Agriculture’s Adult Food Program guidelines, and participate in engaging wellness and social
-          programs designed to foster connection and joy.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CORE SERVICES -->
-  <section class="section container">
-    <h2>Our Core Services</h2>
-
-    <div class="services-grid">
-
-      <article class="service-card">
-        <div class="service-media">
-          <img src="images/nutrition-meals.png" alt="Nutritious meal service and meal planning">
-        </div>
-        <div class="service-body">
-          <h3>Nutrition &amp; Meal Services</h3>
-          <p>
-            Balanced, home-style meals and nutrition support tailored to individual needs, preferences,
-            and wellness goals—served in a safe, supportive environment.
-          </p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-media">
-          <img src="images/therapeutic-services.png" alt="Therapeutic support and wellness activities">
-        </div>
-        <div class="service-body">
-          <h3>Therapeutic Services</h3>
-          <p>
-            Supportive therapeutic resources and structured wellness activities that encourage
-            emotional well-being, confidence, and connection.
-          </p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-media">
-          <img src="images/nursing-health.png" alt="Nursing support and health monitoring">
-        </div>
-        <div class="service-body">
-          <h3>Nursing &amp; Health Monitoring</h3>
-          <p>
-            Medication support and ongoing health monitoring with licensed nursing oversight,
-            plus coordination with providers as needed.
-          </p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-media">
-          <img src="images/transportation.png" alt="Transportation assistance for appointments and community outings">
-        </div>
-        <div class="service-body">
-          <h3>Transportation Services</h3>
-          <p>
-            Reliable transportation support for appointments, errands, and community activities—helping
-            residents maintain independence.
-          </p>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL -->
-  <section class="section testimonial-section">
+  <section class="page-hero center">
     <div class="container">
-      <h2>Resident &amp; Family Testimonial</h2>
+      <div style="display:flex; justify-content:center; margin-bottom:14px;">
+        <img src="/images/Caring_Hearts-logo.png" alt="Caring Hearts" style="height:74px; width:auto;">
+      </div>
 
-      <figure class="testimonial-card">
-        <blockquote>
-          “Caring Hearts Independent Living has been a true blessing for our family. The staff treats my loved one
-          with dignity and patience, and the home feels warm, structured, and safe. Communication is consistent,
-          and I’m grateful knowing she’s supported day-to-day with genuine care.”
-        </blockquote>
+      <h1 style="margin:0;">Caring Hearts</h1>
 
-        <figcaption>
-          <span class="testimonial-name">Sharon T</span>
-          <span class="testimonial-role">Aunt of Resident</span>
-        </figcaption>
-      </figure>
+      <p style="margin-top:12px;">
+        <span class="tag tag-active">Currently Serving</span>
+      </p>
+
+      <p style="margin-top:12px;">
+        Adult independent living support with structured stability, daily support, and coordinated follow-through.
+        Built for families and partners who need reliable outcomes.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/referral.html">Make a Referral</a>
+        <a class="btn btn-outline" href="/contact.html">Request Consultation</a>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <h4>Contact Caring Hearts</h4>
-        <p>Email: <a href="mailto:caringhearts@healinghadc.org">caringhearts@healinghadc.org</a></p>
-        <p>Phone: <a href="tel:+17138240018">(713) 824-0018</a></p>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What Caring Hearts Delivers</h2>
+      <p class="section-subtitle">
+        Caring Hearts exists to reduce instability, prevent crises, and increase independence through structured daily support.
+      </p>
+
+      <div class="pillar-grid" style="margin-top:18px;">
+        <div class="pillar-card">
+          <div class="pillar-body">
+            <h3>Safe, Stable Living</h3>
+            <p>Placement and housing support designed to protect continuity and reduce disruption.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-body">
+            <h3>Daily Support and Structure</h3>
+            <p>Support routines that strengthen independence, stability, and consistent follow-through.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-body">
+            <h3>Care Coordination</h3>
+            <p>Coordinated support across services so families and providers do not carry the full burden alone.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-body">
+            <h3>Partner Communication</h3>
+            <p>Clear communication and responsive coordination that protects trust and reduces friction.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-col social">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"/></a>
-          <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"/></a>
-          <a href="#"><img src="images/icon-linkedin.svg" alt="LinkedIn"/></a>
-          <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"/></a>
+      <div style="text-align:center; margin-top:18px;">
+        <a class="btn btn-primary" href="/referral.html">Start a Referral</a>
+        <a class="btn btn-ghost" href="/about.html" style="margin-left:10px;">Governance and Oversight</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <h2 class="section-title">Who We Serve</h2>
+      <p class="section-subtitle">
+        Caring Hearts serves adults who need structured support to live safely and maintain independence.
+      </p>
+
+      <div class="pillar-grid" style="margin-top:18px;">
+        <div class="pillar-card">
+          <div class="pillar-body">
+            <h3>Families and Guardians</h3>
+            <p>Support when care coordination and stability become difficult to manage alone.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-body">
+            <h3>Hospitals and Discharge Teams</h3>
+            <p>Stability-focused transitions that reduce bounce-backs and prevent unsafe discharge outcomes.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-body">
+            <h3>Community Partners</h3>
+            <p>Coordination with community services to reinforce a stable care plan.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-body">
+            <h3>Providers</h3>
+            <p>Better adherence and follow-through through structured daily support.</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom container">
-      © 2025 Healing H.A.D.C., Inc. — Empowering independence, one heart at a time.
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How Referrals Work</h2>
+      <p class="section-subtitle">
+        Fast intake. Clear eligibility. Coordinated follow-up. Documentation that supports partner workflows.
+      </p>
+
+      <div class="grid-2" style="margin-top:18px;">
+        <div class="panel">
+          <h3>Referral Intake</h3>
+          <p class="helper">Submit the referral form. Our team confirms intake within one business day.</p>
+
+          <h3 style="margin-top:14px;">Review and Planning</h3>
+          <p class="helper">We review needs, living stability, and support requirements. We coordinate next steps with the referring party.</p>
+
+          <h3 style="margin-top:14px;">Activation</h3>
+          <p class="helper">We activate services and provide a clear point of contact for ongoing coordination.</p>
+
+          <div style="margin-top:16px;">
+            <a class="btn btn-primary" href="/referral.html">Make a Referral</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>What Partners Get</h3>
+          <ul>
+            <li>Clear point of contact</li>
+            <li>Structured support plan</li>
+            <li>Reduced coordination burden</li>
+            <li>Predictable follow-through</li>
+          </ul>
+
+          <div style="margin-top:16px;">
+            <a class="btn btn-outline" href="/contact.html">Request Consultation</a>
+          </div>
+
+          <p class="helper" style="margin-top:12px;">
+            If you need a fast handoff from a hospital, include discharge date and urgency in the referral notes.
+          </p>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- NAV TOGGLE & ACCORDION SCRIPTS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.main-nav');
-
-      if (toggle && nav) {
-        toggle.addEventListener('click', () => nav.classList.toggle('open'));
-      }
-
-      document.querySelectorAll('.has-dropdown > a').forEach(link => {
-        link.addEventListener('click', e => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            link.parentElement.classList.toggle('open');
-          }
-        });
-      });
-    });
-  </script>
-
+  <div id="site-footer"></div>
+  <script src="/site.js"></script>
 </body>
 </html>
