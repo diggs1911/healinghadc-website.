@@ -12,7 +12,13 @@ async function loadPartial(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Relative paths so it works on GitHub preview and custom domains
-  loadPartial("site-header", "header.html");
-  loadPartial("site-footer", "footer.html");
+  const load = async (selector, file) => {
+    const el = document.querySelector(selector);
+    if (!el) return;
+    const res = await fetch(file);
+    el.innerHTML = await res.text();
+  };
+
+  load("#site-header", "/header.html");
+  load("#site-footer", "/footer.html");
 });
