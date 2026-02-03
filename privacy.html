@@ -2,76 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Privacy | Healing HADC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Privacy practices for Healing HADC website and referral intake." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/main.css" />
+  <title>Privacy | Healing HADC</title>
+  <meta name="description" content="Privacy information for Healing HADC website intake and submissions." />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
-
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero center">
-    <div class="container">
-      <h1>Privacy</h1>
-      <p>How we handle information collected through our website.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="panel">
-        <h2>Summary</h2>
-        <p>
-          This website intake is designed to avoid clinical PHI. Hospitals and providers send clinical records through established channels such as fax or encrypted transfer.
-        </p>
-
-        <div class="hr"></div>
-
-        <h3>Information we collect</h3>
-        <ul>
-          <li>Contact and coordination information for referral and placement screening</li>
-          <li>Basic insurance details needed to support intake coordination</li>
-          <li>Legal status indicators and related document uploads when provided</li>
-          <li>Document uploads such as government ID and insurance cards</li>
-        </ul>
-
-        <div class="hr"></div>
-
-        <h3>Information we do not request on the website</h3>
-        <ul>
-          <li>Clinical records, diagnosis notes, or detailed medical history</li>
-          <li>Full Social Security Number (only last four if provided)</li>
-        </ul>
-
-        <div class="hr"></div>
-
-        <h3>Third-party services</h3>
-        <p>
-          Referral submissions route through Formspree based on the endpoint used on the referral page.
-          Hosting is provided through GitHub Pages.
-        </p>
-
-        <div class="hr"></div>
-
-        <h3>Contact</h3>
-        <p>
-          For questions about this privacy statement, use the contact page.
-        </p>
-        <div class="cta-row" style="margin-top:14px;">
-          <a class="btn btn-outline" href="contact.html">Contact</a>
-          <a class="btn btn-ghost" href="referral.html">Make a Referral</a>
-        </div>
+  <main id="main" class="page">
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <h1>Privacy</h1>
+        <p class="lead">A clear summary of how website submissions should be used.</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section">
+      <div class="container prose">
+        <h2>Website submission posture</h2>
+        <p>
+          This website supports administrative intake and coordination. Do not submit diagnoses, clinical records, imaging,
+          labs, or progress notes through website forms.
+        </p>
+
+        <h2>Referral intake</h2>
+        <p>
+          The referral form routes submissions through Formspree to deliver information to the intake team.
+          Upload only identity, insurance, and legal documentation.
+        </p>
+
+        <h2>Files</h2>
+        <p>
+          Do not upload clinical records. Hospitals transmit PHI separately via approved channels.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about submission expectations:
+          <a href="mailto:info@healinghadc.org">info@healinghadc.org</a>
+        </p>
+      </div>
+    </section>
+  </main>
 
   <div id="site-footer"></div>
-  <script src="/site.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>
