@@ -1,189 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Healing HADC, Inc.</title>
-  <link rel="stylesheet" href="css/main.css" />
+  <title>Healing HADC | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Healing HADC, Inc. nonprofit care across home health, assisted living, and community services." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css" />
 </head>
+
 <body>
+  <div id="site-header"></div>
 
-<header class="header">
-  <div class="container header-inner">
-    <a href="index.html" aria-label="Healing HADC Home">
-      <img class="logo-img" src="images/Healing_HADC.png" alt="Healing HADC, Inc.">
-    </a>
-
-    <button class="nav-toggle" id="navToggle" type="button">Menu</button>
-
-    <nav class="main-nav" id="mainNav" aria-label="Primary">
-      <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="about.html">About</a></li>
-
-        <li class="has-dropdown">
-          <a class="nav-link" href="services.html">Care Pillars</a>
-          <div class="dropdown">
-            <a href="caring-hearts.html">Caring Hearts Adult Independent Living</a>
-            <a href="vital-path.html">VitalPath Home Health</a>
-            <a href="mind-path.html">MindPath Behavioral Health</a>
-            <a href="heartreach.html">HeartReach</a>
-          </div>
-        </li>
-
-        <li><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <a class="btn btn-primary nav-cta" href="referral.html">Make a Referral</a>
-  </div>
-</header>
-
-<section class="home-hero">
-  <div class="container">
-    <div class="home-hero-grid">
-      <div>
-        <h1>Healing HADC, Inc.</h1>
-
-        <p class="lead">
-          A nonprofit care coordination and community health organization supporting families,
-          providers, and health systems through integrated service pillars.
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="Healing HADC community care"></div>
+    <div class="hero-overlay">
+      <div class="hero-copy">
+        <h1>Care that looks ahead</h1>
+        <p>
+          Healing HADC, Inc. supports families, hospitals, and communities through high-trust care programs and coordinated services.
         </p>
 
-        <p class="sublead">
-          Bridging gaps between healthcare, community services, and families to support continuity of care beyond the hospital and into daily life.
-        </p>
-
-        <div class="home-hero-actions">
+        <div class="hero-actions">
           <a class="btn btn-primary" href="referral.html">Make a Referral</a>
-          <a class="btn btn-outline" href="contact.html">Partner With Us</a>
+          <a class="btn btn-outline" href="contact.html">Contact Us</a>
         </div>
-      </div>
 
-      <div class="home-hero-media">
-        <img src="images/hero-banner.png" alt="Care coordination and support">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Our Commitment</h2>
-    <p class="section-subtitle">
-      Healing HADC coordinates care across families, providers, hospitals, and community services through governed divisions and sustainable partnerships.
-    </p>
-
-    <div class="card-grid">
-      <div class="card-tile">
-        <div class="icon">♥</div>
-        <h3>Nonprofit organization</h3>
-        <p>Mission-driven operations designed for continuity, trust, and long-term outcomes.</p>
-        <a href="about.html">About</a>
-      </div>
-
-      <div class="card-tile">
-        <div class="icon">⛓</div>
-        <h3>Partner-ready workflows</h3>
-        <p>Clear intake and handoffs to reduce friction across care transitions.</p>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="card-tile">
-        <div class="icon">⌂</div>
-        <h3>Multi-pillar coordination</h3>
-        <p>Aligned divisions that roll up to one operating system.</p>
-        <a href="services.html">Care Pillars</a>
-      </div>
-
-      <div class="card-tile">
-        <div class="icon">✓</div>
-        <h3>Long-term impact</h3>
-        <p>Deliberate launch sequencing to protect quality and partner confidence.</p>
-        <a href="about.html">Learn more</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container">
-    <h2 class="section-title">Our Care Divisions</h2>
-    <p class="section-subtitle">
-      Caring Hearts is active. Additional divisions are in structured development under board leadership.
-    </p>
-
-    <div class="pillar-grid">
-      <div class="pillar-card">
-        <div class="pillar-media">
-          <img src="images/Caring_Hearts-logo.png" alt="Caring Hearts Adult Independent Living">
-        </div>
-        <div class="pillar-body">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
-            <h3 style="margin:0;color:var(--teal);">Caring Hearts</h3>
-            <span class="tag tag-active">Currently Serving</span>
-          </div>
-          <p>Adult independent living support with structured stability and coordinated follow-through.</p>
-          <a href="caring-hearts.html">Explore Caring Hearts</a>
-        </div>
-      </div>
-
-      <div class="pillar-card">
-        <div class="pillar-media">
-          <img src="images/Vital_Path_Home_Health-logo.png" alt="VitalPath Home Health">
-        </div>
-        <div class="pillar-body">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
-            <h3 style="margin:0;color:var(--teal);">VitalPath</h3>
-            <span class="tag tag-dev">In Development</span>
-          </div>
-          <p>Home health division in structured development under appointed leadership.</p>
-          <a href="vital-path.html">View VitalPath</a>
+        <div class="hero-chips" aria-label="Highlights">
+          <span class="chip">Family-centered</span>
+          <span class="chip">Provider-ready</span>
+          <span class="chip">Community-driven</span>
+          <span class="chip">Built for longevity</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="container footer-top">
-    <div class="footer-brand">
-      <img src="images/Healing_HADC.png" alt="Healing HADC, Inc." class="footer-logo">
-      <p class="footer-tagline">
-        Nonprofit care coordination and community health organization supporting families, providers, and health systems.
+  <section class="section alt">
+    <div class="container">
+      <h2 class="section-title">Our core divisions</h2>
+      <p class="section-subtitle">
+        Each division runs as an expert-led pillar. Together, they roll up to Healing HADC, Inc.
       </p>
+
+      <div class="pillar-grid" role="list">
+        <article class="pillar-card" role="listitem">
+          <div class="pillar-media">
+            <img src="images/Caring_Hearts-logo.png" alt="Caring Hearts Adult Independent Living logo">
+          </div>
+          <div class="pillar-body">
+            <h3>Caring Hearts Adult Independent Living</h3>
+            <p>Supportive housing and daily living assistance with a stable, respectful experience.</p>
+            <a href="caring-hearts.html">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <div class="pillar-media">
+            <img src="images/Vital_Path_Home_Health-logo.png" alt="Vital Path Home Health logo">
+          </div>
+          <div class="pillar-body">
+            <h3>Vital Path Home Health</h3>
+            <p>Home health services aligned with care transitions, family expectations, and continuity.</p>
+            <a href="vital-path.html">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <div class="pillar-media">
+            <img src="images/Mind_Path-logo.png" alt="Mind Path logo">
+          </div>
+          <div class="pillar-body">
+            <h3>Mind Path</h3>
+            <p>Behavioral and supportive services designed for stability, access, and follow-through.</p>
+            <a href="mind-path.html">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pillar-card" role="listitem">
+          <div class="pillar-media">
+            <img src="images/HeartReach-logo.png" alt="HeartReach logo">
+          </div>
+          <div class="pillar-body">
+            <h3>HeartReach</h3>
+            <p>Community outreach and service coordination that closes gaps and strengthens support.</p>
+            <a href="heartreach.html">Learn more</a>
+          </div>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="footer-links">
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="about.html">About</a>
-        <a href="services.html">Our Care Pillars</a>
-        <a href="contact.html">Contact</a>
+  <section class="section">
+    <div class="container grid-2">
+      <div class="panel">
+        <h2>For hospitals and providers</h2>
+        <p>
+          Use our referral intake to start placement screening and coordination. Clinical records are handled separately via fax or encrypted transfer.
+        </p>
+        <div class="cta-row" style="margin-top:16px;">
+          <a class="btn btn-primary" href="referral.html">Start a referral</a>
+          <a class="btn btn-ghost" href="contact.html">Request a call</a>
+        </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Divisions</h4>
-        <a href="caring-hearts.html">Caring Hearts</a>
-        <a href="vital-path.html">VitalPath</a>
-        <a href="mind-path.html">MindPath</a>
-        <a href="heartreach.html">HeartReach</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="accessibility.html">Accessibility</a>
-      </div>
+      <aside class="panel">
+        <h3>What we do not collect</h3>
+        <p class="help">
+          This site intake avoids clinical PHI. Hospitals send clinical records separately.
+        </p>
+        <div class="hr"></div>
+        <h3>What we do collect</h3>
+        <p class="help">
+          Placement and coordination details, insurance basics, legal documentation, and required uploads.
+        </p>
+      </aside>
     </div>
-  </div>
+  </section>
 
-  <div class="container footer-bottom">
-    © <span id="year-current"></span> Healing HADC, Inc. All rights reserved.
-  </div>
-</footer>
-
-<script src="site.js?v=1"></script>
+  <div id="site-footer"></div>
+  <script src="/site.js"></script>
 </body>
 </html>
